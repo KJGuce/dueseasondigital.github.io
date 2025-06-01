@@ -1,100 +1,442 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Due Season Digital</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #fdfcf9;
-      color: #333;
-      line-height: 1.6;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Due Season Digital - Grow Your Local Business</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="container">
+        <div class="logo-hero-wrap">
+          <div class="logo-sunrays">
+            <!-- Animated sun rays SVG -->
+            <svg
+              width="100"
+              height="60"
+              viewBox="0 0 100 60"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <g class="sunrays-group">
+                <rect
+                  x="48"
+                  y="0"
+                  width="4"
+                  height="18"
+                  rx="2"
+                  fill="#D4AF37"
+                  opacity="0.7"
+                >
+                  <animate
+                    attributeName="opacity"
+                    values="0.7;1;0.7"
+                    dur="2s"
+                    repeatCount="indefinite"
+                  />
+                </rect>
+                <rect
+                  x="80"
+                  y="10"
+                  width="4"
+                  height="18"
+                  rx="2"
+                  transform="rotate(30 80 10)"
+                  fill="#D4AF37"
+                  opacity="0.7"
+                >
+                  <animate
+                    attributeName="opacity"
+                    values="0.7;1;0.7"
+                    dur="2.2s"
+                    repeatCount="indefinite"
+                  />
+                </rect>
+                <rect
+                  x="16"
+                  y="10"
+                  width="4"
+                  height="18"
+                  rx="2"
+                  transform="rotate(-30 16 10)"
+                  fill="#D4AF37"
+                  opacity="0.7"
+                >
+                  <animate
+                    attributeName="opacity"
+                    values="0.7;1;0.7"
+                    dur="1.8s"
+                    repeatCount="indefinite"
+                  />
+                </rect>
+              </g>
+            </svg>
+            <a href="/" class="logo animated-logo">
+              <img
+                src="DSDlogo1.png"
+                alt="Due Season Digital Logo"
+                style="
+                  height: 60px;
+                  width: auto;
+                  display: inline-block;
+                  vertical-align: middle;
+                  margin-right: 12px;
+                "
+              />
+              Due Season Digital
+            </a>
+          </div>
+        </div>
+        <h1>
+          <span class="highlight">Grow Your Local Business</span> with Due
+          Season Digital
+        </h1>
+        <p>
+          We help small businesses thrive in the digital world with personalized
+          marketing solutions that drive real results.
+        </p>
+        <a href="#contact" class="btn btn-cta">
+          <span class="btn-icon" aria-hidden="true">🌱</span> Get a Free
+          Consultation
+        </a>
+      </div>
+    </header>
 
-    header {
-      background-color: #f3ead8;
-      padding: 60px 20px;
-      text-align: center;
-    }
+    <section class="services">
+      <div class="services-bg-animated" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-header">
+          <span class="services-header-accent" aria-hidden="true">
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 28 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g>
+                <circle cx="14" cy="14" r="3" fill="#FFC300" />
+                <circle cx="6" cy="6" r="1.5" fill="#4AC6D3" />
+                <circle cx="22" cy="8" r="1.2" fill="#3CAF7A" />
+                <circle cx="8" cy="22" r="1" fill="#D4AF37" />
+              </g>
+            </svg>
+          </span>
+          <h2>Our Services</h2>
+          <p>
+            Comprehensive digital marketing solutions tailored for your business
+          </p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fas fa-bullhorn"></i>
+            <h3>Social Media Management</h3>
+            <p>
+              Engage your audience and build brand awareness with strategic
+              social media content and campaigns.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-search"></i>
+            <h3>SEO & Local Search</h3>
+            <p>
+              Improve your visibility in local search results and attract more
+              customers to your business.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Website Design</h3>
+            <p>
+              Create a professional, mobile-friendly website that converts
+              visitors into customers.
+            </p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-pen-fancy"></i>
+            <h3>Content Creation</h3>
+            <p>
+              Compelling content that tells your story and connects with your
+              target audience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
+    <section class="about">
+      <div class="container">
+        <div class="about-visuals">
+          <!-- Animated Water Droplets SVG (rain effect) -->
+          <div
+            class="water-droplets"
+            aria-hidden="true"
+            style="margin: 0 auto; display: flex; justify-content: center"
+          >
+            <svg
+              width="80"
+              height="70"
+              viewBox="0 0 80 70"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g class="droplet-group">
+                <ellipse
+                  class="droplet"
+                  cx="10"
+                  cy="10"
+                  rx="3"
+                  ry="7"
+                  fill="#4AC6D3"
+                />
+                <ellipse
+                  class="droplet"
+                  cx="25"
+                  cy="20"
+                  rx="2.5"
+                  ry="6"
+                  fill="#2C7A9E"
+                />
+                <ellipse
+                  class="droplet"
+                  cx="40"
+                  cy="8"
+                  rx="2.5"
+                  ry="6"
+                  fill="#4AC6D3"
+                />
+                <ellipse
+                  class="droplet"
+                  cx="60"
+                  cy="18"
+                  rx="2"
+                  ry="5"
+                  fill="#2C7A9E"
+                />
+                <ellipse
+                  class="droplet"
+                  cx="70"
+                  cy="30"
+                  rx="2"
+                  ry="5"
+                  fill="#4AC6D3"
+                />
+                <ellipse
+                  class="droplet"
+                  cx="20"
+                  cy="40"
+                  rx="1.5"
+                  ry="4"
+                  fill="#2C7A9E"
+                />
+                <ellipse
+                  class="droplet"
+                  cx="55"
+                  cy="50"
+                  rx="1.5"
+                  ry="4"
+                  fill="#4AC6D3"
+                />
+                <ellipse
+                  class="droplet"
+                  cx="35"
+                  cy="60"
+                  rx="2"
+                  ry="5"
+                  fill="#2C7A9E"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="about-content">
+          <div>
+            <div class="section-header">
+              <h2>About Us</h2>
+              <p>Your Partner in Digital Growth</p>
+            </div>
+            <p>
+              At Due Season Digital, we understand the unique challenges small
+              businesses face in today's digital landscape. We're not just
+              another marketing agency – we're your dedicated partner in growth,
+              committed to helping you achieve your business goals through
+              strategic digital marketing solutions.
+            </p>
+            <p>
+              Our team combines local business expertise with cutting-edge
+              digital marketing strategies to deliver results that matter to
+              your bottom line.
+            </p>
+          </div>
+          <div class="about-image">
+            <img
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+              alt="Due Season Digital Team"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
 
-    header p {
-      font-size: 1.2rem;
-      color: #555;
-    }
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <span class="testimonial-header-accent" aria-hidden="true">
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 28 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g>
+                <circle cx="14" cy="14" r="3" fill="#FFC300" />
+                <circle cx="6" cy="6" r="1.5" fill="#4AC6D3" />
+                <circle cx="22" cy="8" r="1.2" fill="#3CAF7A" />
+                <circle cx="8" cy="22" r="1" fill="#D4AF37" />
+              </g>
+            </svg>
+          </span>
+          <h2>What Our Clients Say</h2>
+          <p>Success stories from local businesses we've helped grow</p>
+        </div>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <p>
+              "Due Season Digital transformed our online presence. Our customer
+              base has grown by 40% since working with them!"
+            </p>
+            <div class="testimonial-author">
+              - Sarah Johnson, Local Bakery Owner
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p>
+              "Their social media management has helped us connect with our
+              community in ways we never thought possible."
+            </p>
+            <div class="testimonial-author">
+              - Mike Thompson, Coffee Shop Owner
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p>
+              "The team at Due Season Digital truly understands small business
+              needs. They're responsive, professional, and deliver results."
+            </p>
+            <div class="testimonial-author">- Lisa Chen, Boutique Owner</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    section {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
+    <section class="cta">
+      <div class="container">
+        <!-- Animated Growing Plant SVG (larger) -->
+        <div class="blooming-plant fun-bloom-entrance" aria-hidden="true">
+          <svg
+            width="180"
+            height="220"
+            viewBox="0 0 180 220"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g>
+              <!-- Stem -->
+              <rect
+                x="86"
+                y="120"
+                width="8"
+                height="80"
+                rx="4"
+                fill="#3CAF7A"
+                class="growing-stem"
+              />
+              <!-- Left leaf -->
+              <ellipse
+                cx="68"
+                cy="180"
+                rx="24"
+                ry="12"
+                fill="#4AC6D3"
+                class="growing-leaf-left"
+              />
+              <!-- Right leaf -->
+              <ellipse
+                cx="112"
+                cy="180"
+                rx="24"
+                ry="12"
+                fill="#4AC6D3"
+                class="growing-leaf-right"
+              />
+            </g>
+          </svg>
+        </div>
+        <h2>Ready to Grow Your Business?</h2>
+        <p>Let's discuss how we can help you achieve your goals</p>
+        <a href="#contact" class="btn">Book Your Free Strategy Call</a>
+      </div>
+    </section>
 
-    .btn {
-      display: inline-block;
-      padding: 12px 24px;
-      background-color: #d4a373;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 20px;
-    }
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2>Get in Touch</h2>
+          <p>Let's start a conversation about your business</p>
+        </div>
+        <form
+          class="contact-form"
+          action="https://formsubmit.co/kristenjoy@dueseasondigital.com"
+          method="POST"
+        >
+          <input type="hidden" name="_next" value="/thank-you.html" />
+          <input type="hidden" name="_captcha" value="false" />
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="5"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
 
-    .services ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .services li {
-      margin-bottom: 10px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #f3ead8;
-      font-size: 0.9rem;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>Due Season Digital</h1>
-    <p>Helping small businesses grow in their due season—authentically and affordably.</p>
-    <a href="https://calendly.com/your-link" class="btn">Book a Free Audit</a>
-  </header>
-
-  <section class="about">
-    <h2>About Us</h2>
-    <p>We're a boutique digital marketing agency that offers done-for-you services tailored to small businesses, service providers, and solo entrepreneurs. Whether you're just starting or ready to scale, we help you show up online with clarity and confidence.</p>
-  </section>
-
-  <section class="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>✔ Google Business Profile Optimization</li>
-      <li>✔ Lead Gen Landing Pages</li>
-      <li>✔ Social Media Content Packages</li>
-      <li>✔ Email Funnel Setup</li>
-    </ul>
-  </section>
-
-  <section class="cta">
-    <h2>Ready to Grow?</h2>
-    <p>Let’s build a digital presence that matches your value. Book your free 15-minute audit call today.</p>
-    <a href="https://calendly.com/your-link" class="btn">Get Started</a>
-  </section>
-
-  <footer>
-    &copy; 2025 Due Season Digital. All rights reserved.
-  </footer>
-
-</body>
+    <footer>
+      <div class="container">
+        <div class="social-links">
+          <a href="https://www.facebook.com/profile.php?id=61577034625612"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/dueseason.digital/"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://www.linkedin.com/company/due-season-digital/"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </div>
+        <p>&copy; 2024 Due Season Digital. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
 </html>
