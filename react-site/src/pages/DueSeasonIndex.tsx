@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./DueSeasonIndex.module.css";
 import { Quiz } from "../components/DueSeasonIndex/Quiz";
 import { UrlAnalysis } from "../components/DueSeasonIndex/UrlAnalysis";
@@ -19,14 +19,11 @@ type Step =
 
 export default function DueSeasonIndexPage() {
   const [step, setStep] = useState<Step>("choose");
-  const [quizAnswers, setQuizAnswers] = useState<Record<string, string>>({});
-  const [url, setUrl] = useState("");
   const [score, setScore] = useState<number | null>(null);
   const [category, setCategory] = useState<string | null>(null);
 
   // Simulate analysis and scoring
   const handleUrlAnalysis = (url: string) => {
-    setUrl(url);
     setStep("progress");
     setTimeout(() => {
       // TODO: Replace with real analysis logic
@@ -37,11 +34,10 @@ export default function DueSeasonIndexPage() {
   };
 
   const handleQuizComplete = (
-    answers: Record<string, string>,
+    _answers: Record<string, string>,
     score: number,
     category: string
   ) => {
-    setQuizAnswers(answers);
     setScore(score);
     setCategory(category);
     setStep("score");

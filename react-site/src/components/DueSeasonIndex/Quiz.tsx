@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { quizQuestions, calculateScore } from "../../utils/scoring";
-import type { QuizQuestion } from "../../utils/scoring";
 
 type Props = {
   onComplete: (
