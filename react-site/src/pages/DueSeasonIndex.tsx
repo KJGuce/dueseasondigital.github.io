@@ -23,7 +23,7 @@ export default function DueSeasonIndexPage() {
   const [category, setCategory] = useState<string | null>(null);
 
   // Simulate analysis and scoring
-  const handleUrlAnalysis = (url: string) => {
+  const handleUrlAnalysis = (_url: string) => {
     setStep("progress");
     setTimeout(() => {
       // TODO: Replace with real analysis logic
