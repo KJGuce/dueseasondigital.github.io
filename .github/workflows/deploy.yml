@@ -32,7 +32,9 @@ jobs:
         run: cd react-site && npm run build
 
       - name: Create CNAME file
-        run: echo "dueseasondigital.com" > react-site/dist/CNAME
+        run: |
+          echo "dueseasondigital.com" > react-site/dist/CNAME
+          echo "www.dueseasondigital.com" >> react-site/dist/CNAME
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
