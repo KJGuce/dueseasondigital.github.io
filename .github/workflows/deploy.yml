@@ -17,15 +17,14 @@ jobs:
           node-version: "20"
 
       - name: Install Dependencies
-        run: |
-          npm install
-          cd react-site && npm install
+        run: cd react-site && npm install
 
       - name: Build
-        run: npm run build
+        run: cd react-site && npm run build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: react-site/dist
           branch: gh-pages
+          clean: true
