@@ -1,6 +1,6 @@
 import { Routes, Route, Link } from "react-router-dom";
 import DueSeasonIndexPage from "./pages/DueSeasonIndex";
-import OriginalLandingPage from "./pages/OriginalLandingPage";
+import LandingPageAISEO from "./pages/OriginalLandingPage";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <Link to="/due-season-index">Due Season Index</Link>
       </nav>
       <Routes>
-        <Route path="/" element={<OriginalLandingPage />} />
+        <Route path="/" element={<LandingPageAISEO />} />
         <Route path="/due-season-index" element={<DueSeasonIndexPage />} />
       </Routes>
     </div>
