@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
@@ -18,18 +19,18 @@ const Navbar = () => {
       <div className={styles.container}>
         {/* Logo */}
         <div className={styles.logo}>
-          <a href="/">
+          <Link to="/">
             <span>Due Season Digital</span>
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
         <div className={styles.desktopNav}>
           <div className={styles.navLinks}>
             {navLinks.map((link) => (
-              <a key={link.name} href={link.href} className={styles.navLink}>
+              <Link key={link.name} to={link.href} className={styles.navLink}>
                 {link.name}
-              </a>
+              </Link>
             ))}
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -65,13 +66,13 @@ const Navbar = () => {
           >
             <div className={styles.mobileNavContent}>
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
-                  href={link.href}
+                  to={link.href}
                   className={styles.mobileNavLink}
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
               <motion.button
                 whileTap={{ scale: 0.95 }}
