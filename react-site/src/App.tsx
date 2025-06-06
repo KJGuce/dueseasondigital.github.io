@@ -10,7 +10,7 @@ import "./App.css";
 
 function App() {
   return (
-    <Router basename="/dueseasondigital.github.io">
+    <Router>
       <div className="app">
         <Navbar />
         <main>
