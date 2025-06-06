@@ -266,6 +266,17 @@
   margin-right: auto;
 }
 
+.hero {
+  padding: clamp(4rem, 10vw, 8rem) 0;
+  margin-top: 80px;
+  background: linear-gradient(
+    135deg,
+    var(--color-background) 0%,
+    var(--color-background-dark) 100%
+  );
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .servicesPage {
     padding: 0;
