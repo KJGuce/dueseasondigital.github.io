@@ -87,8 +87,8 @@ const LandingPageAISEO: React.FC = () => (
           </div>
         </div>
         <h1>
-          <span className={styles.highlight}>Get Discovered by AI</span> — Put Your
-          Business in the Spotlight of ChatGPT, Gemini & Answer Engines
+          <span className={styles.highlight}>Get Discovered by AI</span> — Put
+          Your Business in the Spotlight of ChatGPT, Gemini & Answer Engines
         </h1>
         <p>
           We help local businesses and entrepreneurs become the top
@@ -101,6 +101,7 @@ const LandingPageAISEO: React.FC = () => (
           </span>{" "}
           Get Your Free AI SEO Audit
         </a>
+        <div className={styles.heroGraphic}></div>
       </div>
     </header>
 
@@ -118,7 +119,12 @@ const LandingPageAISEO: React.FC = () => (
             >
               <g>
                 <circle cx="14" cy="14" r="3" fill="var(--color-gold)" />
-                <circle cx="6" cy="6" r="1.5" fill="var(--color-primary-accent)" />
+                <circle
+                  cx="6"
+                  cy="6"
+                  r="1.5"
+                  fill="var(--color-primary-accent)"
+                />
                 <circle cx="22" cy="8" r="1.2" fill="var(--color-green)" />
                 <circle cx="8" cy="22" r="1" fill="var(--color-gold)" />
               </g>
@@ -130,6 +136,7 @@ const LandingPageAISEO: React.FC = () => (
             by the bots that matter most.
           </p>
         </div>
+        <div className={styles.servicesGraphic}></div>
         <div className={styles.servicesGrid}>
           <article className={styles.serviceCard}>
             <i className="fas fa-brain"></i>
@@ -274,6 +281,7 @@ const LandingPageAISEO: React.FC = () => (
             "
             sizes="(max-width: 600px) 800px, (max-width: 1200px) 1200px, 1950px"
           />
+          <div className={styles.aboutGraphic}></div>
         </div>
         <div className={styles.aboutContent}>
           <div>
@@ -353,6 +361,7 @@ const LandingPageAISEO: React.FC = () => (
         <a href="/due-season-index" className={styles.btn}>
           Try the Due Season Index Tool
         </a>
+        <div className={styles.ctaGraphic}></div>
       </div>
     </section>
 
@@ -369,7 +378,12 @@ const LandingPageAISEO: React.FC = () => (
             >
               <g>
                 <circle cx="14" cy="14" r="3" fill="var(--color-gold)" />
-                <circle cx="6" cy="6" r="1.5" fill="var(--color-primary-accent)" />
+                <circle
+                  cx="6"
+                  cy="6"
+                  r="1.5"
+                  fill="var(--color-primary-accent)"
+                />
                 <circle cx="22" cy="8" r="1.2" fill="var(--color-green)" />
                 <circle cx="8" cy="22" r="1" fill="var(--color-gold)" />
               </g>
@@ -410,6 +424,7 @@ const LandingPageAISEO: React.FC = () => (
             </div>
           </article>
         </div>
+        <div className={styles.clientWinsGraphic}></div>
       </div>
     </section>
 
@@ -419,6 +434,7 @@ const LandingPageAISEO: React.FC = () => (
           <h2>Get in Touch</h2>
           <p>Let's get your business found by the next wave of searchers</p>
         </div>
+        <div className={styles.contactGraphic}></div>
         <form
           className={styles.contactForm}
           action="https://formsubmit.co/kristenjoy@dueseasondigital.com"
@@ -456,14 +472,14 @@ const LandingPageAISEO: React.FC = () => (
               required
             ></textarea>
           </div>
-          <button type="submit" className="btn">
+          <button type="submit" className={styles.btn}>
             Send Message
           </button>
         </form>
       </div>
     </section>
 
-    <footer>
+    <footer className={styles.footer}>
       <div className="container">
         <div className="social-links">
           <a href="https://www.facebook.com/profile.php?id=61577034625612">
