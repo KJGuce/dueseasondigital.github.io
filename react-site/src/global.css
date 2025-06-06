@@ -1,8 +1,16 @@
+:root {
+  --color-background: #f5f2ec;
+  --color-text-dark: #2d3a3a;
+  --color-green: #5a7a5a;
+  --color-gold: #d4af37;
+}
+
 body {
   margin: 0;
-  font-family: "Inter", Arial, sans-serif;
-  background: #f5f7fa;
-  color: #2d2d34;
+  font-family: "Inter", sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text-dark);
+  line-height: 1.6;
 }
 
 html {
@@ -16,9 +24,20 @@ html {
 }
 
 a {
-  color: #28b36a;
+  color: var(--color-green);
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Georgia", serif;
+  color: var(--color-text-dark);
+  line-height: 1.2;
 }

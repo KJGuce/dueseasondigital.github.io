@@ -131,38 +131,38 @@ const LandingPageAISEO: React.FC = () => (
           </p>
         </div>
         <div className="services-grid">
-          <div className="service-card">
+          <article className="service-card">
             <i className="fas fa-brain"></i>
             <h3>AI SEO & LLM Visibility</h3>
             <p>
               Optimize your online presence so that AI models like ChatGPT,
               Gemini, and Perplexity mention your business first.
             </p>
-          </div>
-          <div className="service-card">
+          </article>
+          <article className="service-card">
             <i className="fas fa-robot"></i>
             <h3>AI-Driven Content & Schema</h3>
             <p>
               We craft content and structure your site with the exact schema and
               signals AI needs to recommend you in answer engines.
             </p>
-          </div>
-          <div className="service-card">
+          </article>
+          <article className="service-card">
             <i className="fas fa-map-marker-alt"></i>
             <h3>Local Profile Optimization</h3>
             <p>
               Ensure your Google Business Profile, reviews, and directories are
               optimized for AI and voice search discovery.
             </p>
-          </div>
-          <div className="service-card">
+          </article>
+          <article className="service-card">
             <i className="fas fa-chart-line"></i>
             <h3>LLM Audit & Analytics</h3>
             <p>
               Get actionable reporting: How visible is your brand in ChatGPT,
               Gemini, and AI-powered platforms? We'll show you—and help you win.
             </p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -248,13 +248,32 @@ const LandingPageAISEO: React.FC = () => (
                   className="droplet"
                   cx="35"
                   cy="60"
-                  rx="2"
-                  ry="5"
+                  rx="1"
+                  ry="3"
+                  fill="#4AC6D3"
+                />
+                <ellipse
+                  className="droplet"
+                  cx="50"
+                  cy="65"
+                  rx="0.8"
+                  ry="2"
                   fill="#2C7A9E"
                 />
               </g>
             </svg>
           </div>
+          {/* Placeholder for the team image */}
+          <img
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+            alt="Due Season Digital Team"
+            srcSet="
+              https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80 800w,
+              https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80 1200w,
+              https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80 1950w
+            "
+            sizes="(max-width: 600px) 800px, (max-width: 1200px) 1200px, 1950px"
+          />
         </div>
         <div className="about-content">
           <div>
@@ -274,12 +293,6 @@ const LandingPageAISEO: React.FC = () => (
               assistants. Let's get you found, heard, and chosen in this new era
               of search.
             </p>
-          </div>
-          <div className="about-image">
-            <img
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-              alt="Due Season Digital Team"
-            />
           </div>
         </div>
       </div>
@@ -369,7 +382,7 @@ const LandingPageAISEO: React.FC = () => (
           </p>
         </div>
         <div className="testimonial-grid">
-          <div className="testimonial-card">
+          <article className="testimonial-card">
             <p>
               "Our business started showing up in ChatGPT and Gemini answers.
               We've seen a surge in leads from people who 'found us on AI.'"
@@ -377,8 +390,8 @@ const LandingPageAISEO: React.FC = () => (
             <div className="testimonial-author">
               - Sarah Johnson, Local Bakery Owner
             </div>
-          </div>
-          <div className="testimonial-card">
+          </article>
+          <article className="testimonial-card">
             <p>
               "Due Season Digital's audit made it clear what we were missing for
               AI SEO. Their plan was practical, and the results are obvious."
@@ -386,8 +399,8 @@ const LandingPageAISEO: React.FC = () => (
             <div className="testimonial-author">
               - Mike Thompson, Coffee Shop Owner
             </div>
-          </div>
-          <div className="testimonial-card">
+          </article>
+          <article className="testimonial-card">
             <p>
               "We finally understand what matters for Google SGE and ChatGPT,
               not just Google rankings. The team made AI SEO simple for us."
@@ -395,7 +408,7 @@ const LandingPageAISEO: React.FC = () => (
             <div className="testimonial-author">
               - Lisa Chen, Boutique Owner
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -414,19 +427,30 @@ const LandingPageAISEO: React.FC = () => (
           <input type="hidden" name="_next" value="/thank-you.html" />
           <input type="hidden" name="_captcha" value="false" />
           <div className="form-group">
-            <input type="text" name="name" placeholder="Your Name" required />
+            <label htmlFor="name">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
           </div>
           <div className="form-group">
+            <label htmlFor="email">Your Email</label>
             <input
               type="email"
+              id="email"
               name="email"
               placeholder="Your Email"
               required
             />
           </div>
           <div className="form-group">
+            <label htmlFor="message">Your Message</label>
             <textarea
               name="message"
+              id="message"
               placeholder="Your Message"
               rows={5}
               required
