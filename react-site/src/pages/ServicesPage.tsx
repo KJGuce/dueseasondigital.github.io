@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaCrown, FaCheck, FaRocket } from "react-icons/fa";
+import { FaCrown, FaCheck, FaRocket, FaGem } from "react-icons/fa";
 import styles from "./ServicesPage.module.css";
 
 const ServicesPage = () => {
@@ -56,7 +56,7 @@ const ServicesPage = () => {
         "Two PR pitches to local/news media",
         "Quarterly strategy review",
       ],
-      icon: <FaCrown className={styles.packageIcon} />,
+      icon: <FaGem className={styles.packageIcon} />,
       popular: false,
     },
   ];
