@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import ServicesPage from "./pages/ServicesPage";
@@ -10,10 +10,10 @@ import "./App.css";
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen">
+    <Router basename="/dueseasondigital.github.io">
+      <div className="app">
         <Navbar />
-        <main className="pt-16">
+        <main>
           {" "}
           {/* Add padding-top to account for fixed navbar */}
           <Routes>

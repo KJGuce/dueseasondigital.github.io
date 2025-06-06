@@ -8,11 +8,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", href: "#/" },
-    { name: "Services", href: "#/services" },
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
     { name: "About", href: "#/about" },
-    { name: "Contact", href: "#/contact" },
-    { name: "Index Tool", href: "#/index-tool" },
+    { name: "Contact", href: "/contact" },
+    { name: "Index Tool", href: "/index-tool" },
   ];
 
   return (
@@ -29,11 +29,7 @@ const Navbar = () => {
         <div className={styles.desktopNav}>
           <div className={styles.navLinks}>
             {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href.replace("#", "")}
-                className={styles.navLink}
-              >
+              <Link key={link.name} to={link.href} className={styles.navLink}>
                 {link.name}
               </Link>
             ))}
@@ -51,6 +47,7 @@ const Navbar = () => {
         <button
           onClick={() => setIsOpen(!isOpen)}
           className={styles.mobileMenuButton}
+          aria-label="Toggle menu"
         >
           {isOpen ? (
             <FaTimes className={styles.menuIcon} />
@@ -73,8 +70,9 @@ const Navbar = () => {
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
-                  to={link.href.replace("#", "")}
+                  to={link.href}
                   className={styles.mobileNavLink}
+                  onClick={() => setIsOpen(false)}
                 >
                   {link.name}
                 </Link>
