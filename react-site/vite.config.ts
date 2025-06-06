@@ -4,7 +4,7 @@ import react from "@vitejs/plugin-react";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/dueseasondigital.github.io/",
+  base: "https://dueseasondigital.com/",
   build: {
     outDir: "dist",
     assetsDir: "assets",

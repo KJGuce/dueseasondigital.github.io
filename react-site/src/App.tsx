@@ -7,11 +7,11 @@ import ContactPage from "./pages/ContactPage";
 import "./variables.css";
 import "./App.css";
 
-// Handle GitHub Pages routing
+// Handle routing for both GitHub Pages and production domain
 const basename =
-  window.location.pathname.split("/")[1] === "dueseasondigital.github.io"
-    ? "/dueseasondigital.github.io"
-    : "";
+  window.location.hostname === "dueseasondigital.com"
+    ? ""
+    : "/dueseasondigital.github.io";
 
 function App() {
   return (
