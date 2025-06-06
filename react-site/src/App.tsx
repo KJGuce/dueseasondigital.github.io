@@ -5,12 +5,14 @@ import AboutPage from "./pages/AboutPage";
 import ServicesPage from "./pages/ServicesPage";
 import ContactPage from "./pages/ContactPage";
 import DueSeasonIndexTool from "./pages/DueSeasonIndexTool";
+import ScrollToTop from "./components/ScrollToTop";
 import "./variables.css";
 import "./App.css";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="app">
         <Navbar />
         <main>
