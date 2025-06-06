@@ -3,10 +3,13 @@
   --color-background: #000000;
   --color-background-light: #0a0a0a;
   --color-background-lighter: #141414;
+  --color-background-dark: #000000;
+  --color-text: #ffffff;
   --color-text-dark: #ffffff;
   --color-text-light: #cccccc;
   --color-text-lighter: #999999;
   --color-border: #333333;
+  --color-card-background: #0a0a0a;
 
   /* Accent Colors */
   --color-primary: #ffd700;
