@@ -85,6 +85,7 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: visible;
 }
 
 .package:hover {
@@ -93,17 +94,24 @@
 }
 
 .popular {
-  background: linear-gradient(
-    135deg,
-    var(--color-primary) 0%,
-    var(--color-primary-accent) 100%
-  );
+  position: relative;
+  background: linear-gradient(135deg, #2c1810 0%, #4a2c1a 100%);
   border: none;
+  overflow: visible;
+  box-shadow: 0 8px 32px rgba(124, 90, 54, 0.18);
+}
+
+.popular::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
 }
 
 .popularBadge {
   position: absolute;
-  top: -12px;
+  top: 0.5rem;
   right: 2rem;
   background: linear-gradient(
     135deg,
@@ -111,11 +119,14 @@
     var(--color-accent) 100%
   );
   color: var(--color-background);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 0.6rem 1.2rem;
+  border-radius: 24px;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  box-shadow: 0 4px 15px rgba(124, 90, 54, 0.12);
+  border: none;
+  z-index: 2;
 }
 
 .packageHeader {
@@ -337,6 +348,44 @@
     var(--color-background-dark) 100%
   );
   text-align: center;
+}
+
+.popular .packageHeader h2 {
+  color: #ffffff;
+}
+
+.popular .packageHeader p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.popular .price {
+  color: #ffffff;
+}
+
+.popular .period {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.popular .setup {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.popular .features li {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.popular .checkIcon {
+  color: var(--color-accent);
+}
+
+.popular .ctaButton {
+  background: linear-gradient(
+    135deg,
+    var(--color-accent) 0%,
+    var(--color-primary) 100%
+  );
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
