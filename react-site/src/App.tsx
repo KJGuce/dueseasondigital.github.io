@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import ServicesPage from "./pages/ServicesPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
+import "./variables.css";
 import "./App.css";
 
 function App() {
