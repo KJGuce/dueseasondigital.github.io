@@ -1,0 +1,272 @@
+.hero {
+  background-color: var(--color-background);
+  padding: 4rem 0; /* Adjust padding */
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3em; /* Make heading larger */
+  margin-bottom: 0.5em;
+  color: var(--color-text-dark);
+}
+
+.hero h1 .highlight {
+  color: var(--color-primary-accent); /* Highlight color */
+}
+
+.hero p {
+  font-size: 1.2em;
+  color: var(--color-text-dark);
+  max-width: 800px;
+  margin: 0.5em auto 2em auto; /* Center paragraph and add space below */
+}
+
+.hero .btn-cta {
+  background-color: var(
+    --color-secondary-accent
+  ); /* Use secondary accent for CTA */
+  color: #fff;
+  font-size: 1.1em;
+  padding: 1em 2.5em;
+  border-radius: 30px; /* More rounded buttons */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero .btn-cta:hover {
+  background-color: var(
+    --color-primary-accent
+  ); /* Hover changes to primary accent */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.logo-hero-wrap {
+  margin-bottom: 2rem; /* Space below logo area */
+}
+
+.services {
+  padding: 4rem 0;
+  background-color: var(--color-background); /* Use background color */
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionHeader h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.3em;
+}
+
+.sectionHeader p {
+  font-size: 1.1em;
+  color: var(--color-text-dark); /* Use text color */
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.serviceCard {
+  background-color: #fff; /* White background for cards */
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.serviceCard i {
+  font-size: 3em;
+  color: var(--color-primary-accent); /* Use primary accent for icons */
+  margin-bottom: 0.5em;
+}
+
+.serviceCard h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  color: var(--color-text-dark); /* Use text color */
+}
+
+.serviceCard p {
+  font-size: 1em;
+  color: var(--color-text-dark); /* Use text color */
+}
+
+.about {
+  padding: 4rem 0;
+  background-color: var(--color-background); /* Use background color */
+}
+
+.about .container {
+  display: flex;
+  flex-direction: column; /* Stack on small screens */
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .about .container {
+    flex-direction: row; /* Side-by-side on larger screens */
+    align-items: center;
+  }
+}
+
+.aboutVisuals,
+.aboutContent {
+  flex: 1; /* Distribute space equally */
+}
+
+.aboutVisuals img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Rounded corners for image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.aboutContent h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: var(--color-text-dark); /* Use text color */
+}
+
+.aboutContent p {
+  font-size: 1.1em;
+  color: var(--color-text-dark); /* Use text color */
+  margin-bottom: 1em;
+}
+
+.cta {
+  padding: 5rem 0;
+  background-color: var(
+    --color-primary-accent
+  ); /* Use primary accent for CTA background */
+  color: #fff; /* White text */
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  color: #fff; /* White heading */
+}
+
+.cta p {
+  font-size: 1.2em;
+  margin-bottom: 2em;
+  color: #fff; /* White paragraph */
+}
+
+.clientWins {
+  padding: 4rem 0;
+  background-color: var(--color-background); /* Use background color */
+}
+
+.testimonialGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.testimonialCard {
+  background-color: #fff; /* White background for cards */
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative; /* Needed for pseudo-elements or absolute positioning */
+}
+
+.testimonialCard p {
+  font-size: 1.1em;
+  font-style: italic; /* Italicize testimonial text */
+  margin-bottom: 1em;
+  color: var(--color-text-dark); /* Use text color */
+}
+
+.testimonialAuthor {
+  font-size: 1em;
+  font-weight: bold;
+  text-align: right;
+  color: var(--color-text-dark); /* Use text color */
+}
+
+.contact {
+  padding: 4rem 0;
+  background-color: var(--color-background); /* Use background color */
+}
+
+.contactForm {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff; /* White background for form */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  color: var(--color-text-dark); /* Use text color */
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 1em;
+  border: 1px solid #ccc; /* Light grey border */
+  border-radius: 5px;
+  font-size: 1em;
+  font-family: "Lato", sans-serif; /* Use body font */
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: var(--color-primary-accent); /* Highlight on focus */
+  box-shadow: 0 0 5px rgba(0, 180, 216, 0.5); /* Soft shadow on focus */
+}
+
+.footer {
+  padding: 2rem 0;
+  background-color: var(--color-text-dark); /* Dark background for footer */
+  color: #fff; /* White text */
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column; /* Stack on small screens */
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .footer .container {
+    flex-direction: row; /* Side-by-side on larger screens */
+    justify-content: space-between;
+  }
+}
+
+.socialLinks a {
+  color: #fff; /* White icons */
+  margin: 0 0.5em;
+  font-size: 1.5em;
+  transition: color 0.3s ease;
+}
+
+.socialLinks a:hover {
+  color: var(--color-primary-accent); /* Highlight on hover */
+}

@@ -1,13 +1,13 @@
 import React from "react";
-import "../global.css";
+import styles from "./OriginalLandingPage.module.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const LandingPageAISEO: React.FC = () => (
   <>
-    <header className="hero">
-      <div className="container">
-        <div className="logo-hero-wrap">
-          <div className="logo-sunrays">
+    <header className={styles.hero}>
+      <div className={styles.container}>
+        <div className={styles.logoHeroWrap}>
+          <div className={styles.logoSunrays}>
             {/* Animated sun rays SVG */}
             <svg
               width="100"
@@ -17,14 +17,14 @@ const LandingPageAISEO: React.FC = () => (
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
             >
-              <g className="sunrays-group">
+              <g className={styles.sunraysGroup}>
                 <rect
                   x="48"
                   y="0"
                   width="4"
                   height="18"
                   rx="2"
-                  fill="#D4AF37"
+                  fill="var(--color-gold)"
                   opacity="0.7"
                 >
                   <animate
@@ -41,7 +41,7 @@ const LandingPageAISEO: React.FC = () => (
                   height="18"
                   rx="2"
                   transform="rotate(30 80 10)"
-                  fill="#D4AF37"
+                  fill="var(--color-gold)"
                   opacity="0.7"
                 >
                   <animate
@@ -58,7 +58,7 @@ const LandingPageAISEO: React.FC = () => (
                   height="18"
                   rx="2"
                   transform="rotate(-30 16 10)"
-                  fill="#D4AF37"
+                  fill="var(--color-gold)"
                   opacity="0.7"
                 >
                   <animate
@@ -70,7 +70,7 @@ const LandingPageAISEO: React.FC = () => (
                 </rect>
               </g>
             </svg>
-            <a href="/" className="logo animated-logo">
+            <a href="/" className={styles.logo}>
               <img
                 src="/DSDlogo1.png"
                 alt="Due Season Digital Logo"
@@ -87,7 +87,7 @@ const LandingPageAISEO: React.FC = () => (
           </div>
         </div>
         <h1>
-          <span className="highlight">Get Discovered by AI</span> — Put Your
+          <span className={styles.highlight}>Get Discovered by AI</span> — Put Your
           Business in the Spotlight of ChatGPT, Gemini & Answer Engines
         </h1>
         <p>
@@ -95,8 +95,8 @@ const LandingPageAISEO: React.FC = () => (
           recommendation for AI-powered search results, voice assistants, and
           large language models. Ready to own your "Due Season"?
         </p>
-        <a href="#due-season-index" className="btn btn-cta">
-          <span className="btn-icon" aria-hidden="true">
+        <a href="#due-season-index" className={styles.btnCta}>
+          <span className={styles.btnIcon} aria-hidden="true">
             🤖
           </span>{" "}
           Get Your Free AI SEO Audit
@@ -104,11 +104,11 @@ const LandingPageAISEO: React.FC = () => (
       </div>
     </header>
 
-    <section className="services">
-      <div className="services-bg-animated" aria-hidden="true"></div>
-      <div className="container">
-        <div className="section-header">
-          <span className="services-header-accent" aria-hidden="true">
+    <section className={styles.services}>
+      <div className={styles.servicesBgAnimated} aria-hidden="true"></div>
+      <div className={styles.container}>
+        <div className={styles.sectionHeader}>
+          <span className={styles.servicesHeaderAccent} aria-hidden="true">
             <svg
               width="28"
               height="28"
@@ -117,10 +117,10 @@ const LandingPageAISEO: React.FC = () => (
               xmlns="http://www.w3.org/2000/svg"
             >
               <g>
-                <circle cx="14" cy="14" r="3" fill="#FFC300" />
-                <circle cx="6" cy="6" r="1.5" fill="#4AC6D3" />
-                <circle cx="22" cy="8" r="1.2" fill="#3CAF7A" />
-                <circle cx="8" cy="22" r="1" fill="#D4AF37" />
+                <circle cx="14" cy="14" r="3" fill="var(--color-gold)" />
+                <circle cx="6" cy="6" r="1.5" fill="var(--color-primary-accent)" />
+                <circle cx="22" cy="8" r="1.2" fill="var(--color-green)" />
+                <circle cx="8" cy="22" r="1" fill="var(--color-gold)" />
               </g>
             </svg>
           </span>
@@ -130,8 +130,8 @@ const LandingPageAISEO: React.FC = () => (
             by the bots that matter most.
           </p>
         </div>
-        <div className="services-grid">
-          <article className="service-card">
+        <div className={styles.servicesGrid}>
+          <article className={styles.serviceCard}>
             <i className="fas fa-brain"></i>
             <h3>AI SEO & LLM Visibility</h3>
             <p>
@@ -139,7 +139,7 @@ const LandingPageAISEO: React.FC = () => (
               Gemini, and Perplexity mention your business first.
             </p>
           </article>
-          <article className="service-card">
+          <article className={styles.serviceCard}>
             <i className="fas fa-robot"></i>
             <h3>AI-Driven Content & Schema</h3>
             <p>
@@ -147,7 +147,7 @@ const LandingPageAISEO: React.FC = () => (
               signals AI needs to recommend you in answer engines.
             </p>
           </article>
-          <article className="service-card">
+          <article className={styles.serviceCard}>
             <i className="fas fa-map-marker-alt"></i>
             <h3>Local Profile Optimization</h3>
             <p>
@@ -155,7 +155,7 @@ const LandingPageAISEO: React.FC = () => (
               optimized for AI and voice search discovery.
             </p>
           </article>
-          <article className="service-card">
+          <article className={styles.serviceCard}>
             <i className="fas fa-chart-line"></i>
             <h3>LLM Audit & Analytics</h3>
             <p>
@@ -167,12 +167,12 @@ const LandingPageAISEO: React.FC = () => (
       </div>
     </section>
 
-    <section className="about">
-      <div className="container">
-        <div className="about-visuals">
+    <section className={styles.about}>
+      <div className={styles.container}>
+        <div className={styles.aboutVisuals}>
           {/* Animated Water Droplets SVG (rain effect) */}
           <div
-            className="water-droplets"
+            className={styles.waterDroplets}
             aria-hidden="true"
             style={{
               margin: "0 auto",
@@ -187,78 +187,78 @@ const LandingPageAISEO: React.FC = () => (
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g className="droplet-group">
+              <g className={styles.dropletGroup}>
                 <ellipse
-                  className="droplet"
+                  className={styles.droplet}
                   cx="10"
                   cy="10"
                   rx="3"
                   ry="7"
-                  fill="#4AC6D3"
+                  fill="var(--color-primary-accent)"
                 />
                 <ellipse
-                  className="droplet"
+                  className={styles.droplet}
                   cx="25"
                   cy="20"
                   rx="2.5"
                   ry="6"
-                  fill="#2C7A9E"
+                  fill="var(--color-text-dark)"
                 />
                 <ellipse
-                  className="droplet"
+                  className={styles.droplet}
                   cx="40"
                   cy="8"
                   rx="2.5"
                   ry="6"
-                  fill="#4AC6D3"
+                  fill="var(--color-primary-accent)"
                 />
                 <ellipse
-                  className="droplet"
+                  className={styles.droplet}
                   cx="60"
                   cy="18"
                   rx="2"
                   ry="5"
-                  fill="#2C7A9E"
+                  fill="var(--color-text-dark)"
                 />
                 <ellipse
-                  className="droplet"
+                  className={styles.droplet}
                   cx="70"
                   cy="30"
                   rx="2"
                   ry="5"
-                  fill="#4AC6D3"
+                  fill="var(--color-primary-accent)"
                 />
                 <ellipse
-                  className="droplet"
+                  className={styles.droplet}
                   cx="20"
                   cy="40"
                   rx="1.5"
                   ry="4"
-                  fill="#2C7A9E"
+                  fill="var(--color-text-dark)"
                 />
                 <ellipse
-                  className="droplet"
+                  className={styles.droplet}
                   cx="55"
                   cy="50"
                   rx="1.5"
                   ry="4"
-                  fill="#4AC6D3"
+                  fill="var(--color-primary-accent)"
                 />
                 <ellipse
-                  className="droplet"
+                  className={styles.droplet}
                   cx="35"
                   cy="60"
                   rx="1"
                   ry="3"
-                  fill="#4AC6D3"
+                  fill="var(--color-primary-accent)"
                 />
                 <ellipse
-                  className="droplet"
+                  className={styles.droplet}
                   cx="50"
                   cy="65"
                   rx="0.8"
                   ry="2"
-                  fill="#2C7A9E"
+                  fill="var(--color-text-dark)"
                 />
               </g>
             </svg>
@@ -275,9 +275,9 @@ const LandingPageAISEO: React.FC = () => (
             sizes="(max-width: 600px) 800px, (max-width: 1200px) 1200px, 1950px"
           />
         </div>
-        <div className="about-content">
+        <div className={styles.aboutContent}>
           <div>
-            <div className="section-header">
+            <div className={styles.sectionHeader}>
               <h2>About Due Season Digital</h2>
               <p>Your AI SEO Partner for Local Business Growth</p>
             </div>
@@ -298,10 +298,10 @@ const LandingPageAISEO: React.FC = () => (
       </div>
     </section>
 
-    <section id="due-season-index" className="cta">
-      <div className="container">
+    <section id="due-season-index" className={styles.cta}>
+      <div className={styles.container}>
         {/* Animated Growing Plant SVG (larger) */}
-        <div className="blooming-plant fun-bloom-entrance" aria-hidden="true">
+        <div className={styles.bloomingPlant} aria-hidden="true">
           <svg
             width="180"
             height="220"
@@ -317,8 +317,8 @@ const LandingPageAISEO: React.FC = () => (
                 width="8"
                 height="80"
                 rx="4"
-                fill="#3CAF7A"
-                className="growing-stem"
+                fill="var(--color-green)"
+                className={styles.growingStem}
               />
               {/* Left leaf */}
               <ellipse
@@ -326,8 +326,8 @@ const LandingPageAISEO: React.FC = () => (
                 cy="180"
                 rx="24"
                 ry="12"
-                fill="#4AC6D3"
-                className="growing-leaf-left"
+                fill="var(--color-primary-accent)"
+                className={styles.growingLeafLeft}
               />
               {/* Right leaf */}
               <ellipse
@@ -335,8 +335,8 @@ const LandingPageAISEO: React.FC = () => (
                 cy="180"
                 rx="24"
                 ry="12"
-                fill="#4AC6D3"
-                className="growing-leaf-right"
+                fill="var(--color-primary-accent)"
+                className={styles.growingLeafRight}
               />
             </g>
           </svg>
@@ -350,16 +350,16 @@ const LandingPageAISEO: React.FC = () => (
             rank—and get actionable next steps instantly.
           </strong>
         </p>
-        <a href="/due-season-index" className="btn">
+        <a href="/due-season-index" className={styles.btn}>
           Try the Due Season Index Tool
         </a>
       </div>
     </section>
 
-    <section className="testimonials">
-      <div className="container">
-        <div className="section-header">
-          <span className="testimonial-header-accent" aria-hidden="true">
+    <section className={styles.clientWins}>
+      <div className={styles.container}>
+        <div className={styles.sectionHeader}>
+          <span className={styles.clientWinsHeaderAccent} aria-hidden="true">
             <svg
               width="28"
               height="28"
@@ -368,10 +368,10 @@ const LandingPageAISEO: React.FC = () => (
               xmlns="http://www.w3.org/2000/svg"
             >
               <g>
-                <circle cx="14" cy="14" r="3" fill="#FFC300" />
-                <circle cx="6" cy="6" r="1.5" fill="#4AC6D3" />
-                <circle cx="22" cy="8" r="1.2" fill="#3CAF7A" />
-                <circle cx="8" cy="22" r="1" fill="#D4AF37" />
+                <circle cx="14" cy="14" r="3" fill="var(--color-gold)" />
+                <circle cx="6" cy="6" r="1.5" fill="var(--color-primary-accent)" />
+                <circle cx="22" cy="8" r="1.2" fill="var(--color-green)" />
+                <circle cx="8" cy="22" r="1" fill="var(--color-gold)" />
               </g>
             </svg>
           </span>
@@ -381,31 +381,31 @@ const LandingPageAISEO: React.FC = () => (
             AI-first approach
           </p>
         </div>
-        <div className="testimonial-grid">
-          <article className="testimonial-card">
+        <div className={styles.testimonialGrid}>
+          <article className={styles.testimonialCard}>
             <p>
               "Our business started showing up in ChatGPT and Gemini answers.
               We've seen a surge in leads from people who 'found us on AI.'"
             </p>
-            <div className="testimonial-author">
+            <div className={styles.testimonialAuthor}>
               - Sarah Johnson, Local Bakery Owner
             </div>
           </article>
-          <article className="testimonial-card">
+          <article className={styles.testimonialCard}>
             <p>
               "Due Season Digital's audit made it clear what we were missing for
               AI SEO. Their plan was practical, and the results are obvious."
             </p>
-            <div className="testimonial-author">
+            <div className={styles.testimonialAuthor}>
               - Mike Thompson, Coffee Shop Owner
             </div>
           </article>
-          <article className="testimonial-card">
+          <article className={styles.testimonialCard}>
             <p>
               "We finally understand what matters for Google SGE and ChatGPT,
               not just Google rankings. The team made AI SEO simple for us."
             </p>
-            <div className="testimonial-author">
+            <div className={styles.testimonialAuthor}>
               - Lisa Chen, Boutique Owner
             </div>
           </article>
@@ -413,20 +413,20 @@ const LandingPageAISEO: React.FC = () => (
       </div>
     </section>
 
-    <section id="contact" className="contact">
-      <div className="container">
-        <div className="section-header">
+    <section id="contact" className={styles.contact}>
+      <div className={styles.container}>
+        <div className={styles.sectionHeader}>
           <h2>Get in Touch</h2>
           <p>Let's get your business found by the next wave of searchers</p>
         </div>
         <form
-          className="contact-form"
+          className={styles.contactForm}
           action="https://formsubmit.co/kristenjoy@dueseasondigital.com"
           method="POST"
         >
           <input type="hidden" name="_next" value="/thank-you.html" />
           <input type="hidden" name="_captcha" value="false" />
-          <div className="form-group">
+          <div className={styles.formGroup}>
             <label htmlFor="name">Your Name</label>
             <input
               type="text"
@@ -436,7 +436,7 @@ const LandingPageAISEO: React.FC = () => (
               required
             />
           </div>
-          <div className="form-group">
+          <div className={styles.formGroup}>
             <label htmlFor="email">Your Email</label>
             <input
               type="email"
