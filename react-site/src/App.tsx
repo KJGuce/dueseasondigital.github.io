@@ -4,18 +4,13 @@ import HomePage from "./pages/HomePage";
 import ServicesPage from "./pages/ServicesPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
+import DueSeasonIndexTool from "./pages/DueSeasonIndexTool";
 import "./variables.css";
 import "./App.css";
 
-// Handle routing for both GitHub Pages and production domain
-const basename =
-  window.location.hostname === "dueseasondigital.com"
-    ? ""
-    : "/dueseasondigital.github.io";
-
 function App() {
   return (
-    <Router basename={basename}>
+    <Router>
       <div className="min-h-screen">
         <Navbar />
         <main className="pt-16">
@@ -26,6 +21,7 @@ function App() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/index-tool" element={<DueSeasonIndexTool />} />
             {/* Add other routes as needed */}
           </Routes>
         </main>

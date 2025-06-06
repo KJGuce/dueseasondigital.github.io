@@ -1,0 +1,262 @@
+.indexToolPage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--color-background);
+  padding-top: 80px; /* Account for fixed navbar */
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 5vw, 4rem);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding-top: 4rem;
+}
+
+.header h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  color: var(--color-text-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.toolCard {
+  background: var(--color-background-light);
+  border-radius: 20px;
+  padding: clamp(2rem, 4vw, 3rem);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 4rem;
+}
+
+.step {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.step h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: var(--color-text);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  position: relative;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-light);
+  font-size: 1.2rem;
+}
+
+.input {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem;
+  border-radius: 10px;
+  border: 2px solid var(--color-border);
+  background-color: var(--color-background-light);
+  color: var(--color-text-light);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.2);
+  background-color: var(--color-background-lighter);
+  color: var(--color-text-dark);
+}
+
+.submitButton {
+  padding: 1rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-accent) 100%
+  );
+  color: var(--color-background);
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.submitButton:hover:not(:disabled) {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.leadText {
+  font-size: 1.2rem;
+  color: var(--color-text-light);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Score Section */
+.scoreSection {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.scoreCircle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-accent) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 2rem;
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+}
+
+.scoreValue {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--color-background);
+}
+
+.scoreLabel {
+  font-size: 1.2rem;
+  color: var(--color-background);
+  font-weight: 600;
+}
+
+.scoreMessage {
+  font-size: 2rem;
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+/* Recommendations */
+.recommendations {
+  margin-bottom: 3rem;
+}
+
+.recommendations h3 {
+  font-size: 1.8rem;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.recommendationsList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.recommendationsList li {
+  background: var(--color-background-lighter);
+  padding: 1.5rem;
+  border-radius: 10px;
+  color: var(--color-text-light);
+  font-size: 1.1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Trend Chart */
+.trendChart {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: var(--color-background-lighter);
+  border-radius: 15px;
+}
+
+.trendChart h3 {
+  font-size: 1.8rem;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* CTA Section */
+.ctaSection {
+  text-align: center;
+}
+
+.ctaButton {
+  padding: 1.2rem 2.5rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-accent) 100%
+  );
+  color: var(--color-background);
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ctaButton:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .scoreCircle {
+    width: 150px;
+    height: 150px;
+  }
+
+  .scoreValue {
+    font-size: 3rem;
+  }
+
+  .scoreLabel {
+    font-size: 1rem;
+  }
+
+  .scoreMessage {
+    font-size: 1.5rem;
+  }
+
+  .recommendationsList li {
+    font-size: 1rem;
+    padding: 1.2rem;
+  }
+}
