@@ -213,11 +213,21 @@
 /* CTA Section */
 .ctaSection {
   text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  background: var(--color-background-lighter);
+  border-radius: 15px;
+}
+
+.ctaSection h3 {
+  font-size: 1.8rem;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
 }
 
 .ctaButtons {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 1rem;
@@ -241,10 +251,12 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  min-width: 250px;
 }
 
 .ctaButton:hover:not(:disabled) {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
 }
 
 .ctaButton:disabled {
@@ -297,6 +309,7 @@
 
   .ctaButtons {
     flex-direction: column;
+    gap: 1rem;
   }
 
   .ctaButton {

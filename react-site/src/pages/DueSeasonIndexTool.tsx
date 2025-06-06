@@ -160,7 +160,7 @@ const DueSeasonIndexTool = () => {
 
   const handleBookCall = () => {
     // Replace with your actual calendar link
-    window.open("https://calendly.com/your-calendar-link", "_blank");
+    window.open("https://calendly.com/dueseasondigital/30min", "_blank");
   };
 
   return (
@@ -359,6 +359,7 @@ const DueSeasonIndexTool = () => {
                 </div>
 
                 <div className={styles.ctaSection}>
+                  <h3>Ready to Take Action?</h3>
                   <div className={styles.ctaButtons}>
                     <motion.button
                       whileHover={{ scale: 1.05 }}
