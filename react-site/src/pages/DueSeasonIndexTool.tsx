@@ -359,17 +359,8 @@ const DueSeasonIndexTool = () => {
                 </div>
 
                 <div className={styles.ctaSection}>
-                  <h3>Ready to Take Action?</h3>
+                  <h3>Choose Your Next Step</h3>
                   <div className={styles.ctaButtons}>
-                    <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className={styles.ctaButton}
-                      onClick={handleBookCall}
-                    >
-                      <FaCalendarAlt className={styles.buttonIcon} />
-                      Book a Free Strategy Call
-                    </motion.button>
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
@@ -383,6 +374,15 @@ const DueSeasonIndexTool = () => {
                         : isReportSent
                         ? "Report Sent!"
                         : "Get Detailed Report"}
+                    </motion.button>
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className={styles.ctaButton}
+                      onClick={handleBookCall}
+                    >
+                      <FaCalendarAlt className={styles.buttonIcon} />
+                      Book a Free Strategy Call
                     </motion.button>
                   </div>
                   {isReportSent && (
