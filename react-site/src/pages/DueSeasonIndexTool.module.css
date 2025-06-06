@@ -217,6 +217,7 @@
   padding: 2rem;
   background: var(--color-background-lighter);
   border-radius: 15px;
+  width: 100%;
 }
 
 .ctaSection h3 {
@@ -231,6 +232,7 @@
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 1rem;
+  width: 100%;
 }
 
 .ctaButton {
@@ -252,6 +254,7 @@
   align-items: center;
   gap: 0.5rem;
   min-width: 250px;
+  justify-content: center;
 }
 
 .ctaButton:hover:not(:disabled) {
@@ -314,6 +317,5 @@
 
   .ctaButton {
     width: 100%;
-    justify-content: center;
   }
 }
