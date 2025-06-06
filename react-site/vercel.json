@@ -4,5 +4,23 @@
       "source": "/(.*)",
       "destination": "/index.html"
     }
+  ],
+  "routes": [
+    {
+      "src": "/about",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/services",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/contact",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/index-tool",
+      "dest": "/index.html"
+    }
   ]
 }
