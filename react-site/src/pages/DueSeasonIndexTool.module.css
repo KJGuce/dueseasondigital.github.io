@@ -245,7 +245,7 @@
     var(--color-primary) 0%,
     var(--color-primary-accent) 100%
   );
-  color: var(--color-background);
+  color: white;
   border: none;
   border-radius: 10px;
   font-size: 1.2rem;
@@ -271,17 +271,14 @@
 }
 
 .reportButton {
-  background: linear-gradient(
-    135deg,
-    var(--color-secondary) 0%,
-    var(--color-secondary-accent) 100%
-  );
+  background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
   order: -1; /* Make it appear first */
-  color: var(--color-background);
+  color: white;
 }
 
 .buttonIcon {
   font-size: 1.2rem;
+  color: white;
 }
 
 .successMessage {
