@@ -15,6 +15,56 @@ import founderPhoto from "../assets/KjGuce-BSTN Pic.jpg";
 const AboutPage: React.FC = () => {
   return (
     <div className={styles.aboutPage}>
+      <div className={styles.hero}>
+        <h1>About Due Season Digital</h1>
+        <p>We help businesses thrive in the age of AI-powered search</p>
+      </div>
+
+      <section className={styles.mission}>
+        <h2>Our Mission</h2>
+        <p>
+          At Due Season Digital, we're dedicated to helping businesses adapt and
+          succeed in the rapidly evolving digital landscape. We believe that
+          every business deserves to be found and recommended by AI-powered
+          search and large language models.
+        </p>
+      </section>
+
+      <section className={styles.values}>
+        <h2>Our Values</h2>
+        <div className={styles.valueGrid}>
+          <div className={styles.valueCard}>
+            <h3>Innovation</h3>
+            <p>
+              We stay at the forefront of digital marketing trends and AI
+              technology to provide cutting-edge solutions.
+            </p>
+          </div>
+          <div className={styles.valueCard}>
+            <h3>Transparency</h3>
+            <p>
+              We believe in clear communication and honest reporting, ensuring
+              you understand every aspect of our work.
+            </p>
+          </div>
+          <div className={styles.valueCard}>
+            <h3>Results</h3>
+            <p>
+              We're focused on delivering measurable outcomes that drive real
+              business growth and success.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.team}>
+        <h2>Our Team</h2>
+        <p>
+          Our team combines deep expertise in digital marketing, AI technology,
+          and business strategy to deliver exceptional results for our clients.
+        </p>
+      </section>
+
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.container}>
