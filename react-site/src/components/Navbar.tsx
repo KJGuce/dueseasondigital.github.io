@@ -8,10 +8,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: "Home", href: "#/" },
+    { name: "Services", href: "#/services" },
+    { name: "About", href: "#/about" },
+    { name: "Contact", href: "#/contact" },
   ];
 
   return (
@@ -28,7 +28,11 @@ const Navbar = () => {
         <div className={styles.desktopNav}>
           <div className={styles.navLinks}>
             {navLinks.map((link) => (
-              <Link key={link.name} to={link.href} className={styles.navLink}>
+              <Link
+                key={link.name}
+                to={link.href.replace("#", "")}
+                className={styles.navLink}
+              >
                 {link.name}
               </Link>
             ))}
@@ -68,7 +72,7 @@ const Navbar = () => {
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
-                  to={link.href}
+                  to={link.href.replace("#", "")}
                   className={styles.mobileNavLink}
                 >
                   {link.name}
