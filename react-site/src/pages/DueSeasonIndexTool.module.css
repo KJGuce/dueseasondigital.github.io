@@ -215,10 +215,11 @@
   text-align: center;
   margin-top: 3rem;
   padding: 2.5rem;
-  background: var(--color-background-lighter);
+  background: var(--color-background);
   border-radius: 15px;
   width: 100%;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border: 2px solid var(--color-border);
 }
 
 .ctaSection h3 {
@@ -276,6 +277,7 @@
     var(--color-secondary-accent) 100%
   );
   order: -1; /* Make it appear first */
+  border: 2px solid var(--color-secondary);
 }
 
 .buttonIcon {
