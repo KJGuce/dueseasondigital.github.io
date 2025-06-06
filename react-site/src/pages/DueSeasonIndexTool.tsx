@@ -7,6 +7,8 @@ import {
   FaUser,
   FaMapMarkerAlt,
   FaTags,
+  FaFileAlt,
+  FaCalendarAlt,
 } from "react-icons/fa";
 import { Line } from "react-chartjs-2";
 import {
@@ -87,6 +89,7 @@ const DueSeasonIndexTool = () => {
   });
   const [loading, setLoading] = useState(false);
   const [score, setScore] = useState(0);
+  const [isReportSent, setIsReportSent] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -145,6 +148,19 @@ const DueSeasonIndexTool = () => {
     // Return 3-4 recommendations based on score
     const count = score < 40 ? 4 : 3;
     return allRecommendations.slice(0, count);
+  };
+
+  const handleGetDetailedReport = async () => {
+    setLoading(true);
+    // Simulate sending report
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+    setIsReportSent(true);
+    setLoading(false);
+  };
+
+  const handleBookCall = () => {
+    // Replace with your actual calendar link
+    window.open("https://calendly.com/your-calendar-link", "_blank");
   };
 
   return (
@@ -343,13 +359,40 @@ const DueSeasonIndexTool = () => {
                 </div>
 
                 <div className={styles.ctaSection}>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className={styles.ctaButton}
-                  >
-                    Book a Free Strategy Call
-                  </motion.button>
+                  <div className={styles.ctaButtons}>
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className={styles.ctaButton}
+                      onClick={handleBookCall}
+                    >
+                      <FaCalendarAlt className={styles.buttonIcon} />
+                      Book a Free Strategy Call
+                    </motion.button>
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className={`${styles.ctaButton} ${styles.reportButton}`}
+                      onClick={handleGetDetailedReport}
+                      disabled={loading || isReportSent}
+                    >
+                      <FaFileAlt className={styles.buttonIcon} />
+                      {loading
+                        ? "Sending..."
+                        : isReportSent
+                        ? "Report Sent!"
+                        : "Get Detailed Report"}
+                    </motion.button>
+                  </div>
+                  {isReportSent && (
+                    <motion.p
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className={styles.successMessage}
+                    >
+                      Your detailed report has been sent to your email!
+                    </motion.p>
+                  )}
                 </div>
               </motion.div>
             )}

@@ -215,6 +215,14 @@
   text-align: center;
 }
 
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
 .ctaButton {
   padding: 1.2rem 2.5rem;
   background: linear-gradient(
@@ -230,10 +238,37 @@
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.ctaButton:hover {
+.ctaButton:hover:not(:disabled) {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.ctaButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.reportButton {
+  background: linear-gradient(
+    135deg,
+    var(--color-secondary) 0%,
+    var(--color-secondary-accent) 100%
+  );
+}
+
+.buttonIcon {
+  font-size: 1.2rem;
+}
+
+.successMessage {
+  color: var(--color-success);
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  font-weight: 600;
 }
 
 /* Responsive Design */
@@ -258,5 +293,14 @@
   .recommendationsList li {
     font-size: 1rem;
     padding: 1.2rem;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+  }
+
+  .ctaButton {
+    width: 100%;
+    justify-content: center;
   }
 }
