@@ -22,14 +22,43 @@
 
 .logo {
   font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-text);
+  font-weight: 800;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-accent) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  letter-spacing: -0.5px;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.logo::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-accent) 100%
+  );
+  transition: width 0.3s ease;
 }
 
 .logo:hover {
-  color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+.logo:hover::after {
+  width: 100%;
 }
 
 .navLinks {
