@@ -1,0 +1,266 @@
+.contactPage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* Background will be handled by individual sections */
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 5vw, 4rem);
+}
+
+/* Hero Section */
+.hero {
+  padding: clamp(4rem, 10vw, 8rem) 0;
+  background: linear-gradient(
+    135deg,
+    var(--color-background) 0%,
+    var(--color-background-dark) 100%
+  );
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--color-text);
+  line-height: 1.1;
+}
+
+.heroSubtitle {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--color-text);
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Form and Info Section */
+.formInfoSection {
+  padding: clamp(4rem, 8vw, 6rem) 0;
+  background: var(--color-background-dark);
+}
+
+.formInfoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  gap: clamp(3rem, 6vw, 5rem);
+  align-items: flex-start;
+}
+
+.contactFormCard {
+  background: var(--color-background-light);
+  padding: clamp(2rem, 4vw, 3rem);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contactFormCard h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: var(--color-text);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: var(--color-text-light);
+  font-weight: 600;
+}
+
+.formInput,
+.formTextarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-background);
+  color: var(--color-text-dark);
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formInput:focus,
+.formTextarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.3);
+}
+
+.formTextarea {
+  resize: vertical;
+}
+
+.submitButton {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-accent) 100%
+  );
+  color: var(--color-background);
+  border: none;
+  border-radius: 10px;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.submitButton:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.submitSuccess {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  color: var(--color-success);
+  text-align: center;
+}
+
+.directSocialCard {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 4vw, 4rem);
+}
+
+.directInfo,
+.socialConnect {
+  background: var(--color-background-light);
+  padding: clamp(2rem, 4vw, 3rem);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.directInfo h2,
+.socialConnect h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: var(--color-text);
+  margin-bottom: 2rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: var(--color-text-light);
+}
+
+.contactIcon {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center; /* Center social icons */
+}
+
+.socialIconLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--color-background);
+  color: var(--color-primary);
+  font-size: 1.8rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.socialIconLink:hover {
+  background: var(--color-primary);
+  color: var(--color-background);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* What Happens Next Section */
+.whatHappensNext {
+  padding: clamp(4rem, 8vw, 6rem) 0;
+  background: var(--color-background);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.sectionHeader h2 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-accent) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.stepsList {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.stepItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.stepNumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-background);
+  font-weight: 700;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-right: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .formInfoGrid {
+    gap: 3rem;
+  }
+
+  .socialIcons {
+    justify-content: center; /* Ensure centering on mobile */
+  }
+
+  .stepItem {
+    font-size: 1rem;
+  }
+}
