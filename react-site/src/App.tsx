@@ -1,6 +1,10 @@
+import React, { Suspense } from "react";
 import { Routes, Route, Link } from "react-router-dom";
-import DueSeasonIndexPage from "./pages/DueSeasonIndex";
-import LandingPageAISEO from "./pages/OriginalLandingPage";
+
+const LandingPageAISEO = React.lazy(
+  () => import("./pages/OriginalLandingPage")
+);
+const DueSeasonIndexPage = React.lazy(() => import("./pages/DueSeasonIndex"));
 
 function App() {
   return (
@@ -11,10 +15,12 @@ function App() {
         </Link>
         <Link to="/due-season-index">Due Season Index</Link>
       </nav>
-      <Routes>
-        <Route path="/" element={<LandingPageAISEO />} />
-        <Route path="/due-season-index" element={<DueSeasonIndexPage />} />
-      </Routes>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<LandingPageAISEO />} />
+          <Route path="/due-season-index" element={<DueSeasonIndexPage />} />
+        </Routes>
+      </Suspense>
     </div>
   );
 }
