@@ -277,7 +277,7 @@
     var(--color-secondary-accent) 100%
   );
   order: -1; /* Make it appear first */
-  border: 2px solid var(--color-secondary);
+  color: var(--color-background);
 }
 
 .buttonIcon {
