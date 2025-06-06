@@ -26,7 +26,10 @@ jobs:
           node-version: "20"
 
       - name: Install Dependencies
-        run: cd react-site && npm install --legacy-peer-deps
+        run: |
+          cd react-site
+          npm install --legacy-peer-deps
+          npm install chart.js react-chartjs-2
 
       - name: Build
         run: cd react-site && npm run build
