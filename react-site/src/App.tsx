@@ -15,7 +15,7 @@ const basename =
 
 function App() {
   return (
-    <Router>
+    <Router basename={basename}>
       <div className="min-h-screen">
         <Navbar />
         <main className="pt-16">
