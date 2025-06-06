@@ -2,6 +2,9 @@
   padding-top: 80px;
   min-height: 100vh;
   background: var(--color-background);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .container {
@@ -14,24 +17,47 @@
 /* Hero Section */
 .hero {
   text-align: center;
-  padding: 4rem 1rem;
+  padding: clamp(4rem, 10vw, 8rem) 0;
+  background: linear-gradient(
+    135deg,
+    var(--color-background) 0%,
+    var(--color-background-dark) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 70% 30%,
+    var(--color-primary) 0%,
+    transparent 70%
+  );
+  opacity: 0.05;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+  line-height: 1.1;
+  position: relative;
+  z-index: 2;
   background: linear-gradient(
     135deg,
     var(--color-primary) 0%,
     var(--color-accent) 100%
   );
-  color: var(--color-background);
-}
-
-.hero h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 800;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
-  opacity: 0.9;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .heroSubtitle {
@@ -39,6 +65,11 @@
   color: var(--color-text);
   margin-bottom: clamp(2rem, 4vw, 3rem);
   font-weight: 500;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 2;
 }
 
 .heroText {
@@ -47,6 +78,8 @@
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
+  position: relative;
+  z-index: 2;
 }
 
 .highlight {
@@ -92,12 +125,32 @@
 .visionMission {
   padding: clamp(4rem, 8vw, 6rem) 0;
   background: var(--color-background);
+  position: relative;
+  overflow: hidden;
+}
+
+.visionMission::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 30% 70%,
+    var(--color-primary) 0%,
+    transparent 70%
+  );
+  opacity: 0.05;
+  z-index: 1;
 }
 
 .visionMissionGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 500px), 1fr));
   gap: clamp(2rem, 4vw, 3rem);
+  position: relative;
+  z-index: 2;
 }
 
 .visionCard,
@@ -106,31 +159,56 @@
   padding: clamp(2rem, 4vw, 3rem);
   border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  border-top: 4px solid var(--color-accent);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.missionCard {
-  border-top: 4px solid var(--color-primary);
+.visionCard::before,
+.missionCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .visionCard:hover,
 .missionCard:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.visionCard:hover::before,
+.missionCard:hover::before {
+  opacity: 0.05;
 }
 
 .visionCard h3,
 .missionCard h3 {
   font-size: clamp(1.5rem, 3vw, 2rem);
-  color: var(--color-accent);
+  font-weight: 700;
   margin-bottom: 1rem;
+  color: var(--color-text-dark);
+  position: relative;
+  z-index: 1;
 }
 
 .visionCard p,
 .missionCard p {
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
-  color: var(--color-text);
+  color: var(--color-text-light);
+  font-size: 1.1rem;
   line-height: 1.6;
+  position: relative;
+  z-index: 1;
 }
 
 /* Core Values Section */
@@ -141,47 +219,114 @@
     var(--color-background) 0%,
     var(--color-background-dark) 100%
   );
+  position: relative;
+  overflow: hidden;
+}
+
+.coreValues::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 70% 30%,
+    var(--color-primary) 0%,
+    transparent 70%
+  );
+  opacity: 0.05;
+  z-index: 1;
 }
 
 .valuesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
   gap: clamp(2rem, 4vw, 3rem);
+  position: relative;
+  z-index: 2;
 }
 
 .valueCard {
-  background: var(--color-card-background);
-  padding: 2rem;
-  border-radius: 15px;
+  background: var(--color-background-light);
+  padding: clamp(2rem, 4vw, 3rem);
+  border-radius: 20px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.valueCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .valueCard:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.valueCard:hover::before {
+  opacity: 0.05;
 }
 
 .valueCard h3 {
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 700;
   margin-bottom: 1rem;
-  color: var(--color-text);
+  color: var(--color-text-dark);
+  position: relative;
+  z-index: 1;
 }
 
 .valueCard p {
   color: var(--color-text-light);
   line-height: 1.6;
+  position: relative;
+  z-index: 1;
 }
 
 /* Promise Section */
 .promise {
   padding: clamp(4rem, 8vw, 6rem) 0;
   background: var(--color-background);
+  position: relative;
+  overflow: hidden;
+}
+
+.promise::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 30% 70%,
+    var(--color-primary) 0%,
+    transparent 70%
+  );
+  opacity: 0.05;
+  z-index: 1;
 }
 
 .promiseContent {
   max-width: 900px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .promiseIntro {
@@ -213,7 +358,7 @@
 }
 
 .promiseGuarantees li svg {
-  color: var(--color-accent);
+  color: var(--color-primary);
   font-size: 1.2rem;
   margin-top: 0.3rem;
   flex-shrink: 0;
@@ -251,7 +396,29 @@
 /* Founder Section */
 .founder {
   padding: clamp(4rem, 8vw, 6rem) 0;
-  background: var(--color-background);
+  background: linear-gradient(
+    135deg,
+    var(--color-background) 0%,
+    var(--color-background-dark) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.founder::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 70% 30%,
+    var(--color-primary) 0%,
+    transparent 70%
+  );
+  opacity: 0.05;
+  z-index: 1;
 }
 
 .founderContent {
@@ -259,6 +426,8 @@
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
   gap: clamp(3rem, 6vw, 5rem);
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
 .founderImage {
@@ -270,6 +439,12 @@
   margin: 0 auto;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   border: 8px solid var(--color-primary);
+  transition: all 0.3s ease;
+}
+
+.founderImage:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
 .founderImage::before {
@@ -305,6 +480,14 @@
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   color: var(--color-accent);
   margin-bottom: 1.5rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-accent) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .founderBio p {
@@ -362,13 +545,16 @@
     padding: 3rem 1rem;
   }
 
-  .mission,
-  .values,
-  .team {
-    padding: 3rem 1rem;
+  .visionMissionGrid {
+    grid-template-columns: 1fr;
   }
 
-  .valueGrid {
+  .visionCard,
+  .missionCard {
+    padding: 2rem;
+  }
+
+  .valuesGrid {
     grid-template-columns: 1fr;
   }
 }

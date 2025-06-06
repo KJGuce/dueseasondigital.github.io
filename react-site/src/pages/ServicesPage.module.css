@@ -16,8 +16,30 @@
   margin-bottom: 4rem;
   padding-top: 6rem;
   padding-bottom: 4rem;
-  background: var(--color-background-dark);
+  background: linear-gradient(
+    135deg,
+    var(--color-background) 0%,
+    var(--color-background-dark) 100%
+  );
   margin-top: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 70% 30%,
+    var(--color-primary) 0%,
+    transparent 70%
+  );
+  opacity: 0.05;
+  z-index: 1;
 }
 
 .header h1 {
@@ -31,12 +53,16 @@
   );
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  z-index: 2;
 }
 
 .header p {
   font-size: clamp(1.25rem, 2vw, 1.5rem);
   color: var(--color-text-light);
+  position: relative;
+  z-index: 2;
 }
 
 .packages {
@@ -50,7 +76,7 @@
 }
 
 .package {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--color-background-light);
   border-radius: 20px;
   padding: 2rem;
   position: relative;
@@ -58,20 +84,21 @@
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .package:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .popular {
   background: linear-gradient(
     135deg,
-    rgba(255, 215, 0, 0.1) 0%,
-    rgba(255, 107, 107, 0.1) 100%
+    var(--color-primary) 0%,
+    var(--color-primary-accent) 100%
   );
-  border: 1px solid rgba(255, 215, 0, 0.2);
+  border: none;
 }
 
 .popularBadge {
@@ -88,6 +115,7 @@
   border-radius: 20px;
   font-weight: 600;
   font-size: 0.9rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .packageHeader {
@@ -175,7 +203,7 @@
   background: linear-gradient(
     135deg,
     var(--color-primary) 0%,
-    var(--color-accent) 100%
+    var(--color-primary-accent) 100%
   );
   color: var(--color-background);
   padding: 1rem;
@@ -184,13 +212,13 @@
   font-size: 1.1rem;
   border: none;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
 .ctaButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .addOns {
@@ -198,6 +226,24 @@
   padding-top: 4rem;
   padding-bottom: 4rem;
   background: var(--color-background-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.addOns::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 30% 70%,
+    var(--color-primary) 0%,
+    transparent 70%
+  );
+  opacity: 0.05;
+  z-index: 1;
 }
 
 .addOns h2 {
@@ -205,16 +251,20 @@
   font-size: clamp(2rem, 3vw, 2.5rem);
   margin-bottom: 2rem;
   color: var(--color-text-dark);
+  position: relative;
+  z-index: 2;
 }
 
 .addOnsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
+  position: relative;
+  z-index: 2;
 }
 
 .addOn {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--color-background-light);
   border-radius: 15px;
   padding: 1.5rem;
   text-align: center;
@@ -222,10 +272,12 @@
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .addOn:hover {
   transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
 }
 
 .addOn h3 {
@@ -241,7 +293,7 @@
 
 .custom {
   text-align: center;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--color-background-light);
   border-radius: 20px;
   padding: 3rem;
   backdrop-filter: blur(10px);
@@ -250,12 +302,21 @@
   padding-top: 4rem;
   padding-bottom: 4rem;
   background: var(--color-background);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .custom h2 {
   font-size: clamp(2rem, 3vw, 2.5rem);
   margin-bottom: 1rem;
   color: var(--color-text-dark);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-accent) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .custom p {

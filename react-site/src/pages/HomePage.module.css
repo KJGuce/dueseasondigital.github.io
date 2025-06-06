@@ -14,8 +14,9 @@
 
 .container {
   width: 100%;
-  margin: 0;
-  padding: 0;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 5vw, 4rem);
 }
 
 /* Hero Section */
@@ -23,7 +24,11 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-background) 0%,
+    var(--color-background-dark) 100%
+  );
   position: relative;
   overflow: hidden;
   padding: 4rem 0;
@@ -39,9 +44,10 @@
   bottom: 0;
   background: radial-gradient(
     circle at 50% 50%,
-    rgba(255, 215, 0, 0.1) 0%,
+    var(--color-primary) 0%,
     transparent 50%
   );
+  opacity: 0.05;
   pointer-events: none;
 }
 
@@ -108,30 +114,32 @@
 .ctaButton {
   display: inline-block;
   padding: clamp(1rem, 2vw, 1.2rem) clamp(2rem, 4vw, 2.5rem);
-  background: var(--color-primary);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-accent) 100%
+  );
   color: var(--color-background);
   text-decoration: none;
   border-radius: 50px;
   font-weight: 700;
   font-size: clamp(1rem, 1.5vw, 1.2rem);
-  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
 .ctaButton:hover {
-  transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.3);
-  background: var(--color-warning);
-  color: var(--color-background);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .robotIcon {
   font-size: clamp(8rem, 15vw, 12rem);
   color: var(--color-primary);
   opacity: 0.8;
-  filter: drop-shadow(0 10px 20px rgba(255, 215, 0, 0.15));
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
   animation: float 6s ease-in-out infinite;
   position: absolute;
   right: clamp(2rem, 5vw, 5rem);
@@ -155,7 +163,11 @@
 /* Services Section */
 .services {
   padding: 6rem 0;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-background-dark) 0%,
+    var(--color-background) 100%
+  );
   position: relative;
   width: 100%;
 }
@@ -178,6 +190,14 @@
   color: var(--color-text-dark);
   position: relative;
   display: inline-block;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-accent) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .sectionHeader h2::after {
@@ -209,10 +229,10 @@
 }
 
 .serviceCard {
-  background: var(--color-background-lighter);
+  background: var(--color-background-light);
   padding: clamp(1.5rem, 3vw, 2.5rem);
   border-radius: 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -237,7 +257,7 @@
 
 .serviceCard:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(255, 215, 0, 0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   border-color: var(--color-primary);
 }
 
