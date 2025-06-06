@@ -15,56 +15,6 @@ import founderPhoto from "../assets/KjGuce-BSTN Pic.jpg";
 const AboutPage: React.FC = () => {
   return (
     <div className={styles.aboutPage}>
-      <div className={styles.hero}>
-        <h1>About Due Season Digital</h1>
-        <p>We help businesses thrive in the age of AI-powered search</p>
-      </div>
-
-      <section className={styles.mission}>
-        <h2>Our Mission</h2>
-        <p>
-          At Due Season Digital, we're dedicated to helping businesses adapt and
-          succeed in the rapidly evolving digital landscape. We believe that
-          every business deserves to be found and recommended by AI-powered
-          search and large language models.
-        </p>
-      </section>
-
-      <section className={styles.values}>
-        <h2>Our Values</h2>
-        <div className={styles.valueGrid}>
-          <div className={styles.valueCard}>
-            <h3>Innovation</h3>
-            <p>
-              We stay at the forefront of digital marketing trends and AI
-              technology to provide cutting-edge solutions.
-            </p>
-          </div>
-          <div className={styles.valueCard}>
-            <h3>Transparency</h3>
-            <p>
-              We believe in clear communication and honest reporting, ensuring
-              you understand every aspect of our work.
-            </p>
-          </div>
-          <div className={styles.valueCard}>
-            <h3>Results</h3>
-            <p>
-              We're focused on delivering measurable outcomes that drive real
-              business growth and success.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className={styles.team}>
-        <h2>Our Team</h2>
-        <p>
-          Our team combines deep expertise in digital marketing, AI technology,
-          and business strategy to deliver exceptional results for our clients.
-        </p>
-      </section>
-
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.container}>
@@ -172,40 +122,34 @@ const AboutPage: React.FC = () => {
                 title: "Diligence",
                 description:
                   "We work hard and do good, knowing that faithful effort brings a harvest.",
-                emoji: "💪",
               },
               {
                 icon: <FaHandshake />,
                 title: "Integrity",
                 description: "We act with honesty, transparency, and trust.",
-                emoji: "🤝",
               },
               {
                 icon: <FaHeart />,
                 title: "Generosity & Service",
                 description: "We serve others with excellence and kindness.",
-                emoji: "💝",
               },
               {
                 icon: <FaShieldAlt />,
                 title: "Stewardship",
                 description:
                   "We honor what's entrusted to us and help clients multiply their results.",
-                emoji: "🛡️",
               },
               {
                 icon: <FaClock />,
                 title: "Patience & Perseverance",
                 description:
                   "We don't give up; we believe in steady, lasting progress.",
-                emoji: "⏳",
               },
               {
                 icon: <FaLeaf />,
                 title: "Growth & Fruitfulness",
                 description:
                   "We pursue growth for our clients, team, and community—believing the best is yet to come.",
-                emoji: "🌿",
               },
             ].map((value, _index) => (
               <motion.div
@@ -217,9 +161,7 @@ const AboutPage: React.FC = () => {
                 }}
               >
                 <div className={styles.valueIcon}>{value.icon}</div>
-                <h3>
-                  {value.title} {value.emoji}
-                </h3>
+                <h3>{value.title}</h3>
                 <p>{value.description}</p>
               </motion.div>
             ))}
@@ -246,102 +188,37 @@ const AboutPage: React.FC = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <motion.p
-              className={styles.promiseIntro}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              At Due Season Digital, we believe in honest work, measurable
-              progress, and clear communication. That's why we'll never promise
-              you #1 rankings, a set number of new clients, or overnight
-              miracles—no reputable agency should.
+            <motion.p className={styles.promiseIntro}>
+              We're committed to delivering exceptional results through our
+              comprehensive approach to digital marketing. Here's what you can
+              expect when you partner with us:
             </motion.p>
             <motion.div
               className={styles.promiseGuarantees}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              variants={{
-                visible: { transition: { staggerChildren: 0.15 } },
-                hidden: {},
-              }}
-            >
-              <h3>But here's what we do guarantee:</h3>
-              <ul>
-                {[
-                  "Transparent, On-Time Delivery: You'll receive every audit, report, and service outlined in your package—delivered on schedule and with total clarity.",
-                  "Actionable, Honest Reporting: Every month, we'll provide a detailed report of your AI Visibility Score, progress, and next steps—so you always know where you stand.",
-                  "Revision & Collaboration: If you're not satisfied with any deliverable, we'll revise and refine it until it meets the standards set out in your package.",
-                  "Continuous Improvement: We'll keep you updated on the latest trends in AI search and ensure your business is always positioned to benefit.",
-                ].map((item, index) => (
-                  <motion.li
-                    key={index}
-                    variants={{
-                      visible: { opacity: 1, y: 0 },
-                      hidden: { opacity: 0, y: 20 },
-                    }}
-                  >
-                    <FaCheck />
-                    <span>{item}</span>
-                  </motion.li>
-                ))}
-              </ul>
-            </motion.div>
-          </motion.div>
-        </div>
-      </motion.section>
-
-      {/* Money-Back Guarantee Section */}
-      <motion.section
-        className={styles.guarantee}
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true, amount: 0.3 }}
-      >
-        <div className={styles.container}>
-          <div className={styles.sectionHeader}>
-            <h2>Our 90-Day Money-Back Guarantee</h2>
-          </div>
-          <motion.div
-            className={styles.guaranteeContent}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              We stand by our work. If, after 90 days of working together and
-              implementing our recommendations, you see no measurable
-              improvement in your AI Visibility Score (as tracked in our
-              reports)—we'll refund your service fee for that period.
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              All we ask is that you've implemented the key recommendations and
-              shared feedback along the way.
-            </motion.p>
-            <motion.p
-              className={styles.guaranteePromise}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              That's our Due Season Promise: Effort, transparency, a measurable
-              path to improvement—and real accountability for your investment.
-            </motion.p>
+              <h3>Our Guarantees</h3>
+              <ul>
+                <li>
+                  <FaCheck /> Transparent communication and regular updates
+                </li>
+                <li>
+                  <FaCheck /> Data-driven strategies tailored to your business
+                </li>
+                <li>
+                  <FaCheck /> Measurable results and clear ROI tracking
+                </li>
+                <li>
+                  <FaCheck /> Dedicated support and personalized attention
+                </li>
+                <li>
+                  <FaCheck /> Continuous optimization and improvement
+                </li>
+              </ul>
+            </motion.div>
           </motion.div>
         </div>
       </motion.section>
@@ -356,17 +233,16 @@ const AboutPage: React.FC = () => {
       >
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <h2>Meet the Founder</h2>
+            <h2>Meet Our Founder</h2>
           </div>
           <div className={styles.founderContent}>
             <motion.div
               className={styles.founderImage}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true, amount: 0.5 }}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
             >
-              {/* Founder's photo */}
               <img
                 src={founderPhoto}
                 alt="Kristen Joy Guce"
@@ -375,28 +251,31 @@ const AboutPage: React.FC = () => {
             </motion.div>
             <motion.div
               className={styles.founderBio}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <motion.a
-                href="https://www.linkedin.com/in/kjguce/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.founderName}
-                whileHover={{ y: -5 }}
-                whileTap={{ scale: 0.95 }}
-              >
+              <div className={styles.founderName}>
                 <h3>Kristen Joy Guce</h3>
-              </motion.a>
+                <p>Founder & CEO</p>
+              </div>
               <p>
-                Kristen Joy Guce founded Due Season Digital to help small
-                businesses flourish in a changing world. With a background in
-                economics, digital marketing, and a passion for local impact,
-                Kristen brings diligence, empathy, and results-driven strategy
-                to every project. She believes that honest, excellent work—done
-                in the right season—creates real, lasting growth.
+                With over a decade of experience across analytics, business
+                strategy, and digital transformation, Kristen Joy Guce founded
+                Due Season Digital to help local businesses thrive in a rapidly
+                changing landscape. Her passion lies in equipping small
+                businesses to grow—combining strategic insight, technical
+                know-how, and a heart for service.
+              </p>
+              <p>
+                Kristen believes that authentic growth happens when technology
+                and purpose go hand in hand. By bridging the gap between classic
+                strategies and the new era of AI-powered search, she ensures
+                each client receives solutions that are both innovative and
+                practical. Kristen's commitment to integrity, excellence, and
+                measurable progress is at the heart of everything we do at Due
+                Season Digital.
               </p>
             </motion.div>
           </div>
