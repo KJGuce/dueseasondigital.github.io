@@ -1,13 +1,25 @@
 :root {
-  --color-background: #f8f7f3; /* Slightly warmer off-white */
-  --color-text-dark: #1a1a2e; /* Deep navy/charcoal */
-  --color-primary-accent: #00b4d8; /* Vibrant teal */
-  --color-secondary-accent: #f08080; /* Bright coral */
+  /* Dark Mode Colors */
+  --color-background: #000000;
+  --color-background-light: #0a0a0a;
+  --color-background-lighter: #141414;
+  --color-text-dark: #ffffff;
+  --color-text-light: #cccccc;
+  --color-text-lighter: #999999;
+
+  /* Accent Colors */
+  --color-primary: #ffd700;
+  --color-secondary: #6b4de6;
+  --color-accent: #4ecdc4;
+  --color-warning: #ff6b6b;
+  --color-success: #00b894;
+  --color-info: #4a90e2;
+  --color-primary-accent: #ffa502;
 }
 
 body {
   margin: 0;
-  font-family: "Lato", sans-serif; /* New body font */
+  font-family: "Nunito", sans-serif;
   background-color: var(--color-background);
   color: var(--color-text-dark);
   line-height: 1.6;
@@ -24,11 +36,14 @@ html {
 }
 
 a {
-  color: var(--color-primary-accent); /* Link color using primary accent */
+  color: var(--color-primary);
   text-decoration: none;
+  transition: color 0.3s ease;
 }
+
 a:hover {
-  text-decoration: underline;
+  color: var(--color-warning);
+  text-decoration: none;
 }
 
 h1,
@@ -37,42 +52,42 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", sans-serif; /* New heading font */
+  font-family: "Nunito", sans-serif;
   color: var(--color-text-dark);
   line-height: 1.2;
-  margin-bottom: 0.5em; /* Add some space below headings */
+  margin-bottom: 0.5em;
 }
 
 p {
-  margin-bottom: 1em; /* Add space below paragraphs */
+  margin-bottom: 1em;
+  color: var(--color-text-light);
 }
 
-/* Basic button styling - we can refine this later */
 .btn {
   display: inline-block;
   padding: 1em 2em;
-  background-color: var(
-    --color-secondary-accent
-  ); /* Button using secondary accent */
-  color: #fff; /* White text */
+  background-color: var(--color-primary);
+  color: var(--color-background);
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
   font-size: 1rem;
-  font-family: "Montserrat", sans-serif; /* Heading font for buttons */
+  font-family: "Nunito", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
 }
 
 .btn:hover {
-  background-color: var(--color-primary-accent); /* Hover effect */
-  text-decoration: none; /* Remove underline on hover */
+  background-color: var(--color-warning);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.3);
+  text-decoration: none;
 }
 
-/* Basic container for centering content - adjust padding as needed */
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 2rem;
 }

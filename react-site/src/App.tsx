@@ -1,27 +1,29 @@
-import React, { Suspense } from "react";
-import { Routes, Route, Link } from "react-router-dom";
-
-const LandingPageAISEO = React.lazy(
-  () => import("./pages/OriginalLandingPage")
-);
-const DueSeasonIndexPage = React.lazy(() => import("./pages/DueSeasonIndex"));
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import HomePage from "./pages/HomePage";
+import ServicesPage from "./pages/ServicesPage";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import "./App.css";
 
 function App() {
   return (
-    <div>
-      <nav style={{ padding: "1rem", background: "#f6e9da" }}>
-        <Link to="/" style={{ marginRight: 16 }}>
-          Home
-        </Link>
-        <Link to="/due-season-index">Due Season Index</Link>
-      </nav>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path="/" element={<LandingPageAISEO />} />
-          <Route path="/due-season-index" element={<DueSeasonIndexPage />} />
-        </Routes>
-      </Suspense>
-    </div>
+    <Router>
+      <div className="min-h-screen bg-[#000000]">
+        <Navbar />
+        <main className="pt-16">
+          {" "}
+          {/* Add padding-top to account for fixed navbar */}
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            {/* Add other routes as needed */}
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
 

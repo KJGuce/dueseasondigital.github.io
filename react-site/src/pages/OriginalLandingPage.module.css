@@ -432,17 +432,22 @@
 .ctaGraphic,
 .clientWinsGraphic,
 .contactGraphic {
-  width: 100px; /* Example size */
-  height: 100px; /* Example size */
+  width: 150px; /* Increase example size */
+  height: 150px; /* Increase example size */
   background-color: rgba(0, 180, 216, 0.2); /* Example placeholder color */
-  margin: 2rem auto; /* Center and add space */
-  border-radius: 10px; /* Example shape */
-  /* Add more specific positioning/styling as needed */
+  margin: 3rem auto; /* Center and add more space */
+  border-radius: 15px; /* Slightly more rounded example shape */
+  display: flex; /* Use flex to center content/icons inside */
+  justify-content: center;
+  align-items: center;
+  font-size: 2em; /* Example size for icon/text inside */
+  color: var(--color-text-dark); /* Example color for icon/text */
+  opacity: 0.5; /* Make placeholders semi-transparent */
 }
 
 /* Specific placeholder adjustments */
 .heroGraphic {
-  margin-top: 3rem;
+  margin-top: 4rem;
   background-color: rgba(240, 128, 128, 0.2); /* Different color for hero */
   border-radius: 50%; /* Circle shape for hero placeholder */
 }
@@ -454,3 +459,36 @@
 .ctaGraphic {
   background-color: rgba(255, 255, 255, 0.2); /* Lighter color for CTA */
 }
+
+/* --- Animation Styles --- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1s ease-out forwards;
+  opacity: 0; /* Start hidden */
+}
+
+.slideInUp {
+  animation: slideInUp 1s ease-out forwards;
+  opacity: 0; /* Start hidden */
+}
+
+/* Add delays or use JavaScript/Intersection Observer for staggered animations */

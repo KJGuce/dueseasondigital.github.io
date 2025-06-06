@@ -70,7 +70,7 @@ const LandingPageAISEO: React.FC = () => (
                 </rect>
               </g>
             </svg>
-            <a href="/" className={styles.logo}>
+            <a href="/" className={`${styles.logo} ${styles.fadeIn}`}>
               <img
                 src="/DSDlogo1.png"
                 alt="Due Season Digital Logo"
@@ -86,29 +86,32 @@ const LandingPageAISEO: React.FC = () => (
             </a>
           </div>
         </div>
-        <h1>
+        <h1 className={styles.slideInUp}>
           <span className={styles.highlight}>Get Discovered by AI</span> — Put
           Your Business in the Spotlight of ChatGPT, Gemini & Answer Engines
         </h1>
-        <p>
+        <p className={styles.slideInUp}>
           We help local businesses and entrepreneurs become the top
           recommendation for AI-powered search results, voice assistants, and
           large language models. Ready to own your "Due Season"?
         </p>
-        <a href="#due-season-index" className={styles.btnCta}>
+        <a
+          href="#due-season-index"
+          className={`${styles.btnCta} ${styles.slideInUp}`}
+        >
           <span className={styles.btnIcon} aria-hidden="true">
             🤖
           </span>{" "}
           Get Your Free AI SEO Audit
         </a>
-        <div className={styles.heroGraphic}></div>
+        <div className={`${styles.heroGraphic} ${styles.fadeIn}`}></div>
       </div>
     </header>
 
     <section className={styles.services}>
       <div className={styles.servicesBgAnimated} aria-hidden="true"></div>
       <div className={styles.container}>
-        <div className={styles.sectionHeader}>
+        <div className={`${styles.sectionHeader} ${styles.slideInUp}`}>
           <span className={styles.servicesHeaderAccent} aria-hidden="true">
             <svg
               width="28"
@@ -136,9 +139,9 @@ const LandingPageAISEO: React.FC = () => (
             by the bots that matter most.
           </p>
         </div>
-        <div className={styles.servicesGraphic}></div>
+        <div className={`${styles.servicesGraphic} ${styles.fadeIn}`}></div>
         <div className={styles.servicesGrid}>
-          <article className={styles.serviceCard}>
+          <article className={`${styles.serviceCard} ${styles.slideInUp}`}>
             <i className="fas fa-brain"></i>
             <h3>AI SEO & LLM Visibility</h3>
             <p>
@@ -146,7 +149,10 @@ const LandingPageAISEO: React.FC = () => (
               Gemini, and Perplexity mention your business first.
             </p>
           </article>
-          <article className={styles.serviceCard}>
+          <article
+            className={`${styles.serviceCard} ${styles.slideInUp}`}
+            style={{ animationDelay: "0.1s" }}
+          >
             <i className="fas fa-robot"></i>
             <h3>AI-Driven Content & Schema</h3>
             <p>
@@ -154,7 +160,10 @@ const LandingPageAISEO: React.FC = () => (
               signals AI needs to recommend you in answer engines.
             </p>
           </article>
-          <article className={styles.serviceCard}>
+          <article
+            className={`${styles.serviceCard} ${styles.slideInUp}`}
+            style={{ animationDelay: "0.2s" }}
+          >
             <i className="fas fa-map-marker-alt"></i>
             <h3>Local Profile Optimization</h3>
             <p>
@@ -162,7 +171,10 @@ const LandingPageAISEO: React.FC = () => (
               optimized for AI and voice search discovery.
             </p>
           </article>
-          <article className={styles.serviceCard}>
+          <article
+            className={`${styles.serviceCard} ${styles.slideInUp}`}
+            style={{ animationDelay: "0.3s" }}
+          >
             <i className="fas fa-chart-line"></i>
             <h3>LLM Audit & Analytics</h3>
             <p>
@@ -281,9 +293,9 @@ const LandingPageAISEO: React.FC = () => (
             "
             sizes="(max-width: 600px) 800px, (max-width: 1200px) 1200px, 1950px"
           />
-          <div className={styles.aboutGraphic}></div>
+          <div className={`${styles.aboutGraphic} ${styles.fadeIn}`}></div>
         </div>
-        <div className={styles.aboutContent}>
+        <div className={`${styles.aboutContent} ${styles.slideInUp}`}>
           <div>
             <div className={styles.sectionHeader}>
               <h2>About Due Season Digital</h2>
@@ -349,25 +361,24 @@ const LandingPageAISEO: React.FC = () => (
             </g>
           </svg>
         </div>
-        <h2>Free Due Season Index™ — AI SEO Audit</h2>
-        <p>
-          Not sure if you're discoverable by ChatGPT, Gemini, and AI-powered
-          search?
-          <strong>
-            Take our free Due Season Index™ quiz or URL scan to see how you
-            rank—and get actionable next steps instantly.
-          </strong>
+        <h2 className={styles.slideInUp}>Ready to Be Discovered by AI?</h2>
+        <p className={styles.slideInUp}>
+          Get your free AI SEO Audit and find out how to become a top AI
+          recommendation.
         </p>
-        <a href="/due-season-index" className={styles.btn}>
+        <a
+          href="/due-season-index"
+          className={`${styles.btn} ${styles.slideInUp}`}
+        >
           Try the Due Season Index Tool
         </a>
-        <div className={styles.ctaGraphic}></div>
+        <div className={`${styles.ctaGraphic} ${styles.fadeIn}`}></div>
       </div>
     </section>
 
     <section className={styles.clientWins}>
       <div className={styles.container}>
-        <div className={styles.sectionHeader}>
+        <div className={`${styles.sectionHeader} ${styles.slideInUp}`}>
           <span className={styles.clientWinsHeaderAccent} aria-hidden="true">
             <svg
               width="28"
@@ -396,7 +407,7 @@ const LandingPageAISEO: React.FC = () => (
           </p>
         </div>
         <div className={styles.testimonialGrid}>
-          <article className={styles.testimonialCard}>
+          <article className={`${styles.testimonialCard} ${styles.slideInUp}`}>
             <p>
               "Our business started showing up in ChatGPT and Gemini answers.
               We've seen a surge in leads from people who 'found us on AI.'"
@@ -405,7 +416,10 @@ const LandingPageAISEO: React.FC = () => (
               - Sarah Johnson, Local Bakery Owner
             </div>
           </article>
-          <article className={styles.testimonialCard}>
+          <article
+            className={`${styles.testimonialCard} ${styles.slideInUp}`}
+            style={{ animationDelay: "0.1s" }}
+          >
             <p>
               "Due Season Digital's audit made it clear what we were missing for
               AI SEO. Their plan was practical, and the results are obvious."
@@ -414,7 +428,10 @@ const LandingPageAISEO: React.FC = () => (
               - Mike Thompson, Coffee Shop Owner
             </div>
           </article>
-          <article className={styles.testimonialCard}>
+          <article
+            className={`${styles.testimonialCard} ${styles.slideInUp}`}
+            style={{ animationDelay: "0.2s" }}
+          >
             <p>
               "We finally understand what matters for Google SGE and ChatGPT,
               not just Google rankings. The team made AI SEO simple for us."
@@ -424,17 +441,17 @@ const LandingPageAISEO: React.FC = () => (
             </div>
           </article>
         </div>
-        <div className={styles.clientWinsGraphic}></div>
+        <div className={`${styles.clientWinsGraphic} ${styles.fadeIn}`}></div>
       </div>
     </section>
 
     <section id="contact" className={styles.contact}>
       <div className={styles.container}>
-        <div className={styles.sectionHeader}>
+        <div className={`${styles.sectionHeader} ${styles.slideInUp}`}>
           <h2>Get in Touch</h2>
           <p>Let's get your business found by the next wave of searchers</p>
         </div>
-        <div className={styles.contactGraphic}></div>
+        <div className={`${styles.contactGraphic} ${styles.fadeIn}`}></div>
         <form
           className={styles.contactForm}
           action="https://formsubmit.co/kristenjoy@dueseasondigital.com"
@@ -462,7 +479,7 @@ const LandingPageAISEO: React.FC = () => (
               required
             />
           </div>
-          <div className="form-group">
+          <div className={`${styles.formGroup} ${styles.slideInUp}`}>
             <label htmlFor="message">Your Message</label>
             <textarea
               name="message"
@@ -472,7 +489,7 @@ const LandingPageAISEO: React.FC = () => (
               required
             ></textarea>
           </div>
-          <button type="submit" className={styles.btn}>
+          <button type="submit" className={`${styles.btn} ${styles.slideInUp}`}>
             Send Message
           </button>
         </form>
@@ -480,8 +497,8 @@ const LandingPageAISEO: React.FC = () => (
     </section>
 
     <footer className={styles.footer}>
-      <div className="container">
-        <div className="social-links">
+      <div className={styles.container}>
+        <div className={`${styles.socialLinks} ${styles.fadeIn}`}>
           <a href="https://www.facebook.com/profile.php?id=61577034625612">
             <i className="fab fa-facebook"></i>
           </a>
@@ -492,7 +509,9 @@ const LandingPageAISEO: React.FC = () => (
             <i className="fab fa-linkedin"></i>
           </a>
         </div>
-        <p>&copy; 2024 Due Season Digital. All rights reserved.</p>
+        <p className={styles.fadeIn}>
+          &copy; 2024 Due Season Digital. All rights reserved.
+        </p>
       </div>
     </footer>
   </>
