@@ -1,11 +1,21 @@
 :root {
+  /* Dark Mode Colors */
+  --color-background: #000000;
+  --color-background-light: #0a0a0a;
+  --color-background-lighter: #141414;
+  --color-text-dark: #ffffff;
+  --color-text-light: #cccccc;
+  --color-text-lighter: #999999;
+
+  /* Accent Colors */
   --color-primary: #ffd700;
-  --color-accent: #ff6b6b;
-  --color-background: #ffffff;
-  --color-background-lighter: #f5f5f5;
-  --color-text-dark: #333333;
-  --color-text-light: #666666;
+  --color-secondary: #6b4de6;
+  --color-accent: #4ecdc4;
   --color-warning: #ff6b6b;
+  --color-success: #00b894;
+  --color-info: #4a90e2;
+  --color-primary-accent: #ffa502;
+
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
