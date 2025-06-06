@@ -8,7 +8,7 @@ import "./App.css";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/dueseasondigital.github.io">
       <div className="min-h-screen bg-[#000000]">
         <Navbar />
         <main className="pt-16">
