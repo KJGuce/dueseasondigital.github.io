@@ -14,7 +14,7 @@
 
 /* Hero Section */
 .hero {
-  padding: clamp(4rem, 10vw, 8rem) 0;
+  padding: clamp(8rem, 15vw, 12rem) 0 clamp(4rem, 10vw, 8rem) 0;
   background: linear-gradient(
     135deg,
     var(--color-background) 0%,
@@ -250,10 +250,27 @@
   flex-shrink: 0;
 }
 
+.socialConnect {
+  background: var(--color-background-light);
+  padding: clamp(2rem, 4vw, 3rem);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.socialConnect h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: var(--color-text);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
 .socialIcons {
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .socialIconLink {
