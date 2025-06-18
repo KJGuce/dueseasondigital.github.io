@@ -392,7 +392,7 @@ const HomePage: React.FC = () => {
         <div className={styles.container}>
           <div className={styles.socialLinks}>
             <motion.a
-              href="https://facebook.com/dueseasondigital"
+              href="https://www.facebook.com/profile.php?id=61577034625612"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ y: -5 }}
