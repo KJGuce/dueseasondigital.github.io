@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -8,6 +9,11 @@ export default defineConfig({
     process.env.NODE_ENV === "production"
       ? "/"
       : "/dueseasondigital.github.io/",
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
   build: {
     outDir: "dist",
     assetsDir: "assets",
@@ -17,8 +23,10 @@ export default defineConfig({
         assetFileNames: (assetInfo) => {
           if (!assetInfo.name) return "assets/[name]-[hash][extname]";
           const info = assetInfo.name.split(".");
-          const ext = info[info.length - 1];
-          if (/\.(woff2?|ttf|eot|otf)$/.test(assetInfo.name)) {
+          if (
+            info[info.length - 1] === "woff" ||
+            info[info.length - 1] === "woff2"
+          ) {
             return `assets/fonts/[name]-[hash][extname]`;
           }
           return `assets/[name]-[hash][extname]`;
