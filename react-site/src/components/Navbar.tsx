@@ -6,7 +6,6 @@ import styles from "./Navbar.module.css";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAlertClosed, setIsAlertClosed] = useState(false);
-  const location = useLocation();
 
   useEffect(() => {
     // Check if alert banner is closed
