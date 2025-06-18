@@ -31,7 +31,7 @@ const AboutPage: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Rooted in purpose. Fueled by growth. Focused on you.
+            Rooted in purpose. Fueled by growth. Focused on your success.
           </motion.p>
           <motion.p
             className={styles.heroText}
@@ -39,11 +39,10 @@ const AboutPage: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            Due Season Digital exists to help local businesses thrive in the era
-            of AI-powered search. Our name is inspired by Galatians 6:9: "And
-            let us not grow weary of doing good, for in due season we will reap,
-            if we do not give up." We believe growth happens for those who keep
-            showing up—and we bring that spirit to every client partnership.
+            Due Season Digital empowers local businesses to thrive in the new
+            era of AI-powered search. We believe that growth happens for those
+            who keep showing up—and we bring that spirit to every client
+            partnership.
           </motion.p>
         </div>
       </section>
@@ -70,9 +69,10 @@ const AboutPage: React.FC = () => {
             >
               <h3>Vision</h3>
               <p>
-                To become the most trusted partner for local businesses seeking
-                visibility in the new era of AI-powered search, helping them
-                thrive and grow—no matter how search technology evolves.
+                To be the most trusted AI SEO partner for local businesses
+                seeking visibility across Google, ChatGPT, and emerging AI
+                platforms—helping them grow sustainably despite rapid
+                technological change.
               </p>
             </motion.div>
             <motion.div
@@ -84,9 +84,9 @@ const AboutPage: React.FC = () => {
             >
               <h3>Mission</h3>
               <p>
-                Empowering small and local businesses to secure top placement in
-                both traditional and AI-driven search platforms, by delivering
-                clear, measurable, and innovative digital marketing solutions
+                We empower small and local businesses to secure top placements
+                on both traditional and AI-driven search platforms by delivering
+                clear, innovative, and measurable digital marketing solutions
                 that unlock real-world growth.
               </p>
             </motion.div>
@@ -121,7 +121,7 @@ const AboutPage: React.FC = () => {
                 icon: <FaChartLine />,
                 title: "Diligence",
                 description:
-                  "We work hard and do good, knowing that faithful effort brings a harvest.",
+                  "We work hard and do good, believing faithful effort brings a fruitful harvest.",
               },
               {
                 icon: <FaHandshake />,
@@ -245,7 +245,7 @@ const AboutPage: React.FC = () => {
             >
               <img
                 src={founderPhoto}
-                alt="Kristen Joy Guce"
+                alt="Kristen Joy Guce, Founder and CEO of Due Season Digital"
                 className={styles.founderPhoto}
               />
             </motion.div>
@@ -261,21 +261,15 @@ const AboutPage: React.FC = () => {
                 <p>Founder & CEO</p>
               </div>
               <p>
-                With over a decade of experience across analytics, business
-                strategy, and digital transformation, Kristen Joy Guce founded
-                Due Season Digital to help local businesses thrive in a rapidly
-                changing landscape. Her passion lies in equipping small
-                businesses to grow—combining strategic insight, technical
-                know-how, and a heart for service.
-              </p>
-              <p>
-                Kristen believes that authentic growth happens when technology
-                and purpose go hand in hand. By bridging the gap between classic
-                strategies and the new era of AI-powered search, she ensures
-                each client receives solutions that are both innovative and
-                practical. Kristen's commitment to integrity, excellence, and
-                measurable progress is at the heart of everything we do at Due
-                Season Digital.
+                Kristen Joy Guce is the founder and CEO of Due Season Digital.
+                With a background in analytics and business strategy, she leads
+                a talented team and harnesses innovative AI tools to help local
+                businesses grow their visibility in today's evolving search
+                landscape. Kristen is passionate about blending strategic
+                thinking with technology to deliver meaningful results. Her
+                leadership ensures clients benefit from a smart mix of human
+                expertise and AI-driven solutions, all delivered with integrity
+                and care.
               </p>
             </motion.div>
           </div>
