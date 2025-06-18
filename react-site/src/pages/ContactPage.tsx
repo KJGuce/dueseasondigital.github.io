@@ -98,7 +98,10 @@ const ContactPage: React.FC = () => {
       icon: <FaInstagram />,
       href: "https://www.instagram.com/dueseason.digital",
     },
-    { icon: <FaFacebookF />, href: "https://facebook.com/dueseasondigital" },
+    {
+      icon: <FaFacebookF />,
+      href: "https://www.facebook.com/profile.php?id=61577034625612",
+    },
   ];
 
   return (
