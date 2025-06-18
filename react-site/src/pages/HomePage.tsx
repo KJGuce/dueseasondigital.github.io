@@ -138,9 +138,6 @@ const HomePage: React.FC = () => {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <a href="/" className={styles.logo}>
-            Due Season Digital
-          </a>
           <h1>Get Found on Google, ChatGPT, and Every AI That Matters.</h1>
           <p className={styles.heroSubtitle}>
             AI-powered local SEO that makes your business show up across Google,
