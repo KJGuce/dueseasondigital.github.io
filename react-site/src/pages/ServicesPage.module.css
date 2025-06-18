@@ -76,42 +76,31 @@
 }
 
 .package {
-  background: var(--color-background-light);
-  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
   padding: 2rem;
   position: relative;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  overflow: visible;
+  transition: all 0.3s ease;
 }
 
 .package:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .popular {
-  position: relative;
-  background: linear-gradient(135deg, #2c1810 0%, #4a2c1a 100%);
-  border: none;
-  overflow: visible;
-  box-shadow: 0 8px 32px rgba(124, 90, 54, 0.18);
-}
-
-.popular::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.08);
-  pointer-events: none;
+  border: 2px solid var(--color-primary);
+  transform: scale(1.05);
 }
 
 .popularBadge {
   position: absolute;
-  top: 0.5rem;
+  top: -12px;
   right: 2rem;
   background: linear-gradient(
     135deg,
@@ -119,19 +108,15 @@
     var(--color-accent) 100%
   );
   color: var(--color-background);
-  padding: 0.6rem 1.2rem;
-  border-radius: 24px;
-  font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: 0.04em;
-  box-shadow: 0 4px 15px rgba(124, 90, 54, 0.12);
-  border: none;
-  z-index: 2;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
 .packageHeader {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .packageIcon {
@@ -141,45 +126,64 @@
 }
 
 .packageHeader h2 {
-  font-size: clamp(1.5rem, 2vw, 2rem);
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: var(--color-text-dark);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
 }
 
 .packageHeader p {
   color: var(--color-text-light);
   font-size: 1rem;
-  line-height: 1.6;
 }
 
 .price {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: var(--color-text-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.fullPrice {
+  display: flex;
+  align-items: baseline;
+  color: var(--color-text-light);
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.betaPrice {
+  display: flex;
+  align-items: baseline;
+  color: var(--color-primary);
+  font-weight: 700;
 }
 
 .currency {
   font-size: 1.5rem;
   font-weight: 600;
-  vertical-align: top;
+  margin-right: 0.25rem;
 }
 
 .amount {
-  font-size: 3.5rem;
-  font-weight: 800;
+  font-size: 3rem;
+  font-weight: 700;
   line-height: 1;
 }
 
 .period {
   font-size: 1rem;
   color: var(--color-text-light);
+  margin-left: 0.25rem;
 }
 
 .setup {
-  font-size: 1rem;
-  color: var(--color-text-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
   margin-top: 0.5rem;
+  font-size: 0.9rem;
 }
 
 .pricingNote {
@@ -192,44 +196,44 @@
 .features {
   list-style: none;
   padding: 0;
-  margin: 0 0 2rem 0;
+  margin: 2rem 0;
 }
 
 .features li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  gap: 0.75rem;
   margin-bottom: 1rem;
   color: var(--color-text-light);
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 .checkIcon {
   color: var(--color-primary);
-  margin-right: 0.75rem;
   flex-shrink: 0;
+  margin-top: 0.25rem;
 }
 
 .ctaButton {
   width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 50px;
   background: linear-gradient(
     135deg,
     var(--color-primary) 0%,
-    var(--color-primary-accent) 100%
+    var(--color-accent) 100%
   );
   color: var(--color-background);
-  padding: 1rem;
-  border-radius: 50px;
-  font-weight: 700;
-  font-size: 1.1rem;
-  border: none;
+  font-weight: 600;
+  font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
 .ctaButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
 }
 
 .addOns {
@@ -260,30 +264,40 @@
 .addOns h2 {
   text-align: center;
   font-size: clamp(2rem, 3vw, 2.5rem);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: var(--color-text-dark);
+  position: relative;
+  z-index: 2;
+}
+
+.addOnsSubtitle {
+  text-align: center;
+  color: var(--color-text-light);
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
   position: relative;
   z-index: 2;
 }
 
 .addOnsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
   position: relative;
   z-index: 2;
+  margin-bottom: 4rem;
 }
 
 .addOn {
-  background: var(--color-background-light);
-  border-radius: 15px;
-  padding: 1.5rem;
-  text-align: center;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
   border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease;
 }
 
 .addOn:hover {
@@ -295,11 +309,111 @@
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: var(--color-text-dark);
+  color: var(--color-text);
 }
 
 .addOnPrice {
-  color: var(--color-text-dark);
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.addOnDescription {
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.socialBooster {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.socialBooster h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.socialBooster > p {
+  text-align: center;
+  color: var(--color-text-light);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.socialBoosterTiers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.socialBoosterTier {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.02) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.socialBoosterTier:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.socialBoosterTier h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.tierPrice {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+}
+
+.tierFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tierFeatures li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+}
+
+.tierFeatures .checkIcon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 0.25rem;
 }
 
 .custom {
@@ -348,6 +462,77 @@
     var(--color-background-dark) 100%
   );
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at 70% 30%,
+    var(--color-primary) 0%,
+    transparent 70%
+  );
+  opacity: 0.05;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-accent) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+.hero p {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  color: var(--color-text-light);
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.discountBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 0, 0.15) 0%,
+    rgba(255, 215, 0, 0.05) 100%
+  );
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem;
+  margin: 2rem auto;
+  position: relative;
+  z-index: 2;
+}
+
+.discountBadge span {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.discountBadge .discountIcon {
+  color: var(--color-primary);
+  font-size: 1.4rem;
 }
 
 .popular .packageHeader h2 {
@@ -388,6 +573,21 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+.betaNote {
+  background: linear-gradient(
+    135deg,
+    rgba(191, 212, 189, 0.2) 0%,
+    rgba(191, 212, 189, 0.1) 100%
+  );
+  border: 1px solid rgba(191, 212, 189, 0.3);
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: var(--color-text);
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .servicesPage {
     padding: 0;
@@ -403,6 +603,11 @@
 
   .addOnsGrid {
     grid-template-columns: 1fr;
+  }
+
+  .addOn,
+  .socialBoosterTier {
+    padding: 1.5rem;
   }
 
   .custom {

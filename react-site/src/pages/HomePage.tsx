@@ -7,16 +7,126 @@ import {
   FaChartLine,
   FaUsers,
   FaCheck,
-  FaQuoteLeft,
   FaFacebook,
   FaLinkedin,
   FaInstagram,
+  FaSeedling,
+  FaLeaf,
+  FaTag,
+  FaBrain,
+  FaStar,
+  FaMapMarkerAlt,
+  FaHandshake,
+  FaBullseye,
+  FaHeart,
 } from "react-icons/fa";
 import styles from "./HomePage.module.css";
 
 const MotionLink = motion(Link);
 
 const HomePage: React.FC = () => {
+  const packages = [
+    {
+      name: "Seed Package",
+      description: "Start your visibility journey.",
+      fullPrice: "895",
+      betaPrice: "675",
+      period: "one-time",
+      features: [
+        "AI + Local Search Audit",
+        "Google Business Profile Optimization",
+        "Listings Setup (Yelp, Bing, Apple, etc.)",
+        "Basic On-Site SEO (1–2 pages)",
+        "FAQ + Schema Markup (1 page)",
+        "'Ask the AI' Report (PDF)",
+        "Implementation Guide & Checklist",
+      ],
+      icon: <FaSeedling className={styles.packageIcon} />,
+      cta: "🌱 Plant My Visibility",
+      popular: false,
+    },
+    {
+      name: "Sprout Package",
+      description: "Grow trust and get seen.",
+      fullPrice: "749",
+      betaPrice: "560",
+      period: "month",
+      setupFullPrice: "850",
+      setupBetaPrice: "640",
+      features: [
+        "Everything in Seed",
+        "Monthly Blog/FAQ Post",
+        "Review Automation System",
+        "Ongoing Listing Management (5/mo)",
+        "Monthly AI Visibility Report",
+        "1 Local PR Pitch (Month 2)",
+      ],
+      icon: <FaLeaf className={styles.packageIcon} />,
+      cta: "🌿 Nurture My Growth",
+      popular: true,
+    },
+    {
+      name: "Harvest Package",
+      description: "Reap results in due season.",
+      fullPrice: "1,800",
+      betaPrice: "1,350",
+      period: "month",
+      setupFullPrice: "2,999",
+      setupBetaPrice: "2,250",
+      features: [
+        "Everything in Sprout",
+        "Full Website Refresh (up to 5 pages)",
+        "Advanced Schema + Technical SEO",
+        "2x PR Pitches (Quarterly)",
+        "Brand Visibility Dashboard",
+        "Quarterly Strategy Report",
+        "Priority Email & Voice Note Support",
+      ],
+      icon: <FaChartLine className={styles.packageIcon} />,
+      cta: "🌾 Let's Harvest the Results",
+      popular: false,
+    },
+  ];
+
+  const benefits = [
+    {
+      icon: <FaBrain className={styles.benefitIcon} />,
+      title: "AI-First, Not AI-Only",
+      description:
+        "We specialize in visibility across AI tools like ChatGPT and Google—but never lose the human touch.",
+    },
+    {
+      icon: <FaStar className={styles.benefitIcon} />,
+      title: "Rooted in Purpose & Integrity",
+      description:
+        "We lead with honesty, alignment, and long-term impact—because the why behind your business matters.",
+    },
+    {
+      icon: <FaMapMarkerAlt className={styles.benefitIcon} />,
+      title: "Local SEO Expertise",
+      description:
+        "From Google Maps to Apple Business, we help you stand out in the search results that actually convert.",
+    },
+    {
+      icon: <FaHandshake className={styles.benefitIcon} />,
+      title: "People Before Pixels",
+      description:
+        "You're more than data—we partner with purpose, not just deliverables.",
+    },
+    {
+      icon: <FaBullseye className={styles.benefitIcon} />,
+      title: "Designed to Convert",
+      description:
+        "Smart strategy meets beautiful execution. We write, design, and optimize with ROI in mind.",
+    },
+    {
+      icon: <FaHeart className={styles.benefitIcon} />,
+      title: "Small Team, Big Heart",
+      description:
+        "You won't get lost in a dashboard. We walk with you, not just talk to you.",
+    },
+  ];
+
   return (
     <div className={styles.homePage}>
       {/* Hero Section */}
@@ -63,86 +173,126 @@ const HomePage: React.FC = () => {
       </section>
 
       {/* Services Section */}
-      <section className={styles.services}>
+      <section id="pricing-plans" className={styles.services}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <h2>Our Services</h2>
+            <h2>AI-Powered Visibility Plans</h2>
             <p>
-              Comprehensive SEO solutions powered by artificial intelligence
+              Get found on Google, ChatGPT, and everywhere your customers search
+              — with AI-enhanced local SEO built for real results.
             </p>
           </div>
-          <div className={styles.servicesGrid}>
-            {[
-              {
-                icon: <FaSearch />,
-                title: "Keyword Research",
-                description:
-                  "AI-powered keyword analysis to find the most valuable opportunities for your business.",
-              },
-              {
-                icon: <FaChartLine />,
-                title: "Content Optimization",
-                description:
-                  "Smart content recommendations to improve your rankings and engage your audience.",
-              },
-              {
-                icon: <FaUsers />,
-                title: "Technical SEO",
-                description:
-                  "Advanced technical optimization to ensure search engines can crawl and index your site effectively.",
-              },
-              {
-                icon: <FaRobot />,
-                title: "AI Analytics",
-                description:
-                  "Deep insights and predictions to stay ahead of your competition.",
-              },
-            ].map((service, index) => (
+          <div className={styles.packagesGrid}>
+            {packages.map((pkg, index) => (
               <motion.div
-                key={service.title}
-                className={styles.serviceCard}
+                key={pkg.name}
+                className={`${styles.package} ${
+                  pkg.popular ? styles.popular : ""
+                }`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
               >
-                <div className={styles.serviceIcon}>{service.icon}</div>
-                <h3>{service.title}</h3>
-                <p>{service.description}</p>
+                {pkg.popular && (
+                  <div className={styles.popularBadge}>Most Popular</div>
+                )}
+                <div className={styles.packageHeader}>
+                  {pkg.icon}
+                  <h3>{pkg.name}</h3>
+                  <p>{pkg.description}</p>
+                </div>
+                <div className={styles.price}>
+                  <div className={styles.fullPrice}>
+                    <span className={styles.currency}>$</span>
+                    <span className={styles.amount}>{pkg.fullPrice}</span>
+                    <span className={styles.period}>/{pkg.period}</span>
+                  </div>
+                  <div className={styles.betaPrice}>
+                    <span className={styles.currency}>$</span>
+                    <span className={styles.amount}>{pkg.betaPrice}</span>
+                    <span className={styles.period}>/{pkg.period}</span>
+                  </div>
+                  {pkg.setupFullPrice && (
+                    <div className={styles.setup}>
+                      <div className={styles.fullPrice}>
+                        + ${pkg.setupFullPrice} setup
+                      </div>
+                      <div className={styles.betaPrice}>
+                        + ${pkg.setupBetaPrice} setup
+                      </div>
+                    </div>
+                  )}
+                </div>
+                <div className={styles.betaBadge}>
+                  <FaTag className={styles.betaIcon} />
+                  <span>Beta Pricing Available</span>
+                </div>
+                <ul className={styles.features}>
+                  {pkg.features.map((feature, i) => (
+                    <li key={i}>
+                      <FaCheck className={styles.checkIcon} />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <MotionLink
+                  to="/contact"
+                  className={styles.ctaButton}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {pkg.cta}
+                </MotionLink>
               </motion.div>
             ))}
           </div>
+          <motion.div
+            className={styles.postSectionCTA}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <p>Not sure which plan is right for you?</p>
+            <MotionLink
+              to="/index-tool"
+              className={styles.secondaryCtaButton}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              🧭 Get a Free Visibility Check
+            </MotionLink>
+          </motion.div>
         </div>
       </section>
 
       {/* Why Choose Us Section */}
-      <section className={styles.whyUs}>
-        <div className={styles.container}>
+      <section className={styles.whyUs} id="why-dsd">
+        <div className={styles.whyUsContent}>
           <div className={styles.sectionHeader}>
-            <h2>Why Choose Us</h2>
-            <p>Experience the power of AI-driven SEO</p>
+            <h2>Rooted in Values. Built for Visibility.</h2>
+            <p>
+              Why modern brands, local businesses, and founders choose Due
+              Season Digital.
+            </p>
           </div>
           <div className={styles.benefitsGrid}>
-            {[
-              "AI-powered keyword research and analysis",
-              "Data-driven content optimization",
-              "Advanced technical SEO solutions",
-              "Real-time performance tracking",
-              "Customized SEO strategies",
-              "Expert team of SEO professionals",
-            ].map((benefit, index) => (
-              <motion.div
-                key={benefit}
-                className={styles.benefitItem}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <FaCheck className={styles.checkIcon} />
-                <p>{benefit}</p>
-              </motion.div>
+            {benefits.map((benefit, index) => (
+              <div key={index} className={styles.benefitItem}>
+                {benefit.icon}
+                <div className={styles.benefitContent}>
+                  <h3>{benefit.title}</h3>
+                  <p>{benefit.description}</p>
+                </div>
+              </div>
             ))}
+          </div>
+          <div className={styles.whyUsCta}>
+            <p>✨ Ready to work with a partner who actually sees you?</p>
+            <Link to="/contact" className={styles.secondaryCtaButton}>
+              Book a Free Visibility Check
+            </Link>
           </div>
         </div>
       </section>
@@ -154,44 +304,19 @@ const HomePage: React.FC = () => {
             <h2>Client Success Stories</h2>
             <p>See what our clients say about our AI-powered SEO services</p>
           </div>
-          <div className={styles.testimonialGrid}>
-            {[
-              {
-                quote:
-                  "Due Season Digital's AI-powered SEO has transformed our online presence. Our organic traffic has increased by 200% in just 3 months!",
-                author: "Sarah Johnson",
-                role: "Marketing Director, TechStart",
-              },
-              {
-                quote:
-                  "The team's expertise in AI and SEO is unmatched. They've helped us rank for competitive keywords we never thought possible.",
-                author: "Michael Chen",
-                role: "CEO, GrowthLabs",
-              },
-              {
-                quote:
-                  "Working with Due Season Digital has been a game-changer for our business. Their AI-driven approach delivers real results.",
-                author: "Emily Rodriguez",
-                role: "Founder, EcoStyle",
-              },
-            ].map((testimonial, index) => (
-              <motion.div
-                key={testimonial.author}
-                className={styles.testimonialCard}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-              >
-                <FaQuoteLeft className={styles.chatIcon} />
-                <p>{testimonial.quote}</p>
-                <div className={styles.testimonialAuthor}>
-                  <strong>{testimonial.author}</strong>
-                  <span>{testimonial.role}</span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          <motion.div
+            className={styles.comingSoon}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h3>Coming Soon</h3>
+            <p>
+              We're working on gathering our first success stories. Check back
+              soon!
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -214,8 +339,8 @@ const HomePage: React.FC = () => {
           >
             Join the AI revolution and start ranking higher today
           </motion.p>
-          <motion.a
-            href="#contact"
+          <MotionLink
+            to="/index-tool"
             className={styles.ctaButton}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -225,7 +350,7 @@ const HomePage: React.FC = () => {
             whileTap={{ scale: 0.95 }}
           >
             Get Your Free SEO Audit
-          </motion.a>
+          </MotionLink>
         </div>
       </section>
 

@@ -1,6 +1,6 @@
 .navbar {
   position: fixed;
-  top: 0;
+  top: 3.5rem;
   left: 0;
   right: 0;
   background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
