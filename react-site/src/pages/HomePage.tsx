@@ -401,7 +401,7 @@ const HomePage: React.FC = () => {
               <FaFacebook />
             </motion.a>
             <motion.a
-              href="https://linkedin.com/company/dueseasondigital"
+              href="https://www.linkedin.com/company/due-season-digital/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ y: -5 }}
