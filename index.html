@@ -32,8 +32,8 @@
             })
             .join("?");
 
-          // Only update the URL if it's different from the current path
-          var newPath = l.pathname.slice(0, -1) + decoded + l.hash;
+          // Update the URL without triggering a page reload
+          var newPath = "/" + decoded + l.hash;
           if (newPath !== l.pathname + l.search + l.hash) {
             window.history.replaceState(null, null, newPath);
           }
