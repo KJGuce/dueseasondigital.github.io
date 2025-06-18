@@ -31,7 +31,7 @@
   );
   position: relative;
   overflow: visible;
-  padding: clamp(6rem, 12vw, 10rem) 0 8rem;
+  padding: clamp(4rem, 8vw, 8rem) 0 4rem;
   width: 100%;
   margin-bottom: 2rem;
 }
@@ -1232,7 +1232,7 @@
 }
 
 .scrollCue {
-  position: fixed;
+  position: absolute;
   bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
@@ -1246,27 +1246,27 @@
   transition: all 0.3s ease;
   cursor: pointer;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
   padding: 1rem 2rem;
   border-radius: 50px;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   pointer-events: auto;
 }
 
 .scrollCue:hover {
   opacity: 1;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   transform: translateX(-50%) translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
 .scrollCueIcon {
   font-size: 1.75rem;
   animation: bounce 2s infinite;
   color: var(--color-primary);
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
 }
 
 @keyframes bounce {
