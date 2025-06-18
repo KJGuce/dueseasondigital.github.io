@@ -30,16 +30,14 @@
           .slice(pathSegmentsToKeep)
           .join("/");
 
-        // Only redirect if we're not already on the correct path
-        if (currentPath && !l.search.includes(currentPath)) {
-          l.replace(
-            baseUrl +
-              "?/" +
-              currentPath.replace(/&/g, "~and~") +
-              (l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "") +
-              l.hash
-          );
-        }
+        // Always redirect to index.html with the current path
+        l.replace(
+          baseUrl +
+            "?/" +
+            currentPath.replace(/&/g, "~and~") +
+            (l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "") +
+            l.hash
+        );
       })();
     </script>
   </head>
