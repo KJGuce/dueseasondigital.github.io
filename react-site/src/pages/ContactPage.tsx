@@ -94,7 +94,10 @@ const ContactPage: React.FC = () => {
       icon: <FaLinkedinIn />,
       href: "https://www.linkedin.com/company/due-season-digital",
     },
-    { icon: <FaInstagram />, href: "https://instagram.com/dueseasondigital" },
+    {
+      icon: <FaInstagram />,
+      href: "https://www.instagram.com/dueseason.digital",
+    },
     { icon: <FaFacebookF />, href: "https://facebook.com/dueseasondigital" },
   ];
 
