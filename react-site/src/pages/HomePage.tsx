@@ -3,15 +3,13 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
   FaRobot,
-  FaSearch,
-  FaChartLine,
-  FaUsers,
   FaCheck,
   FaFacebook,
   FaLinkedin,
   FaInstagram,
   FaSeedling,
   FaLeaf,
+  FaChartLine,
   FaTag,
   FaBrain,
   FaStar,
@@ -91,97 +89,120 @@ const HomePage: React.FC = () => {
   const benefits = [
     {
       icon: <FaBrain className={styles.benefitIcon} />,
-      title: "AI-First, Not AI-Only",
+      title: "AI-First Strategy",
       description:
-        "We specialize in visibility across AI tools like ChatGPT and Google—but never lose the human touch.",
+        "We optimize for both traditional search and AI platforms, ensuring you're found wherever your customers look.",
     },
     {
       icon: <FaStar className={styles.benefitIcon} />,
-      title: "Rooted in Purpose & Integrity",
+      title: "Local Market Mastery",
       description:
-        "We lead with honesty, alignment, and long-term impact—because the why behind your business matters.",
+        "Deep understanding of local search behavior and AI interactions in your specific market.",
     },
     {
       icon: <FaMapMarkerAlt className={styles.benefitIcon} />,
-      title: "Local SEO Expertise",
+      title: "Multi-Platform Visibility",
       description:
-        "From Google Maps to Apple Business, we help you stand out in the search results that actually convert.",
+        "Get found across Google, Gemini, ChatGPT, and more — wherever your customers are asking questions.",
     },
     {
       icon: <FaHandshake className={styles.benefitIcon} />,
-      title: "People Before Pixels",
+      title: "True Partnership",
       description:
-        "You're more than data—we partner with purpose, not just deliverables.",
+        "We're invested in your growth, providing personalized support that adapts to your business stage.",
     },
     {
       icon: <FaBullseye className={styles.benefitIcon} />,
-      title: "Designed to Convert",
+      title: "Clear Growth Metrics",
       description:
-        "Smart strategy meets beautiful execution. We write, design, and optimize with ROI in mind.",
+        "Track your visibility across all platforms with AI-powered reports that show real progress.",
     },
     {
       icon: <FaHeart className={styles.benefitIcon} />,
-      title: "Small Team, Big Heart",
+      title: "Your Success Story",
       description:
-        "You won't get lost in a dashboard. We walk with you, not just talk to you.",
+        "We're committed to helping you build a strong, visible presence that attracts your ideal customers.",
     },
   ];
+
+  const scrollToServices = () => {
+    const servicesSection = document.querySelector(`.${styles.services}`);
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className={styles.homePage}>
       {/* Hero Section */}
       <section className={styles.hero}>
-        <div className={styles.container}>
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            Supercharge Your <span className={styles.highlight}>SEO</span> with{" "}
-            <span className={styles.highlightAI}>AI</span>
-          </motion.h1>
-          <motion.p
-            className={styles.heroSubtitle}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            We help businesses in Toronto rank higher, drive more traffic, and
-            grow their online presence using cutting-edge AI technology.
-          </motion.p>
-          <MotionLink
-            to="/contact"
-            className={styles.ctaButton}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Get Started
-          </MotionLink>
+        <div className={styles.heroContent}>
+          <h1>Get Found on Google, ChatGPT, and Every AI That Matters.</h1>
+          <p className={styles.heroSubtitle}>
+            AI-powered local SEO that makes your business show up across Google,
+            Gemini, ChatGPT, Perplexity, and more — wherever your customers ask.
+          </p>
+          <div className={styles.heroCta}>
+            <button onClick={scrollToServices} className={styles.primaryButton}>
+              🌱 Plant My Visibility
+            </button>
+            <Link to="/services" className={styles.secondaryButton}>
+              See All Plans
+            </Link>
+          </div>
         </div>
-        <div className={styles.heroGraphic}>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <FaRobot className={styles.robotIcon} />
-          </motion.div>
+        <div className={styles.heroGraphic}></div>
+        <div className={styles.robotIcon}>
+          <FaRobot />
         </div>
       </section>
 
+      {/* Section Divider */}
+      <div className={styles.sectionDivider}></div>
+
       {/* Services Section */}
-      <section id="pricing-plans" className={styles.services}>
-        <div className={styles.container}>
+      <section className={styles.services} id="pricing-plans">
+        <div className={styles.servicesContent}>
+          <div className={styles.contextSection}>
+            <p className={styles.contextText}>
+              🌍 Get found across Google, Gemini, ChatGPT, and more — our
+              AI-driven local SEO helps you show up where your customers are
+              already searching. No guesswork. Just growth.
+            </p>
+            <div className={styles.benefitIcons}>
+              <div className={styles.contextBenefitIcon}>
+                <span>🧠</span>
+                <h4>Smarter Visibility</h4>
+                <p>
+                  We optimize your presence across major search engines{" "}
+                  <em>and</em> AI chat platforms — so you're not just ranking,
+                  you're recognized.
+                </p>
+              </div>
+              <div className={styles.contextBenefitIcon}>
+                <span>📊</span>
+                <h4>Clarity You Can Measure</h4>
+                <p>
+                  Our AI-powered reports track your visibility, reach, and
+                  growth — with insights you can actually use.
+                </p>
+              </div>
+              <div className={styles.contextBenefitIcon}>
+                <span>🤝</span>
+                <h4>Partnership, Not Just Service</h4>
+                <p>
+                  We walk with you. Whether you're just getting started or
+                  scaling fast, our support adapts to your stage and goals.
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div className={styles.sectionHeader}>
             <h2>AI-Powered Visibility Plans</h2>
-            <p>
-              Get found on Google, ChatGPT, and everywhere your customers search
-              — with AI-enhanced local SEO built for real results.
-            </p>
+            <p>Choose the perfect plan for your business growth</p>
           </div>
+
           <div className={styles.packagesGrid}>
             {packages.map((pkg, index) => (
               <motion.div
@@ -271,21 +292,28 @@ const HomePage: React.FC = () => {
       <section className={styles.whyUs} id="why-dsd">
         <div className={styles.whyUsContent}>
           <div className={styles.sectionHeader}>
-            <h2>Rooted in Values. Built for Visibility.</h2>
+            <h2>AI-Powered Growth, Human-Centered Support</h2>
             <p>
-              Why modern brands, local businesses, and founders choose Due
-              Season Digital.
+              Why forward-thinking businesses choose Due Season Digital for
+              their visibility needs.
             </p>
           </div>
           <div className={styles.benefitsGrid}>
             {benefits.map((benefit, index) => (
-              <div key={index} className={styles.benefitItem}>
+              <motion.div
+                key={index}
+                className={styles.benefitItem}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
                 {benefit.icon}
                 <div className={styles.benefitContent}>
                   <h3>{benefit.title}</h3>
                   <p>{benefit.description}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
           <div className={styles.whyUsCta}>
