@@ -1,10 +1,18 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isAlertClosed, setIsAlertClosed] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    // Check if alert banner is closed
+    const alertClosed = localStorage.getItem("alertClosed");
+    setIsAlertClosed(alertClosed === "true");
+  }, []);
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -15,7 +23,11 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={styles.navbar}>
+    <nav
+      className={`${styles.navbar} ${
+        isAlertClosed ? styles.navbarNoAlert : ""
+      }`}
+    >
       <div className={styles.container}>
         {/* Logo */}
         <Link to="/" className={styles.logo}>
@@ -25,20 +37,22 @@ const Navbar = () => {
         {/* Mobile menu button */}
         <button
           className={styles.menuButton}
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
-          {isOpen ? <FaTimes /> : <FaBars />}
+          {isMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
 
         {/* Desktop Navigation */}
-        <div className={`${styles.navLinks} ${isOpen ? styles.active : ""}`}>
+        <div
+          className={`${styles.navLinks} ${isMenuOpen ? styles.active : ""}`}
+        >
           {navLinks.map((link) => (
             <Link
               key={link.name}
               to={link.href}
               className={styles.navLink}
-              onClick={() => setIsOpen(false)}
+              onClick={() => setIsMenuOpen(false)}
             >
               {link.name}
             </Link>

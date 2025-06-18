@@ -1,14 +1,18 @@
 .navbar {
   position: fixed;
-  top: 3.5rem;
+  top: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  z-index: 1000;
-  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  transition: top 0.3s ease;
+}
+
+.navbarNoAlert {
+  top: 0;
 }
 
 .container {
