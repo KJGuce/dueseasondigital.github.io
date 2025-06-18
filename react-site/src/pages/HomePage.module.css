@@ -1245,6 +1245,7 @@
   opacity: 0.7;
   transition: opacity 0.3s ease;
   cursor: pointer;
+  z-index: 10;
 }
 
 .scrollCue:hover {
@@ -1254,6 +1255,7 @@
 .scrollCueIcon {
   font-size: 1.5rem;
   animation: bounce 2s infinite;
+  color: var(--color-primary);
 }
 
 @keyframes bounce {
