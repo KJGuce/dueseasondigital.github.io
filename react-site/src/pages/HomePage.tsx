@@ -138,6 +138,20 @@ const HomePage: React.FC = () => {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
+          <a href="/" className={styles.logo}>
+            <img
+              src="/DSDfavicon1.png"
+              alt="Due Season Digital Logo"
+              style={{
+                height: 60,
+                width: 60,
+                display: "inline-block",
+                verticalAlign: "middle",
+                marginRight: 12,
+              }}
+            />
+            Due Season Digital
+          </a>
           <h1>Get Found on Google, ChatGPT, and Every AI That Matters.</h1>
           <p className={styles.heroSubtitle}>
             AI-powered local SEO that makes your business show up across Google,

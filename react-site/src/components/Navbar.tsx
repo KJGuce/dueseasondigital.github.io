@@ -30,6 +30,17 @@ const Navbar = () => {
       <div className={styles.container}>
         {/* Logo */}
         <Link to="/" className={styles.logo}>
+          <img
+            src="/DSDfavicon1.png"
+            alt="Due Season Digital Logo"
+            style={{
+              height: 36,
+              width: 36,
+              display: "inline-block",
+              verticalAlign: "middle",
+              marginRight: 10,
+            }}
+          />
           Due Season Digital
         </Link>
 
