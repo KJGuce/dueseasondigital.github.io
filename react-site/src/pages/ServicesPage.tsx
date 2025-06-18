@@ -1,9 +1,6 @@
 import { motion } from "framer-motion";
 import {
-  FaCrown,
   FaCheck,
-  FaRocket,
-  FaGem,
   FaSeedling,
   FaLeaf,
   FaChartLine,
@@ -12,6 +9,35 @@ import {
 import styles from "./ServicesPage.module.css";
 
 const ServicesPage = () => {
+  const formatPrice = (price: string) => {
+    return new Intl.NumberFormat("en-US").format(
+      parseInt(price.replace(/,/g, ""))
+    );
+  };
+
+  const getPeriodDisplay = (period: string) => {
+    switch (period) {
+      case "one-time":
+        return "";
+      case "pitch":
+        return "/pitch";
+      case "each":
+        return "/each";
+      case "post":
+        return "/post";
+      case "script":
+        return "/script";
+      case "page":
+        return "/page";
+      case "blog":
+        return "/blog";
+      case "month":
+        return "/month";
+      default:
+        return `/${period}`;
+    }
+  };
+
   const packages = [
     {
       name: "Seed Package",
@@ -91,7 +117,7 @@ const ServicesPage = () => {
     {
       name: "Local PR Pitch",
       price: "550",
-      period: "each",
+      period: "pitch",
       description:
         "Written and sent to a relevant local or industry outlet. Includes a pitch angle and tracking sheet.",
     },
@@ -149,7 +175,14 @@ const ServicesPage = () => {
       price: "1,950",
       period: "one-time",
       description:
-        "Done-for-you design and content using Dorik, Framer, or Webflow Lite. Optimized for mobile and local SEO.",
+        "Starter website design (1–3 pages), copywriting + build using tools like Framer, Dorik, or your preferred platform.",
+    },
+    {
+      name: "Location Page SEO Build",
+      price: "375",
+      period: "page",
+      description:
+        "Fully optimized landing page for each city or region you serve. Includes local keyword research, AI-enhanced copy, schema markup, and internal linking. Perfect for businesses targeting multiple locations.",
     },
   ];
 
@@ -225,21 +258,33 @@ const ServicesPage = () => {
               <div className={styles.price}>
                 <div className={styles.fullPrice}>
                   <span className={styles.currency}>$</span>
-                  <span className={styles.amount}>{pkg.fullPrice}</span>
-                  <span className={styles.period}>/{pkg.period}</span>
+                  <span className={styles.amount}>
+                    {formatPrice(pkg.fullPrice)}
+                  </span>
+                  {pkg.period !== "one-time" && (
+                    <span className={styles.period}>
+                      {getPeriodDisplay(pkg.period)}
+                    </span>
+                  )}
                 </div>
                 <div className={styles.betaPrice}>
                   <span className={styles.currency}>$</span>
-                  <span className={styles.amount}>{pkg.betaPrice}</span>
-                  <span className={styles.period}>/{pkg.period}</span>
+                  <span className={styles.amount}>
+                    {formatPrice(pkg.betaPrice)}
+                  </span>
+                  {pkg.period !== "one-time" && (
+                    <span className={styles.period}>
+                      {getPeriodDisplay(pkg.period)}
+                    </span>
+                  )}
                 </div>
                 {pkg.setupFullPrice && (
                   <div className={styles.setup}>
                     <div className={styles.fullPrice}>
-                      + ${pkg.setupFullPrice} setup
+                      + ${formatPrice(pkg.setupFullPrice)} setup
                     </div>
                     <div className={styles.betaPrice}>
-                      + ${pkg.setupBetaPrice} setup
+                      + ${formatPrice(pkg.setupBetaPrice)} setup
                     </div>
                   </div>
                 )}
@@ -285,8 +330,14 @@ const ServicesPage = () => {
                 <h3>{addOn.name}</h3>
                 <div className={styles.addOnPrice}>
                   <span className={styles.currency}>$</span>
-                  <span className={styles.amount}>{addOn.price}</span>
-                  <span className={styles.period}>/{addOn.period}</span>
+                  <span className={styles.amount}>
+                    {formatPrice(addOn.price)}
+                  </span>
+                  {addOn.period !== "one-time" && (
+                    <span className={styles.period}>
+                      {getPeriodDisplay(addOn.period)}
+                    </span>
+                  )}
                 </div>
                 <p className={styles.addOnDescription}>{addOn.description}</p>
               </motion.div>
@@ -313,8 +364,12 @@ const ServicesPage = () => {
                   <h4>{tier.name}</h4>
                   <div className={styles.tierPrice}>
                     <span className={styles.currency}>$</span>
-                    <span className={styles.amount}>{tier.price}</span>
-                    <span className={styles.period}>/{tier.period}</span>
+                    <span className={styles.amount}>
+                      {formatPrice(tier.price)}
+                    </span>
+                    <span className={styles.period}>
+                      {getPeriodDisplay(tier.period)}
+                    </span>
                   </div>
                   <ul className={styles.tierFeatures}>
                     {tier.features.map((feature, i) => (

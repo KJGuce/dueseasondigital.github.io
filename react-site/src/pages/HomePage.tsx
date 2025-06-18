@@ -17,6 +17,7 @@ import {
   FaHandshake,
   FaBullseye,
   FaHeart,
+  FaArrowDown,
 } from "react-icons/fa";
 import styles from "./HomePage.module.css";
 
@@ -126,7 +127,7 @@ const HomePage: React.FC = () => {
   ];
 
   const scrollToServices = () => {
-    const servicesSection = document.querySelector(`.${styles.services}`);
+    const servicesSection = document.querySelector(".services");
     if (servicesSection) {
       servicesSection.scrollIntoView({ behavior: "smooth" });
     }
@@ -150,6 +151,10 @@ const HomePage: React.FC = () => {
               See All Plans
             </Link>
           </div>
+        </div>
+        <div className={styles.scrollCue} onClick={scrollToServices}>
+          <span>Scroll to see plans</span>
+          <FaArrowDown className={styles.scrollCueIcon} />
         </div>
         <div className={styles.heroGraphic}></div>
         <div className={styles.robotIcon}>
