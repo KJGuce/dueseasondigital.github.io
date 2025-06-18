@@ -30,7 +30,7 @@
     var(--color-background-dark) 100%
   );
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   padding: clamp(6rem, 12vw, 10rem) 0 8rem;
   width: 100%;
   margin-bottom: 2rem;
@@ -1232,7 +1232,7 @@
 }
 
 .scrollCue {
-  position: absolute;
+  position: fixed;
   bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
@@ -1245,13 +1245,14 @@
   opacity: 1;
   transition: all 0.3s ease;
   cursor: pointer;
-  z-index: 20;
+  z-index: 1000;
   background: rgba(0, 0, 0, 0.4);
   padding: 1rem 2rem;
   border-radius: 50px;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  pointer-events: auto;
 }
 
 .scrollCue:hover {
