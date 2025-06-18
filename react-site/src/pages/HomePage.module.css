@@ -22,6 +22,7 @@
 /* Hero Section */
 .hero {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background: linear-gradient(
@@ -31,7 +32,7 @@
   );
   position: relative;
   overflow: hidden;
-  padding: clamp(8rem, 15vw, 12rem) 0 6rem;
+  padding: clamp(6rem, 12vw, 10rem) 0 4rem;
   width: 100%;
   margin-bottom: 2rem;
 }
@@ -63,8 +64,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.5rem;
-  margin-top: 3.5rem;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .hero h1 {
@@ -840,7 +842,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 12rem 0 6rem;
+    padding: clamp(5rem, 10vw, 8rem) 0 3rem;
   }
 
   .heroGraphic {
@@ -943,13 +945,15 @@
   }
 
   .heroContent {
-    gap: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    gap: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
   .hero {
-    padding: 10rem 0 4rem;
+    padding: clamp(4rem, 8vw, 6rem) 0 2rem;
   }
 
   .heroGraphic {
@@ -1054,11 +1058,18 @@
   }
 
   .heroContent {
-    gap: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
+    gap: 1rem;
   }
 
   .scrollCue {
-    bottom: 1rem;
+    margin: 0.5rem auto 0;
+    padding: 0.5rem 1rem;
+  }
+
+  .scrollCueIcon {
+    font-size: 1.25rem;
   }
 }
 
@@ -1233,10 +1244,7 @@
 }
 
 .scrollCue {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1247,14 +1255,19 @@
   transition: all 0.3s ease;
   z-index: 10;
   background: rgba(0, 0, 0, 0.2);
-  padding: 1rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 50px;
   backdrop-filter: blur(5px);
+  margin: 0.75rem auto 0;
+  width: fit-content;
+  cursor: pointer;
+  text-align: center;
+  align-self: center;
 }
 
 .scrollCue:hover {
   opacity: 1;
-  transform: translateX(-50%) translateY(-5px);
+  transform: translateY(-5px);
   background: rgba(0, 0, 0, 0.3);
 }
 
@@ -1277,5 +1290,28 @@
   }
   60% {
     transform: translateY(-5px);
+  }
+}
+
+/* Responsive adjustments for scroll cue */
+@media (max-width: 768px) {
+  .scrollCue {
+    margin: 0.5rem auto 0;
+    padding: 0.5rem 1rem;
+  }
+
+  .scrollCueIcon {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .scrollCue {
+    margin: 0.5rem auto 0;
+    padding: 0.5rem 1rem;
+  }
+
+  .scrollCueIcon {
+    font-size: 1rem;
   }
 }
