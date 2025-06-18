@@ -10,16 +10,22 @@
       var pathSegmentsToKeep = 1;
 
       var l = window.location;
+      var baseUrl =
+        l.protocol + "//" + l.hostname + (l.port ? ":" + l.port : "") + "/";
+
+      // Don't redirect if we're already on the index page
+      if (l.pathname === "/" || l.pathname === "/index.html") {
+        return;
+      }
+
+      // Don't redirect if we're already in a redirect
+      if (l.search.indexOf("?/") === 0) {
+        return;
+      }
+
       l.replace(
-        l.protocol +
-          "//" +
-          l.hostname +
-          (l.port ? ":" + l.port : "") +
-          l.pathname
-            .split("/")
-            .slice(0, 1 + pathSegmentsToKeep)
-            .join("/") +
-          "/?/" +
+        baseUrl +
+          "?/" +
           l.pathname
             .slice(1)
             .split("/")

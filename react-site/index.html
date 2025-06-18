@@ -31,11 +31,12 @@
               return s.replace(/~and~/g, "&");
             })
             .join("?");
-          window.history.replaceState(
-            null,
-            null,
-            l.pathname.slice(0, -1) + decoded + l.hash
-          );
+
+          // Only update the URL if it's different from the current path
+          var newPath = l.pathname.slice(0, -1) + decoded + l.hash;
+          if (newPath !== l.pathname + l.search + l.hash) {
+            window.history.replaceState(null, null, newPath);
+          }
         }
       })(window.location);
     </script>
