@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- White background -->
+  <rect width="32" height="32" rx="6" fill="#FFFFFF"/>
+  
+  <!-- Stylized "D" -->
+  <path d="M10 8H18C20 8 22 10 22 12V20C22 22 20 24 18 24H10V8Z" 
+        fill="#2E8B57"/>
+  
+  <!-- Small leaf accent -->
+  <path d="M14 12C14 12 16 13 16 15C16 17 14 18 14 18C14 18 12 17 12 15C12 13 14 12 14 12Z" 
+        fill="#D4AF37"/>
+  
+  <!-- Leaf vein -->
+  <path d="M14 12L14 18" 
+        stroke="#2E8B57" 
+        stroke-width="0.5" 
+        stroke-linecap="round"/>
+</svg> 
