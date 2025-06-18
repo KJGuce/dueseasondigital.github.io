@@ -1,6 +1,6 @@
 .navbar {
   position: fixed;
-  top: 0;
+  top: 3.5rem;
   left: 0;
   right: 0;
   z-index: 1000;
@@ -9,6 +9,7 @@
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   transition: top 0.3s ease;
+  padding: 1rem 0;
 }
 
 .navbarNoAlert {
