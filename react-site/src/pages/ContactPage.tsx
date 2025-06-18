@@ -92,7 +92,7 @@ const ContactPage: React.FC = () => {
   const socialLinks = [
     {
       icon: <FaLinkedinIn />,
-      href: "https://linkedin.com/company/dueseasondigital",
+      href: "https://www.linkedin.com/company/due-season-digital",
     },
     { icon: <FaInstagram />, href: "https://instagram.com/dueseasondigital" },
     { icon: <FaFacebookF />, href: "https://facebook.com/dueseasondigital" },
