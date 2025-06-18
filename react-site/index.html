@@ -34,9 +34,7 @@
 
           // Update the URL without triggering a page reload
           var newPath = "/" + decoded + l.hash;
-          if (newPath !== l.pathname + l.search + l.hash) {
-            window.history.replaceState(null, null, newPath);
-          }
+          window.history.replaceState(null, null, newPath);
         }
       })(window.location);
     </script>
