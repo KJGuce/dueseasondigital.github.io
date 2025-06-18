@@ -19,22 +19,14 @@
       }
     </script>
     <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-      // MIT License
-      // https://github.com/rafgraph/spa-github-pages
+      // Handle path restoration for GitHub Pages
       (function (l) {
-        if (l.search[1] === "/") {
-          var decoded = l.search
-            .slice(1)
-            .split("&")
-            .map(function (s) {
-              return s.replace(/~and~/g, "&");
-            })
-            .join("?");
-
-          // Update the URL without triggering a page reload
-          var newPath = "/" + decoded + l.hash;
-          window.history.replaceState(null, null, newPath);
+        var path = l.search.match(/[?&]path=([^&]+)/);
+        if (path) {
+          var decodedPath = decodeURIComponent(path[1]);
+          if (decodedPath !== l.pathname) {
+            window.history.replaceState(null, null, decodedPath + l.hash);
+          }
         }
       })(window.location);
     </script>
