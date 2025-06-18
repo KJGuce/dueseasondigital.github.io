@@ -8,7 +8,6 @@
       // MIT License
       // https://github.com/rafgraph/spa-github-pages
       (function () {
-        var pathSegmentsToKeep = 0;
         var l = window.location;
         var baseUrl =
           l.protocol + "//" + l.hostname + (l.port ? ":" + l.port : "") + "/";
@@ -23,15 +22,15 @@
           return;
         }
 
-        // Get the current path without the base path
-        var currentPath = l.pathname.slice(1);
+        // Get the current path
+        var currentPath = l.pathname;
 
-        // Always redirect to index.html with the current path
+        // Redirect to index.html with the path as a query parameter
         l.replace(
           baseUrl +
-            "?/" +
-            currentPath.replace(/&/g, "~and~") +
-            (l.search ? "&" + l.search.slice(1).replace(/&/g, "~and~") : "") +
+            "index.html?path=" +
+            encodeURIComponent(currentPath) +
+            (l.search ? "&" + l.search.slice(1) : "") +
             l.hash
         );
       })();
