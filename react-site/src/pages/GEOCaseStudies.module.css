@@ -69,8 +69,15 @@
 }
 
 .primaryButton {
-  background: var(--color-primary);
-  color: var(--color-text-light);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-accent) 100%
+  );
+  color: var(--color-background);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  font-weight: 700;
 }
 
 .secondaryButton {

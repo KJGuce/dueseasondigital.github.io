@@ -70,7 +70,8 @@
 
 .primaryButton {
   background: var(--color-primary);
-  color: var(--color-text-light);
+  color: var(--color-background);
+  font-weight: 700;
 }
 
 .secondaryButton {
@@ -114,7 +115,7 @@
   top: 1rem;
   right: 1rem;
   background: var(--color-primary);
-  color: var(--color-text-light);
+  color: var(--color-background);
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;
@@ -182,8 +183,8 @@
   border: none;
   border-radius: 8px;
   background: var(--color-primary);
-  color: var(--color-text-light);
-  font-weight: 600;
+  color: var(--color-background);
+  font-weight: 700;
   cursor: pointer;
   transition: transform 0.2s ease;
 }

@@ -49,3 +49,12 @@
 .read-the-docs {
   color: var(--color-text-light);
 }
+
+main {
+  padding-top: 126px; /* Default for banner visible */
+  transition: padding-top 0.3s ease;
+}
+
+main:not(.with-banner) {
+  padding-top: 68px; /* When banner is not visible */
+}

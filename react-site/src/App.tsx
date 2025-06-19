@@ -31,7 +31,11 @@ function App() {
         onClose={() => setIsBannerVisible(false)}
       />
       <Navbar isBannerVisible={isBannerVisible} />
-      <main>
+      <main
+        className={
+          isBannerVisible ? "main-content with-banner" : "main-content"
+        }
+      >
         {" "}
         {/* Add padding-top to account for fixed navbar */}
         <Routes>
