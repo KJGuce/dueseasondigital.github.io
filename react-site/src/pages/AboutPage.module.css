@@ -428,7 +428,7 @@
 }
 
 .promiseGuarantees li svg {
-  color: var(--color-primary);
+  color: var(--color-secondary-accent);
   font-size: 1.2rem;
   flex-shrink: 0;
 }
@@ -552,4 +552,34 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.commitmentHighlight {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-accent) 100%
+  );
+  color: var(--color-background);
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
 }

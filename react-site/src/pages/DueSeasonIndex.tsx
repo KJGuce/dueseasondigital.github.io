@@ -23,14 +23,29 @@ export default function DueSeasonIndexPage() {
   const [category, setCategory] = useState<string | null>(null);
 
   // Simulate analysis and scoring
-  const handleUrlAnalysis = (_url: string) => {
+  const handleUrlAnalysis = async (url: string) => {
     setStep("progress");
-    setTimeout(() => {
-      // TODO: Replace with real analysis logic
-      setScore(72);
-      setCategory("Good");
-      setStep("score");
-    }, 2000);
+    try {
+      const res = await fetch("http://localhost:4000/api/analyze", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ url }),
+      });
+      const data = await res.json();
+      setScore(data.score);
+      // Simple category logic based on score
+      let cat = "";
+      if (data.score >= 80) cat = "Excellent";
+      else if (data.score >= 60) cat = "Good";
+      else if (data.score >= 40) cat = "Fair";
+      else cat = "Needs Improvement";
+      setCategory(cat);
+    } catch (err) {
+      setScore(null);
+      setCategory(null);
+      alert("Error analyzing site. Please try again.");
+    }
+    setStep("score");
   };
 
   const handleQuizComplete = (

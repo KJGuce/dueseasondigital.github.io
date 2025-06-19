@@ -89,11 +89,14 @@ const LandingPageAISEO: React.FC = () => (
         <h1 className={styles.slideInUp}>
           <span className={styles.highlight}>Get Discovered by AI</span> — Put
           Your Business in the Spotlight of ChatGPT, Gemini & Answer Engines
+          with GEO
         </h1>
         <p className={styles.slideInUp}>
           We help local businesses and entrepreneurs become the top
-          recommendation for AI-powered search results, voice assistants, and
-          large language models. Ready to own your "Due Season"?
+          recommendation for AI-powered search results and generative answer
+          engines. GEO (Generative Engine Optimization) is how you get found by
+          AI assistants like ChatGPT, Gemini, and Bing Chat. Ready to own your
+          "Due Season"?
         </p>
         <a
           href="#due-season-index"
@@ -102,7 +105,7 @@ const LandingPageAISEO: React.FC = () => (
           <span className={styles.btnIcon} aria-hidden="true">
             🤖
           </span>{" "}
-          Get Your Free AI SEO Audit
+          Get Your Free GEO Audit
         </a>
         <div className={`${styles.heroGraphic} ${styles.fadeIn}`}></div>
       </div>
@@ -133,20 +136,21 @@ const LandingPageAISEO: React.FC = () => (
               </g>
             </svg>
           </span>
-          <h2>AI SEO Services</h2>
+          <h2>GEO Services</h2>
           <p>
-            Modern SEO for the age of AI — make sure your business is "findable"
-            by the bots that matter most.
+            Modern GEO for the age of AI — make sure your business is "findable"
+            by the AI assistants and answer engines that matter most.
           </p>
         </div>
         <div className={`${styles.servicesGraphic} ${styles.fadeIn}`}></div>
         <div className={styles.servicesGrid}>
           <article className={`${styles.serviceCard} ${styles.slideInUp}`}>
             <i className="fas fa-brain"></i>
-            <h3>AI SEO & LLM Visibility</h3>
+            <h3>GEO & LLM Visibility</h3>
             <p>
               Optimize your online presence so that AI models like ChatGPT,
-              Gemini, and Perplexity mention your business first.
+              Gemini, and Perplexity mention your business first in generative
+              results.
             </p>
           </article>
           <article
@@ -154,10 +158,10 @@ const LandingPageAISEO: React.FC = () => (
             style={{ animationDelay: "0.1s" }}
           >
             <i className="fas fa-robot"></i>
-            <h3>AI-Driven Content & Schema</h3>
+            <h3>GEO-Driven Content & Schema</h3>
             <p>
               We craft content and structure your site with the exact schema and
-              signals AI needs to recommend you in answer engines.
+              signals AI needs to recommend you in generative answer engines.
             </p>
           </article>
           <article
@@ -165,10 +169,10 @@ const LandingPageAISEO: React.FC = () => (
             style={{ animationDelay: "0.2s" }}
           >
             <i className="fas fa-map-marker-alt"></i>
-            <h3>Local Profile Optimization</h3>
+            <h3>Local GEO Profile Optimization</h3>
             <p>
               Ensure your Google Business Profile, reviews, and directories are
-              optimized for AI and voice search discovery.
+              optimized for GEO and AI assistant discovery.
             </p>
           </article>
           <article
@@ -176,10 +180,11 @@ const LandingPageAISEO: React.FC = () => (
             style={{ animationDelay: "0.3s" }}
           >
             <i className="fas fa-chart-line"></i>
-            <h3>LLM Audit & Analytics</h3>
+            <h3>LLM GEO Audit & Analytics</h3>
             <p>
               Get actionable reporting: How visible is your brand in ChatGPT,
-              Gemini, and AI-powered platforms? We'll show you—and help you win.
+              Gemini, and AI-powered platforms? We'll show you—and help you win
+              with GEO.
             </p>
           </article>
         </div>
@@ -299,19 +304,19 @@ const LandingPageAISEO: React.FC = () => (
           <div>
             <div className={styles.sectionHeader}>
               <h2>About Due Season Digital</h2>
-              <p>Your AI SEO Partner for Local Business Growth</p>
+              <p>Your GEO Partner for Local Business Growth</p>
             </div>
             <p>
               Due Season Digital exists to put local businesses on the digital
               map—literally and figuratively. We combine small business know-how
-              with the latest in AI search and answer engine optimization so you
-              show up where your customers are searching today (and tomorrow).
+              with the latest in GEO and generative answer engine optimization
+              so you show up where your customers are searching today (and
+              tomorrow).
             </p>
             <p>
               Our approach is transparent, measurable, and focused on making
-              your business the go-to recommendation for LLMs and voice
-              assistants. Let's get you found, heard, and chosen in this new era
-              of search.
+              your business the go-to recommendation for LLMs and AI assistants.
+              Let's get you found, heard, and chosen in this new era of search.
             </p>
           </div>
         </div>
@@ -363,7 +368,7 @@ const LandingPageAISEO: React.FC = () => (
         </div>
         <h2 className={styles.slideInUp}>Ready to Be Discovered by AI?</h2>
         <p className={styles.slideInUp}>
-          Get your free AI SEO Audit and find out how to become a top AI
+          Get your free GEO Audit and find out how to become a top AI
           recommendation.
         </p>
         <a
@@ -403,14 +408,15 @@ const LandingPageAISEO: React.FC = () => (
           <h2>Client Wins</h2>
           <p>
             See how local businesses have grown with Due Season Digital's
-            AI-first approach
+            GEO-first approach
           </p>
         </div>
         <div className={styles.testimonialGrid}>
           <article className={`${styles.testimonialCard} ${styles.slideInUp}`}>
             <p>
               "Our business started showing up in ChatGPT and Gemini answers.
-              We've seen a surge in leads from people who 'found us on AI.'"
+              We've seen a surge in leads from people who 'found us on AI.' GEO
+              works."
             </p>
             <div className={styles.testimonialAuthor}>
               - Sarah Johnson, Local Bakery Owner
@@ -422,7 +428,7 @@ const LandingPageAISEO: React.FC = () => (
           >
             <p>
               "Due Season Digital's audit made it clear what we were missing for
-              AI SEO. Their plan was practical, and the results are obvious."
+              GEO. Their plan was practical, and the results are obvious."
             </p>
             <div className={styles.testimonialAuthor}>
               - Mike Thompson, Coffee Shop Owner
@@ -434,7 +440,7 @@ const LandingPageAISEO: React.FC = () => (
           >
             <p>
               "We finally understand what matters for Google SGE and ChatGPT,
-              not just Google rankings. The team made AI SEO simple for us."
+              not just Google rankings. The team made GEO simple for us."
             </p>
             <div className={styles.testimonialAuthor}>
               - Lisa Chen, Boutique Owner

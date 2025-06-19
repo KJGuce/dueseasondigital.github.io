@@ -41,25 +41,25 @@ const ServicesPage = () => {
   const packages = [
     {
       name: "Seed Package",
-      description: "Start your visibility journey.",
+      description: "Start your GEO visibility journey.",
       fullPrice: "895",
       betaPrice: "675",
       period: "one-time",
       features: [
-        "AI + Local Search Audit",
-        "Google Business Profile Optimization",
+        "GEO + Local Search Audit",
+        "Google Business Profile Optimization for AI Assistants",
         "Listings Setup (Yelp, Bing, Apple, etc.)",
-        "Basic On-Site SEO (1–2 pages)",
-        "FAQ + Schema Markup (1 page)",
-        "'Ask the AI' Report (PDF)",
-        "Implementation Guide & Checklist",
+        "Basic On-Site GEO (1–2 pages)",
+        "FAQ + Schema Markup for AI Answer Engines (1 page)",
+        "'Ask the AI' GEO Report (PDF)",
+        "GEO Implementation Guide & Checklist",
       ],
       icon: <FaSeedling className={styles.packageIcon} />,
       popular: false,
     },
     {
       name: "Sprout Package",
-      description: "Grow trust and get seen.",
+      description: "Grow trust and get seen in AI-powered results.",
       fullPrice: "749",
       betaPrice: "560",
       period: "month",
@@ -67,10 +67,10 @@ const ServicesPage = () => {
       setupBetaPrice: "640",
       features: [
         "Everything in Seed, plus:",
-        "Monthly Blog/FAQ Post (AI optimized + edited)",
+        "Monthly Conversational Content/FAQ Post (GEO-optimized)",
         "Review Automation System",
         "Directory Management (5/month)",
-        "Monthly AI Visibility Report",
+        "Monthly GEO Visibility Report",
         "Email Support",
         "1 Local PR Pitch (Month 2)",
       ],
@@ -79,7 +79,7 @@ const ServicesPage = () => {
     },
     {
       name: "Harvest Package",
-      description: "Reap results in due season.",
+      description: "Reap GEO results in due season.",
       fullPrice: "1,800",
       betaPrice: "1,350",
       period: "month",
@@ -88,10 +88,10 @@ const ServicesPage = () => {
       features: [
         "Everything in Sprout, plus:",
         "Full Website Refresh (up to 5 pages – copy + design)",
-        "Advanced Schema + Technical SEO",
+        "Advanced Schema + Technical GEO",
         "2x PR Pitches (Quarterly)",
-        "Brand Visibility Dashboard",
-        "Quarterly Strategy Report",
+        "Brand GEO Visibility Dashboard",
+        "Quarterly GEO Strategy Report",
         "Priority Support",
       ],
       icon: <FaChartLine className={styles.packageIcon} />,
@@ -101,18 +101,18 @@ const ServicesPage = () => {
 
   const addOns = [
     {
-      name: "Blog/FAQ Post (AI Optimized)",
+      name: "Blog/FAQ Post (GEO Optimized)",
       price: "250",
       period: "post",
       description:
-        "Crafted using AI and refined for clarity, SEO, and AI assistant visibility. Great for FAQ content, local rankings, and search dominance.",
+        "Crafted using GEO best practices and refined for clarity, AI assistant visibility, and answer engine optimization. Great for FAQ content, local GEO rankings, and generative search dominance.",
     },
     {
       name: "AI Content + Light Human Edit",
       price: "125",
       period: "post",
       description:
-        "Quick, lightweight version of blog content. AI-generated with light polishing—ideal for clients on a budget.",
+        "Quick, lightweight version of blog content. AI-generated with light polishing—ideal for clients on a budget and for GEO-focused content.",
     },
     {
       name: "Local PR Pitch",
@@ -129,11 +129,11 @@ const ServicesPage = () => {
         "Includes review request automation (email/SMS), platform monitoring, and monthly performance summaries.",
     },
     {
-      name: "AI Audit & Visibility Report",
+      name: "AI Audit & GEO Visibility Report",
       price: "325",
       period: "one-time",
       description:
-        "Manual and AI-powered audit of ChatGPT, Gemini, Perplexity, and Google visibility. Includes screenshots, recommendations, and PDF delivery.",
+        "Manual and AI-powered audit of ChatGPT, Gemini, Perplexity, and Google visibility. Includes GEO recommendations, screenshots, and PDF delivery.",
     },
     {
       name: "Profile Power-Up",
@@ -178,11 +178,11 @@ const ServicesPage = () => {
         "Starter website design (1–3 pages), copywriting + build using tools like Framer, Dorik, or your preferred platform.",
     },
     {
-      name: "Location Page SEO Build",
+      name: "Location Page GEO Build",
       price: "375",
       period: "page",
       description:
-        "Fully optimized landing page for each city or region you serve. Includes local keyword research, AI-enhanced copy, schema markup, and internal linking. Perfect for businesses targeting multiple locations.",
+        "Fully optimized landing page for each city or region you serve. Includes local GEO keyword research, AI-enhanced copy, schema markup, and internal linking. Perfect for businesses targeting multiple locations in generative search.",
     },
   ];
 

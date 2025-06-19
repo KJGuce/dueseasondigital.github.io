@@ -27,18 +27,18 @@ const HomePage: React.FC = () => {
   const packages = [
     {
       name: "Seed Package",
-      description: "Start your visibility journey.",
+      description: "Start your GEO visibility journey.",
       fullPrice: "895",
       betaPrice: "675",
       period: "one-time",
       features: [
-        "AI + Local Search Audit",
-        "Google Business Profile Optimization",
+        "GEO + Local Search Audit",
+        "Google Business Profile Optimization for AI Assistants",
         "Listings Setup (Yelp, Bing, Apple, etc.)",
-        "Basic On-Site SEO (1–2 pages)",
-        "FAQ + Schema Markup (1 page)",
-        "'Ask the AI' Report (PDF)",
-        "Implementation Guide & Checklist",
+        "Basic On-Site GEO (1–2 pages)",
+        "FAQ + Schema Markup for AI Answer Engines (1 page)",
+        "'Ask the AI' GEO Report (PDF)",
+        "GEO Implementation Guide & Checklist",
       ],
       icon: <FaSeedling className={styles.packageIcon} />,
       cta: "🌱 Plant My Visibility",
@@ -46,7 +46,7 @@ const HomePage: React.FC = () => {
     },
     {
       name: "Sprout Package",
-      description: "Grow trust and get seen.",
+      description: "Grow trust and get seen in AI-powered results.",
       fullPrice: "749",
       betaPrice: "560",
       period: "month",
@@ -54,10 +54,10 @@ const HomePage: React.FC = () => {
       setupBetaPrice: "640",
       features: [
         "Everything in Seed",
-        "Monthly Blog/FAQ Post",
+        "Monthly Conversational Content/FAQ Post (GEO-optimized)",
         "Review Automation System",
         "Ongoing Listing Management (5/mo)",
-        "Monthly AI Visibility Report",
+        "Monthly GEO Visibility Report",
         "1 Local PR Pitch (Month 2)",
       ],
       icon: <FaLeaf className={styles.packageIcon} />,
@@ -66,7 +66,7 @@ const HomePage: React.FC = () => {
     },
     {
       name: "Harvest Package",
-      description: "Reap results in due season.",
+      description: "Reap GEO results in due season.",
       fullPrice: "1,800",
       betaPrice: "1,350",
       period: "month",
@@ -75,10 +75,10 @@ const HomePage: React.FC = () => {
       features: [
         "Everything in Sprout",
         "Full Website Refresh (up to 5 pages)",
-        "Advanced Schema + Technical SEO",
+        "Advanced Schema + Technical GEO",
         "2x PR Pitches (Quarterly)",
-        "Brand Visibility Dashboard",
-        "Quarterly Strategy Report",
+        "Brand GEO Visibility Dashboard",
+        "Quarterly GEO Strategy Report",
         "Priority Email & Voice Note Support",
       ],
       icon: <FaChartLine className={styles.packageIcon} />,
@@ -90,9 +90,9 @@ const HomePage: React.FC = () => {
   const benefits = [
     {
       icon: <FaBrain className={styles.benefitIcon} />,
-      title: "AI-First Strategy",
+      title: "GEO-First Strategy",
       description:
-        "We optimize for both traditional search and AI platforms, ensuring you're found wherever your customers look.",
+        "We specialize in Generative Engine Optimization (GEO), helping you get found by AI-powered conversational search platforms and answer engines.",
     },
     {
       icon: <FaStar className={styles.benefitIcon} />,
@@ -102,9 +102,9 @@ const HomePage: React.FC = () => {
     },
     {
       icon: <FaMapMarkerAlt className={styles.benefitIcon} />,
-      title: "Multi-Platform Visibility",
+      title: "Multi-Platform GEO Visibility",
       description:
-        "Get found across Google, Gemini, ChatGPT, and more — wherever your customers are asking questions.",
+        "Get found across Google, Gemini, ChatGPT, and more — wherever AI assistants are answering questions.",
     },
     {
       icon: <FaHandshake className={styles.benefitIcon} />,
@@ -114,9 +114,9 @@ const HomePage: React.FC = () => {
     },
     {
       icon: <FaBullseye className={styles.benefitIcon} />,
-      title: "Clear Growth Metrics",
+      title: "Clear GEO Growth Metrics",
       description:
-        "Track your visibility across all platforms with AI-powered reports that show real progress.",
+        "Track your GEO visibility across all platforms with AI-powered reports that show real progress.",
     },
     {
       icon: <FaHeart className={styles.benefitIcon} />,
@@ -138,10 +138,14 @@ const HomePage: React.FC = () => {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <h1>Get Found on Google, ChatGPT, and Every AI That Matters.</h1>
+          <h1>
+            Rank Higher on AI Search Assistants with Generative Engine
+            Optimization (GEO)
+          </h1>
           <p className={styles.heroSubtitle}>
-            AI-powered local SEO that makes your business show up across Google,
-            Gemini, ChatGPT, Perplexity, and more — wherever your customers ask.
+            We help your business get found where customers ask AI assistants
+            like ChatGPT, Gemini, and Bing Chat. GEO (Generative Engine
+            Optimization) is the new way to win visibility in the age of AI.
           </p>
           <div className={styles.heroCta}>
             <button onClick={scrollToServices} className={styles.primaryButton}>
@@ -171,17 +175,17 @@ const HomePage: React.FC = () => {
           <div className={styles.contextSection}>
             <p className={styles.contextText}>
               🌍 Get found across Google, Gemini, ChatGPT, and more — our
-              AI-driven local SEO helps you show up where your customers are
+              GEO-driven approach helps you show up where your customers are
               already searching. No guesswork. Just growth.
             </p>
             <div className={styles.benefitIcons}>
               <div className={styles.contextBenefitIcon}>
                 <span>🧠</span>
-                <h4>Smarter Visibility</h4>
+                <h4>Smarter GEO Visibility</h4>
                 <p>
-                  We optimize your presence across major search engines{" "}
-                  <em>and</em> AI chat platforms — so you're not just ranking,
-                  you're recognized.
+                  We optimize your presence for Generative Engines and AI chat
+                  platforms — so you're not just ranking, you're recommended by
+                  AI assistants.
                 </p>
               </div>
               <div className={styles.contextBenefitIcon}>
@@ -204,8 +208,10 @@ const HomePage: React.FC = () => {
           </div>
 
           <div className={styles.sectionHeader}>
-            <h2>AI-Powered Visibility Plans</h2>
-            <p>Choose the perfect plan for your business growth</p>
+            <h2>GEO-Powered Visibility Plans</h2>
+            <p>
+              Choose the perfect plan to boost your AI assistant search ranking
+            </p>
           </div>
 
           <div className={styles.packagesGrid}>
@@ -297,10 +303,10 @@ const HomePage: React.FC = () => {
       <section className={styles.whyUs} id="why-dsd">
         <div className={styles.whyUsContent}>
           <div className={styles.sectionHeader}>
-            <h2>AI-Powered Growth, Human-Centered Support</h2>
+            <h2>GEO-Powered Growth, Human-Centered Support</h2>
             <p>
               Why forward-thinking businesses choose Due Season Digital for
-              their visibility needs.
+              their GEO and AI assistant search optimization needs.
             </p>
           </div>
           <div className={styles.benefitsGrid}>
@@ -335,7 +341,10 @@ const HomePage: React.FC = () => {
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
             <h2>Client Success Stories</h2>
-            <p>See what our clients say about our AI-powered SEO services</p>
+            <p>
+              See what our clients say about our GEO and AI assistant search
+              optimization services
+            </p>
           </div>
           <motion.div
             className={styles.comingSoon}
@@ -362,7 +371,7 @@ const HomePage: React.FC = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            Ready to Transform Your SEO?
+            Ready to Transform Your GEO?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -370,7 +379,8 @@ const HomePage: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Join the AI revolution and start ranking higher today
+            Join the GEO revolution and start ranking higher in AI-powered
+            search today
           </motion.p>
           <MotionLink
             to="/index-tool"
@@ -382,7 +392,7 @@ const HomePage: React.FC = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Get Your Free SEO Audit
+            Get Your Free GEO Audit
           </MotionLink>
         </div>
       </section>

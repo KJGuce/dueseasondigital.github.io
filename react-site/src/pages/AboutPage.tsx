@@ -8,9 +8,11 @@ import {
   FaHandshake,
   FaChartLine,
   FaCheck,
+  FaBrain,
 } from "react-icons/fa";
 import styles from "./AboutPage.module.css";
 import founderPhoto from "../assets/KjGuce-BSTN Pic.jpg";
+import { Link } from "react-router-dom";
 
 const AboutPage: React.FC = () => {
   return (
@@ -40,9 +42,10 @@ const AboutPage: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             Due Season Digital empowers local businesses to thrive in the new
-            era of AI-powered search. We believe that growth happens for those
-            who keep showing up—and we bring that spirit to every client
-            partnership.
+            era of Generative Engine Optimization (GEO). We believe that growth
+            happens for those who keep showing up—and we bring that spirit to
+            every client partnership. As pioneers in GEO, we help you get found
+            by AI-powered conversational search and answer engines.
           </motion.p>
         </div>
       </section>
@@ -69,10 +72,11 @@ const AboutPage: React.FC = () => {
             >
               <h3>Vision</h3>
               <p>
-                To be the most trusted AI SEO partner for local businesses
-                seeking visibility across Google, ChatGPT, and emerging AI
+                To be the most trusted GEO partner for local businesses seeking
+                visibility across Google, ChatGPT, and emerging AI
                 platforms—helping them grow sustainably despite rapid
-                technological change.
+                technological change. We lead the way in Generative Engine
+                Optimization.
               </p>
             </motion.div>
             <motion.div
@@ -86,8 +90,9 @@ const AboutPage: React.FC = () => {
               <p>
                 We empower small and local businesses to secure top placements
                 on both traditional and AI-driven search platforms by delivering
-                clear, innovative, and measurable digital marketing solutions
-                that unlock real-world growth.
+                clear, innovative, and measurable GEO solutions that unlock
+                real-world growth. GEO is the future of search, and we're here
+                to help you master it.
               </p>
             </motion.div>
           </div>
@@ -118,38 +123,40 @@ const AboutPage: React.FC = () => {
           >
             {[
               {
-                icon: <FaChartLine />,
-                title: "Diligence",
-                description:
-                  "We work hard and do good, believing faithful effort brings a fruitful harvest.",
-              },
-              {
                 icon: <FaHandshake />,
                 title: "Integrity",
-                description: "We act with honesty, transparency, and trust.",
-              },
-              {
-                icon: <FaHeart />,
-                title: "Generosity & Service",
-                description: "We serve others with excellence and kindness.",
-              },
-              {
-                icon: <FaShieldAlt />,
-                title: "Stewardship",
                 description:
-                  "We honor what's entrusted to us and help clients multiply their results.",
+                  "We build trust through honesty, transparency, and ethical actions in every project.",
               },
               {
-                icon: <FaClock />,
-                title: "Patience & Perseverance",
+                icon: <FaChartLine />,
+                title: "Impact",
                 description:
-                  "We don't give up; we believe in steady, lasting progress.",
+                  "We are committed to delivering meaningful, measurable results that help clients grow.",
               },
               {
                 icon: <FaLeaf />,
-                title: "Growth & Fruitfulness",
+                title: "Curiosity",
                 description:
-                  "We pursue growth for our clients, team, and community—believing the best is yet to come.",
+                  "We embrace continuous learning, exploring new technologies, and adapting to change.",
+              },
+              {
+                icon: <FaHeart />,
+                title: "Empathy",
+                description:
+                  "We listen deeply and serve clients with genuine care and understanding.",
+              },
+              {
+                icon: <FaBrain />,
+                title: "Innovation",
+                description:
+                  "We harness the power of AI and emerging tech to create forward-thinking solutions.",
+              },
+              {
+                icon: <FaShieldAlt />,
+                title: "Resilience",
+                description:
+                  "We persist through challenges with determination and adapt to thrive in evolving landscapes.",
               },
             ].map((value, _index) => (
               <motion.div
@@ -189,9 +196,7 @@ const AboutPage: React.FC = () => {
             viewport={{ once: true }}
           >
             <motion.p className={styles.promiseIntro}>
-              We're committed to delivering exceptional results through our
-              comprehensive approach to digital marketing. Here's what you can
-              expect when you partner with us:
+              When you partner with Due Season Digital, you can expect:
             </motion.p>
             <motion.div
               className={styles.promiseGuarantees}
@@ -200,24 +205,51 @@ const AboutPage: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h3>Our Guarantees</h3>
+              <h3>Our Commitments to You</h3>
               <ul>
                 <li>
-                  <FaCheck /> Transparent communication and regular updates
+                  <FaCheck />{" "}
+                  <span className={styles.commitmentHighlight}>
+                    Transparent communication and regular updates
+                  </span>{" "}
+                  — so you're always in the loop.
                 </li>
                 <li>
-                  <FaCheck /> Data-driven strategies tailored to your business
+                  <FaCheck />{" "}
+                  <span className={styles.commitmentHighlight}>
+                    Data-driven strategies tailored to your unique business
+                  </span>{" "}
+                  — focused on real growth.
                 </li>
                 <li>
-                  <FaCheck /> Measurable results and clear ROI tracking
+                  <FaCheck />{" "}
+                  <span className={styles.commitmentHighlight}>
+                    Measurable results with clear ROI tracking
+                  </span>{" "}
+                  — no guesswork, just impact.
                 </li>
                 <li>
-                  <FaCheck /> Dedicated support and personalized attention
+                  <FaCheck />{" "}
+                  <span className={styles.commitmentHighlight}>
+                    Dedicated support and personalized attention
+                  </span>{" "}
+                  — because your success matters.
                 </li>
                 <li>
-                  <FaCheck /> Continuous optimization and improvement
+                  <FaCheck />{" "}
+                  <span className={styles.commitmentHighlight}>
+                    Continuous optimization
+                  </span>{" "}
+                  — ensuring your strategy evolves as your business grows.
                 </li>
               </ul>
+              <Link
+                to="/contact"
+                className={styles.ctaButton}
+                style={{ marginTop: "2rem", display: "inline-block" }}
+              >
+                Schedule a Free Consultation Today
+              </Link>
             </motion.div>
           </motion.div>
         </div>
@@ -261,15 +293,23 @@ const AboutPage: React.FC = () => {
                 <p>Founder & CEO</p>
               </div>
               <p>
-                Kristen Joy Guce is the founder and CEO of Due Season Digital.
-                With a background in analytics and business strategy, she leads
-                a talented team and harnesses innovative AI tools to help local
-                businesses grow their visibility in today's evolving search
-                landscape. Kristen is passionate about blending strategic
-                thinking with technology to deliver meaningful results. Her
-                leadership ensures clients benefit from a smart mix of human
-                expertise and AI-driven solutions, all delivered with integrity
-                and care.
+                Kristen Joy is the founder and CEO of Due Season Digital, where
+                she helps local businesses grow their online visibility and
+                connect with customers in the new era of AI-powered search. With
+                a unique blend of analytics, technology, and AI expertise, she
+                crafts smart strategies that deliver real results—helping
+                clients step confidently into their due season of growth and
+                success. 🚀
+              </p>
+              <p>
+                Beyond her professional work, Kristen Joy is passionate about
+                empowering people personally and professionally. She leads
+                connect groups, sings on the worship team, and enjoys emceeing
+                or performing at events. An aspiring author and lifelong
+                learner, she brings creativity, heart, and a genuine commitment
+                to every project. Working with Kristen means partnering with
+                someone who combines down-to-earth expertise with cutting-edge
+                AI knowledge—all delivered with care. ✨
               </p>
             </motion.div>
           </div>
