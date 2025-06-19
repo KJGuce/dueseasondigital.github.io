@@ -54,7 +54,7 @@ const GenerativeEngineOptimization: React.FC = () => {
             Assistants
           </p>
           <div className={styles.heroCta}>
-            <Link to="/contact" className={styles.primaryButton}>
+            <Link to="/due-season-index" className={styles.primaryButton}>
               Get Your AI Recommendation Audit
             </Link>
             <Link

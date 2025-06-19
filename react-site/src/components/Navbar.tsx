@@ -1,17 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import styles from "./Navbar.module.css";
 
-const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isAlertClosed, setIsAlertClosed] = useState(false);
+interface NavbarProps {
+  isBannerVisible: boolean;
+}
 
-  useEffect(() => {
-    // Check if alert banner is closed
-    const alertClosed = localStorage.getItem("alertClosed");
-    setIsAlertClosed(alertClosed === "true");
-  }, []);
+const Navbar: React.FC<NavbarProps> = ({ isBannerVisible }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -36,7 +33,7 @@ const Navbar = () => {
   return (
     <nav
       className={`${styles.navbar} ${
-        isAlertClosed ? styles.navbarNoAlert : ""
+        !isBannerVisible ? styles.navbarNoAlert : ""
       }`}
     >
       <div className={styles.container}>
@@ -94,7 +91,7 @@ const Navbar = () => {
               )}
             </div>
           ))}
-          <Link to="/contact" className={styles.ctaButton}>
+          <Link to="/due-season-index" className={styles.ctaButton}>
             Get Your AI Audit
           </Link>
         </div>

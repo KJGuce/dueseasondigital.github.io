@@ -25,7 +25,7 @@ const AboutPage: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            Why <span className={styles.highlight}>Due Season</span> Digital?
+            Why <span className={styles.highlight}>Due Season Digital</span>?
           </motion.h1>
           <motion.p
             className={styles.heroSubtitle}
@@ -41,11 +41,12 @@ const AboutPage: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            Due Season Digital empowers local businesses to thrive in the new
-            era of Generative Engine Optimization (GEO). We believe that growth
-            happens for those who keep showing up—and we bring that spirit to
-            every client partnership. As pioneers in GEO, we help you get found
-            by AI-powered conversational search and answer engines.
+            <span className={styles.brandName}>Due Season Digital</span>{" "}
+            empowers local businesses to thrive in the new era of Generative
+            Engine Optimization (GEO). We believe that growth happens for those
+            who keep showing up—and we bring that spirit to every client
+            partnership. As pioneers in GEO, we help you get found by AI-powered
+            conversational search and answer engines.
           </motion.p>
         </div>
       </section>

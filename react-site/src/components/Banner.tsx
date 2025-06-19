@@ -4,9 +4,12 @@ import { Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
 import styles from "./Banner.module.css";
 
-const Banner: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(true);
+interface BannerProps {
+  isVisible: boolean;
+  onClose: () => void;
+}
 
+const Banner: React.FC<BannerProps> = ({ isVisible, onClose }) => {
   if (!isVisible) return null;
 
   return (
@@ -28,7 +31,7 @@ const Banner: React.FC = () => {
           </Link>
           <button
             className={styles.closeButton}
-            onClick={() => setIsVisible(false)}
+            onClick={onClose}
             aria-label="Close banner"
           >
             <FaTimes />

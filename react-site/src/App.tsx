@@ -18,48 +18,52 @@ import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer";
 import "./variables.css";
 import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const [isBannerVisible, setIsBannerVisible] = useState(true);
+
   return (
     <Router>
       <ScrollToTop />
-      <div className="app">
-        <Banner />
-        <Navbar />
-        <main>
-          {" "}
-          {/* Add padding-top to account for fixed navbar */}
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/index-tool" element={<DueSeasonIndexTool />} />
-            <Route path="/geofaq" element={<GEOFAQ />} />
-            <Route
-              path="/generative-engine-optimization"
-              element={<GenerativeEngineOptimization />}
-            />
-            <Route
-              path="/generative-engine-optimization/faq"
-              element={<GEOFAQPage />}
-            />
-            <Route
-              path="/generative-engine-optimization/case-studies"
-              element={<GEOCaseStudies />}
-            />
-            <Route
-              path="/generative-engine-optimization/blog"
-              element={<GEOBlog />}
-            />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/terms-of-service" element={<TermsOfService />} />
-            <Route path="/cookie-policy" element={<CookiePolicy />} />
-            {/* Add other routes as needed */}
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+      <Banner
+        isVisible={isBannerVisible}
+        onClose={() => setIsBannerVisible(false)}
+      />
+      <Navbar isBannerVisible={isBannerVisible} />
+      <main>
+        {" "}
+        {/* Add padding-top to account for fixed navbar */}
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/index-tool" element={<DueSeasonIndexTool />} />
+          <Route path="/geofaq" element={<GEOFAQ />} />
+          <Route
+            path="/generative-engine-optimization"
+            element={<GenerativeEngineOptimization />}
+          />
+          <Route
+            path="/generative-engine-optimization/faq"
+            element={<GEOFAQPage />}
+          />
+          <Route
+            path="/generative-engine-optimization/case-studies"
+            element={<GEOCaseStudies />}
+          />
+          <Route
+            path="/generative-engine-optimization/blog"
+            element={<GEOBlog />}
+          />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
+          {/* Add other routes as needed */}
+        </Routes>
+      </main>
+      <Footer />
     </Router>
   );
 }

@@ -140,14 +140,27 @@ const HomePage: React.FC = () => {
       <section className={styles.hero}>
         <div className={styles.heroContent}>
           <h1>
-            Get Actively Recommended by AI Assistants with Generative Engine
-            Optimization (GEO)
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              Get Actively Recommended by AI Assistants with Generative Engine
+              Optimization (GEO)
+            </motion.span>
           </h1>
           <p className={styles.heroSubtitle}>
-            We don't just help you rank — we help you get recommended by AI
-            assistants like ChatGPT, Gemini, and Bing Chat. Our GEO strategy
-            ensures your business becomes the trusted source that AI platforms
-            actively suggest to users.
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              We don't just help you rank — we help you get recommended by AI
+              assistants like ChatGPT, Google Gemini, Bing Chat, Perplexity,
+              YouChat, Anthropic Claude, and more. Our GEO strategy ensures your
+              business becomes the trusted source that AI platforms actively
+              suggest to users.
+            </motion.span>
           </p>
           <div className={styles.heroCta}>
             <Link to="/contact" className={styles.primaryButton}>
