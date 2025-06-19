@@ -154,6 +154,9 @@ const HomePage: React.FC = () => {
             <Link to="/services" className={styles.secondaryButton}>
               See All Plans
             </Link>
+            <Link to="/geofaq" className={styles.secondaryButton}>
+              Learn more about GEO
+            </Link>
           </div>
         </div>
         <div className={styles.scrollCue} onClick={scrollToServices}>
@@ -429,7 +432,16 @@ const HomePage: React.FC = () => {
               <FaInstagram />
             </motion.a>
           </div>
-          <p>© 2025 Due Season Digital. All rights reserved.</p>
+          <p>
+            © 2025 Due Season Digital. All rights reserved.{" "}
+            <Link
+              to="/geofaq"
+              className={styles.secondaryButton}
+              style={{ marginLeft: "1rem", fontSize: "1rem" }}
+            >
+              GEO FAQ
+            </Link>
+          </p>
         </div>
       </footer>
     </div>

@@ -215,10 +215,10 @@
 }
 
 .ctaButton {
-  width: 100%;
-  padding: 1rem;
-  border: none;
-  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
   background: linear-gradient(
     135deg,
     var(--color-primary) 0%,
@@ -226,9 +226,12 @@
   );
   color: var(--color-background);
   font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  text-decoration: none;
   transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
 }
 
 .ctaButton:hover {

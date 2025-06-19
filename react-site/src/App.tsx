@@ -6,6 +6,7 @@ import AboutPage from "./pages/AboutPage";
 import ServicesPage from "./pages/ServicesPage";
 import ContactPage from "./pages/ContactPage";
 import DueSeasonIndexTool from "./pages/DueSeasonIndexTool";
+import GEOFAQ from "./pages/GEOFAQ";
 import ScrollToTop from "./components/ScrollToTop";
 import "./variables.css";
 import "./App.css";
@@ -26,6 +27,7 @@ function App() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/index-tool" element={<DueSeasonIndexTool />} />
+            <Route path="/geofaq" element={<GEOFAQ />} />
             {/* Add other routes as needed */}
           </Routes>
         </main>

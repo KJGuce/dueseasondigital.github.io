@@ -7,6 +7,7 @@ import {
   FaTag,
 } from "react-icons/fa";
 import styles from "./ServicesPage.module.css";
+import { Link } from "react-router-dom";
 
 const ServicesPage = () => {
   const formatPrice = (price: string) => {
@@ -233,6 +234,18 @@ const ServicesPage = () => {
               Founding Client Offer: 25% off all packages for the first 10
               clients!
             </span>
+          </div>
+          <div
+            style={{
+              textAlign: "center",
+              margin: "2rem 0",
+              position: "relative",
+              zIndex: 10,
+            }}
+          >
+            <Link to="/geofaq" className={styles.ctaButton}>
+              Frequently Asked Questions about GEO
+            </Link>
           </div>
         </motion.div>
 
