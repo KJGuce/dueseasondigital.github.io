@@ -42,25 +42,25 @@ const ServicesPage = () => {
   const packages = [
     {
       name: "Seed Package",
-      description: "Start your GEO visibility journey.",
+      description: "Start your journey to AI assistant recommendations.",
       fullPrice: "895",
       betaPrice: "675",
       period: "one-time",
       features: [
-        "GEO + Local Search Audit",
-        "Google Business Profile Optimization for AI Assistants",
-        "Listings Setup (Yelp, Bing, Apple, etc.)",
-        "Basic On-Site GEO (1–2 pages)",
-        "FAQ + Schema Markup for AI Answer Engines (1 page)",
-        "'Ask the AI' GEO Report (PDF)",
-        "GEO Implementation Guide & Checklist",
+        "AI Assistant Recommendation Audit",
+        "Google Business Profile Optimization for AI Trust",
+        "Verified Listings Setup (Yelp, Bing, Apple, etc.)",
+        "Basic Schema Markup for AI Understanding",
+        "FAQ + Content Optimization for AI Recommendations",
+        "'Ask the AI' Recommendation Report (PDF)",
+        "AI Recommendation Strategy Guide",
       ],
       icon: <FaSeedling className={styles.packageIcon} />,
       popular: false,
     },
     {
       name: "Sprout Package",
-      description: "Grow trust and get seen in AI-powered results.",
+      description: "Grow your AI-powered recommendation presence.",
       fullPrice: "749",
       betaPrice: "560",
       period: "month",
@@ -68,19 +68,19 @@ const ServicesPage = () => {
       setupBetaPrice: "640",
       features: [
         "Everything in Seed, plus:",
-        "Monthly Conversational Content/FAQ Post (GEO-optimized)",
-        "Review Automation System",
-        "Directory Management (5/month)",
-        "Monthly GEO Visibility Report",
+        "Monthly AI-Optimized Content Creation",
+        "Review Management for AI Trust",
+        "Verified Directory Management (5/month)",
+        "Monthly AI Recommendation Report",
         "Email Support",
-        "1 Local PR Pitch (Month 2)",
+        "1 Local Authority Building PR Pitch",
       ],
       icon: <FaLeaf className={styles.packageIcon} />,
       popular: true,
     },
     {
       name: "Harvest Package",
-      description: "Reap GEO results in due season.",
+      description: "Maximize AI recommendations and authority.",
       fullPrice: "1,800",
       betaPrice: "1,350",
       period: "month",
@@ -88,11 +88,11 @@ const ServicesPage = () => {
       setupBetaPrice: "2,250",
       features: [
         "Everything in Sprout, plus:",
-        "Full Website Refresh (up to 5 pages – copy + design)",
-        "Advanced Schema + Technical GEO",
-        "2x PR Pitches (Quarterly)",
-        "Brand GEO Visibility Dashboard",
-        "Quarterly GEO Strategy Report",
+        "Full Website AI Content Optimization",
+        "Advanced Schema + AI Understanding",
+        "2x Authority Building PR Pitches",
+        "AI Recommendation Dashboard",
+        "Quarterly AI Strategy Report",
         "Priority Support",
       ],
       icon: <FaChartLine className={styles.packageIcon} />,
@@ -102,88 +102,88 @@ const ServicesPage = () => {
 
   const addOns = [
     {
-      name: "Blog/FAQ Post (GEO Optimized)",
+      name: "Blog/FAQ Post (AI-Optimized)",
       price: "250",
       period: "post",
       description:
-        "Crafted using GEO best practices and refined for clarity, AI assistant visibility, and answer engine optimization. Great for FAQ content, local GEO rankings, and generative search dominance.",
+        "Strategic content crafted to become the trusted source that AI assistants recommend. Includes schema markup, conversational optimization, and verification of facts that AI platforms prioritize.",
     },
     {
-      name: "AI Content + Light Human Edit",
+      name: "AI-Enhanced Content",
       price: "125",
       period: "post",
       description:
-        "Quick, lightweight version of blog content. AI-generated with light polishing—ideal for clients on a budget and for GEO-focused content.",
+        "AI-generated content enhanced with human expertise and structured data. Perfect for building a foundation of trustworthy content that AI assistants can confidently recommend.",
     },
     {
-      name: "Local PR Pitch",
+      name: "Authority Building PR Pitch",
       price: "550",
       period: "pitch",
       description:
-        "Written and sent to a relevant local or industry outlet. Includes a pitch angle and tracking sheet.",
+        "Strategic outreach to build verifiable authority that AI assistants recognize. Includes placement tracking and schema markup for maximum AI visibility.",
     },
     {
-      name: "Review Management (Standalone)",
+      name: "Trust Signals Management",
       price: "299",
       period: "month",
       description:
-        "Includes review request automation (email/SMS), platform monitoring, and monthly performance summaries.",
+        "Comprehensive review and reputation management to build trust signals that AI assistants value. Includes automated collection, monitoring, and schema-enhanced display.",
     },
     {
-      name: "AI Audit & GEO Visibility Report",
+      name: "AI Recommendation Audit",
       price: "325",
       period: "one-time",
       description:
-        "Manual and AI-powered audit of ChatGPT, Gemini, Perplexity, and Google visibility. Includes GEO recommendations, screenshots, and PDF delivery.",
+        "In-depth analysis of how AI assistants currently view and recommend your business. Covers ChatGPT, Gemini, Bing Chat, and Perplexity with actionable optimization steps.",
     },
     {
-      name: "Profile Power-Up",
+      name: "Verified Profile Enhancement",
       price: "399",
       period: "one-time",
       description:
-        "Includes logo + photo updates and consistent branding across Google, Yelp, Bing, Apple, and Facebook listings.",
+        "Comprehensive verification and optimization of your business profiles across platforms that AI assistants trust. Includes schema markup and authority building.",
     },
     {
-      name: "Monthly Analytics Summary",
+      name: "AI Recommendation Analytics",
       price: "145",
       period: "month",
       description:
-        "Visual Looker Studio dashboard + AI-generated insights from GA4 and GSC. Delivered as PDF or Notion embed.",
+        "Track and analyze how often AI assistants recommend your business. Includes custom dashboard and AI-generated strategy insights.",
     },
     {
-      name: "Website Copywriting",
+      name: "AI-Optimized Page Content",
       price: "175",
       period: "page",
       description:
-        "Custom, SEO-aligned copy for any core web page. Includes brand voice matching and headline structure.",
+        "Strategic page content designed to become the trusted source for AI recommendations. Includes schema markup and natural language optimization.",
     },
     {
-      name: "Landing Page (Conversion-Optimized)",
+      name: "Conversion Landing Page",
       price: "475",
       period: "page",
       description:
-        "AI-informed, conversion-driven landing pages tailored for service pages, lead magnets, or campaigns.",
+        "High-converting pages built with both human users and AI assistants in mind. Includes trust-building elements that AI platforms recognize.",
     },
     {
-      name: "Reel/Short Script",
+      name: "Multi-Format Content Script",
       price: "125",
       period: "script",
       description:
-        "Short-form script written from blog content for use in Instagram Reels, TikToks, or YouTube Shorts.",
+        "Repurpose your trusted content into engaging video scripts, maintaining consistency across platforms that AI assistants monitor.",
     },
     {
-      name: "Website Starter",
+      name: "AI-Ready Website Foundation",
       price: "1,950",
       period: "one-time",
       description:
-        "Starter website design (1–3 pages), copywriting + build using tools like Framer, Dorik, or your preferred platform.",
+        "Complete website setup (1–3 pages) built to be easily understood and recommended by AI assistants. Includes schema markup and trust signal integration.",
     },
     {
-      name: "Location Page GEO Build",
+      name: "Local Authority Page",
       price: "375",
       period: "page",
       description:
-        "Fully optimized landing page for each city or region you serve. Includes local GEO keyword research, AI-enhanced copy, schema markup, and internal linking. Perfect for businesses targeting multiple locations in generative search.",
+        "Location-specific pages built to dominate local AI recommendations. Includes verified local data, schema markup, and trust signals that AI assistants prioritize.",
     },
   ];
 
@@ -227,13 +227,25 @@ const ServicesPage = () => {
           className={styles.header}
         >
           <h1>Our Services</h1>
-          <p>Choose the perfect package for your business needs</p>
+          <p>
+            Choose your path to becoming the trusted recommendation in
+            AI-powered searches
+          </p>
           <div className={styles.discountBadge}>
             <FaTag className={styles.discountIcon} />
             <span>
               Founding Client Offer: 25% off all packages for the first 10
               clients!
             </span>
+          </div>
+          <div className={styles.introText}>
+            <p>
+              We don't just help you rank — we help you become the business that
+              AI assistants actively recommend. Through strategic content
+              optimization, schema markup, and verified platform presence, we
+              position your business as the trusted authority that AI platforms
+              naturally suggest to users.
+            </p>
           </div>
           <div
             style={{
@@ -244,7 +256,7 @@ const ServicesPage = () => {
             }}
           >
             <Link to="/geofaq" className={styles.ctaButton}>
-              Frequently Asked Questions about GEO
+              Learn How We Get You Recommended by AI
             </Link>
           </div>
         </motion.div>

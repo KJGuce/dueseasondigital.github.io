@@ -27,18 +27,18 @@ const HomePage: React.FC = () => {
   const packages = [
     {
       name: "Seed Package",
-      description: "Start your GEO visibility journey.",
+      description: "Start your journey to AI assistant recommendations.",
       fullPrice: "895",
       betaPrice: "675",
       period: "one-time",
       features: [
-        "GEO + Local Search Audit",
-        "Google Business Profile Optimization for AI Assistants",
-        "Listings Setup (Yelp, Bing, Apple, etc.)",
-        "Basic On-Site GEO (1–2 pages)",
-        "FAQ + Schema Markup for AI Answer Engines (1 page)",
-        "'Ask the AI' GEO Report (PDF)",
-        "GEO Implementation Guide & Checklist",
+        "AI Assistant Recommendation Audit",
+        "Google Business Profile Optimization for AI Trust",
+        "Verified Listings Setup (Yelp, Bing, Apple, etc.)",
+        "Basic Schema Markup for AI Understanding",
+        "FAQ + Content Optimization for AI Recommendations",
+        "'Ask the AI' Recommendation Report (PDF)",
+        "AI Recommendation Strategy Guide",
       ],
       icon: <FaSeedling className={styles.packageIcon} />,
       cta: "🌱 Plant My Visibility",
@@ -47,7 +47,7 @@ const HomePage: React.FC = () => {
     },
     {
       name: "Sprout Package",
-      description: "Grow trust and get seen in AI-powered results.",
+      description: "Grow your AI-powered recommendation presence.",
       fullPrice: "749",
       betaPrice: "560",
       period: "month",
@@ -55,11 +55,11 @@ const HomePage: React.FC = () => {
       setupBetaPrice: "640",
       features: [
         "Everything in Seed",
-        "Monthly Conversational Content/FAQ Post (GEO-optimized)",
-        "Review Automation System",
-        "Ongoing Listing Management (5/mo)",
-        "Monthly GEO Visibility Report",
-        "1 Local PR Pitch (Month 2)",
+        "Monthly AI-Optimized Content Creation",
+        "Review Management for AI Trust",
+        "Verified Directory Management (5/mo)",
+        "Monthly AI Recommendation Report",
+        "1 Local Authority Building PR Pitch",
       ],
       icon: <FaLeaf className={styles.packageIcon} />,
       cta: "🌿 Nurture My Growth",
@@ -67,7 +67,7 @@ const HomePage: React.FC = () => {
     },
     {
       name: "Harvest Package",
-      description: "Reap GEO results in due season.",
+      description: "Maximize AI recommendations and authority.",
       fullPrice: "1,800",
       betaPrice: "1,350",
       period: "month",
@@ -75,12 +75,12 @@ const HomePage: React.FC = () => {
       setupBetaPrice: "2,250",
       features: [
         "Everything in Sprout",
-        "Full Website Refresh (up to 5 pages)",
-        "Advanced Schema + Technical GEO",
-        "2x PR Pitches (Quarterly)",
-        "Brand GEO Visibility Dashboard",
-        "Quarterly GEO Strategy Report",
-        "Priority Email & Voice Note Support",
+        "Full Website AI Content Optimization",
+        "Advanced Schema + AI Understanding",
+        "2x Authority Building PR Pitches",
+        "AI Recommendation Dashboard",
+        "Quarterly AI Strategy Report",
+        "Priority Support",
       ],
       icon: <FaChartLine className={styles.packageIcon} />,
       cta: "🌾 Let's Harvest the Results",
@@ -91,39 +91,39 @@ const HomePage: React.FC = () => {
   const benefits = [
     {
       icon: <FaBrain className={styles.benefitIcon} />,
-      title: "GEO-First Strategy",
+      title: "AI-First Recommendation Strategy",
       description:
-        "We specialize in Generative Engine Optimization (GEO), helping you get found by AI-powered conversational search platforms and answer engines.",
+        "We specialize in Generative Engine Optimization (GEO), crafting authoritative content and optimizing your presence to become the trusted source that AI assistants actively recommend.",
     },
     {
       icon: <FaStar className={styles.benefitIcon} />,
-      title: "Local Market Mastery",
+      title: "Local Market Authority",
       description:
-        "Deep understanding of local search behavior and AI interactions in your specific market.",
+        "Build trust through optimized Google Business Profiles, industry directories, and local content that AI assistants recognize and recommend in your market.",
     },
     {
       icon: <FaMapMarkerAlt className={styles.benefitIcon} />,
-      title: "Multi-Platform GEO Visibility",
+      title: "Multi-Platform AI Visibility",
       description:
-        "Get found across Google, Gemini, ChatGPT, and more — wherever AI assistants are answering questions.",
+        "Get actively recommended across ChatGPT, Google Gemini, Bing Chat, and Perplexity — wherever customers ask AI assistants for recommendations.",
     },
     {
       icon: <FaHandshake className={styles.benefitIcon} />,
       title: "True Partnership",
       description:
-        "We're invested in your growth, providing personalized support that adapts to your business stage.",
+        "We're invested in your growth, providing personalized strategies to establish your business as a trusted recommendation in AI-powered searches.",
     },
     {
       icon: <FaBullseye className={styles.benefitIcon} />,
-      title: "Clear GEO Growth Metrics",
+      title: "AI Recommendation Metrics",
       description:
-        "Track your GEO visibility across all platforms with AI-powered reports that show real progress.",
+        "Track how often AI assistants recommend your business with our comprehensive reports covering ChatGPT, Gemini, Bing Chat, and more.",
     },
     {
       icon: <FaHeart className={styles.benefitIcon} />,
-      title: "Your Success Story",
+      title: "Your AI Success Story",
       description:
-        "We're committed to helping you build a strong, visible presence that attracts your ideal customers.",
+        "We're committed to making your business the go-to recommendation when customers ask AI assistants about your industry.",
     },
   ];
 
@@ -140,13 +140,14 @@ const HomePage: React.FC = () => {
       <section className={styles.hero}>
         <div className={styles.heroContent}>
           <h1>
-            Rank Higher on AI Search Assistants with Generative Engine
+            Get Actively Recommended by AI Assistants with Generative Engine
             Optimization (GEO)
           </h1>
           <p className={styles.heroSubtitle}>
-            We help your business get found where customers ask AI assistants
-            like ChatGPT, Gemini, and Bing Chat. GEO (Generative Engine
-            Optimization) is the new way to win visibility in the age of AI.
+            We don't just help you rank — we help you get recommended by AI
+            assistants like ChatGPT, Gemini, and Bing Chat. Our GEO strategy
+            ensures your business becomes the trusted source that AI platforms
+            actively suggest to users.
           </p>
           <div className={styles.heroCta}>
             <Link to="/contact" className={styles.primaryButton}>
@@ -178,34 +179,37 @@ const HomePage: React.FC = () => {
         <div className={styles.servicesContent}>
           <div className={styles.contextSection}>
             <p className={styles.contextText}>
-              🌍 Get found across Google, Gemini, ChatGPT, and more — our
-              GEO-driven approach helps you show up where your customers are
-              already searching. No guesswork. Just growth.
+              🌍 Get actively recommended by ChatGPT, Gemini, Bing Chat, and
+              more — our GEO-driven approach ensures AI assistants recognize and
+              suggest your business to potential customers. Beyond rankings, we
+              focus on becoming the trusted source that AI platforms naturally
+              recommend.
             </p>
             <div className={styles.benefitIcons}>
               <div className={styles.contextBenefitIcon}>
                 <span>🧠</span>
-                <h4>Smarter GEO Visibility</h4>
+                <h4>AI-Powered Recommendations</h4>
                 <p>
-                  We optimize your presence for Generative Engines and AI chat
-                  platforms — so you're not just ranking, you're recommended by
-                  AI assistants.
+                  We optimize your presence so AI assistants don't just find you
+                  — they actively recommend you as a trusted solution to user
+                  queries.
                 </p>
               </div>
               <div className={styles.contextBenefitIcon}>
                 <span>📊</span>
-                <h4>Clarity You Can Measure</h4>
+                <h4>Recommendation Tracking</h4>
                 <p>
-                  Our AI-powered reports track your visibility, reach, and
-                  growth — with insights you can actually use.
+                  Our AI-powered reports show how often you're recommended
+                  across platforms, with actionable insights to increase
+                  recommendation frequency.
                 </p>
               </div>
               <div className={styles.contextBenefitIcon}>
                 <span>🤝</span>
-                <h4>Partnership, Not Just Service</h4>
+                <h4>Strategic AI Partnership</h4>
                 <p>
-                  We walk with you. Whether you're just getting started or
-                  scaling fast, our support adapts to your stage and goals.
+                  We help you build authority that AI assistants trust and
+                  recommend, adapting our approach as AI platforms evolve.
                 </p>
               </div>
             </div>

@@ -6,62 +6,68 @@ const faqs = [
   {
     question: "What is Generative Engine Optimization (GEO)?",
     answer:
-      "Generative Engine Optimization (GEO) is the process of optimizing your website and online presence to rank highly in AI-powered search assistants and generative engines such as ChatGPT, Google Gemini, Bing Chat, and Perplexity. Unlike traditional SEO, which focuses on keyword ranking on search engines like Google, GEO targets conversational AI platforms where users ask natural language questions and get AI-generated answers.",
+      "Generative Engine Optimization (GEO) is the strategic process of optimizing your online presence to be actively recommended by AI assistants like ChatGPT, Google Gemini, Bing Chat, and Perplexity. Unlike traditional SEO that focuses on keyword ranking, GEO ensures your business becomes a trusted source that AI platforms naturally suggest when users ask questions in your industry.",
+  },
+  {
+    question:
+      "How do you ensure my business gets recommended by AI assistants, not just ranked?",
+    answer:
+      "We use a comprehensive approach that focuses on building trust signals that AI assistants value: 1) Creating authoritative, fact-verified content that AI platforms can confidently recommend, 2) Implementing advanced schema markup that helps AI understand your business details, 3) Maintaining verified profiles across trusted platforms, 4) Building local authority through strategic PR and content placement, and 5) Continuously monitoring and optimizing how AI assistants represent your business in their recommendations.",
   },
   {
     question: "Why is GEO important for my business?",
     answer:
-      "More consumers are turning to AI assistants and chatbots to find products, services, and local businesses. If your business isn't optimized for these AI platforms, you risk losing visibility to competitors who are. GEO helps you stay ahead by ensuring your business appears in AI-generated responses, voice searches, and conversational queries—capturing a growing segment of the market.",
+      "As more consumers rely on AI assistants for recommendations, being merely visible isn't enough—you need to be actively recommended. AI platforms like ChatGPT and Gemini are becoming the new gatekeepers of business recommendations. GEO ensures your business is positioned as a trusted authority that these AI assistants confidently recommend to users seeking services in your industry.",
   },
   {
     question: "How is GEO different from traditional SEO?",
     answer:
-      "While traditional SEO focuses on ranking your website for specific keywords in search engine results pages (SERPs), GEO optimizes for the way AI assistants understand and generate answers from multiple sources. This means GEO emphasizes conversational content, FAQ optimization, structured data (schema markup), and local business signals that AI engines use to generate accurate and relevant responses.",
+      "While traditional SEO focuses on keyword rankings, GEO optimizes for AI understanding and trust. This means creating content that AI assistants can verify and confidently recommend, implementing comprehensive schema markup for clear business understanding, maintaining verified profiles across trusted platforms, and building authority signals that AI systems recognize when making recommendations.",
   },
   {
     question: "What kind of businesses benefit most from GEO?",
     answer:
-      "Businesses that rely on local customers and service-oriented queries benefit greatly from GEO, including: retail stores and restaurants, healthcare providers, home service professionals (plumbers, electricians), legal and financial advisors, hospitality and tourism businesses. However, any business looking to stay competitive in the evolving digital landscape should consider GEO as part of their marketing strategy.",
+      "Any business that wants to be actively recommended by AI assistants can benefit from GEO. This is especially crucial for local businesses, service providers, and industry experts who want to be the top recommendation when users ask AI assistants for trusted providers. This includes: retail stores, restaurants, healthcare providers, home service professionals, legal and financial advisors, and hospitality businesses.",
   },
   {
     question: "What are some key strategies used in GEO?",
     answer:
-      "Key GEO strategies include: creating conversational, natural language content that answers common customer questions; optimizing FAQ sections with schema markup to increase chances of being featured in AI-generated answers; enhancing Google Business Profiles and local citations to improve local AI search visibility; monitoring AI assistant traffic and adjusting content based on emerging trends; using structured data to help AI better interpret your website information.",
+      "Our key strategies focus on building trust signals that influence AI recommendations: 1) Creating authoritative, fact-verified content that answers user questions comprehensively, 2) Implementing advanced schema markup to help AI understand your business details and trustworthiness, 3) Optimizing Google Business Profiles and local citations for enhanced credibility, 4) Building verifiable authority through strategic content placement and PR, and 5) Maintaining consistent, verified information across all platforms that AI assistants reference.",
   },
   {
     question: "How long does it take to see results from GEO?",
     answer:
-      "GEO is an evolving field, and results depend on factors like your industry, current online presence, and competition. Generally, you can expect to see initial improvements within 2-3 months, with more significant growth over 6-12 months as AI assistants increasingly drive search traffic.",
+      "Initial improvements in AI recommendations can be seen within 2-3 months as we implement trust signals and optimize your content. More significant growth in recommendation frequency and authority typically occurs over 6-12 months as AI assistants increasingly recognize and trust your business as a reliable source in your industry.",
   },
   {
     question: "Can I combine GEO with my existing SEO efforts?",
     answer:
-      "Absolutely! GEO complements traditional SEO and should be part of a holistic digital marketing strategy. While traditional SEO focuses on search engines, GEO ensures your content and business are optimized for the growing number of users searching via AI assistants and conversational platforms.",
+      "Absolutely! While traditional SEO helps with search engine visibility, GEO ensures you're actively recommended by AI assistants. The two strategies complement each other, creating a comprehensive approach that captures both traditional search traffic and the growing number of users who rely on AI assistants for recommendations.",
   },
   {
     question: "How does GEO impact voice search?",
     answer:
-      "Voice search is a subset of AI-powered search where users speak their queries instead of typing them. GEO's focus on natural language content and conversational queries naturally improves your chances of appearing in voice search results, capturing voice-driven traffic from smart speakers and mobile assistants.",
+      "Voice search heavily relies on AI assistants to understand and answer queries. Our GEO strategies ensure your business is recommended in voice search results by optimizing for natural language understanding and building the trust signals that voice assistants rely on when making recommendations.",
   },
   {
     question: "How do you measure success in GEO?",
     answer:
-      "Success is measured by tracking increased traffic coming from AI-powered search assistants; improved rankings for conversational queries and FAQs; growth in local business visibility and engagement; leads and conversions generated through AI assistant interactions. Specialized analytics tools and AI-focused performance metrics are used for transparent reporting.",
+      "We track multiple metrics to measure how often and confidently AI assistants recommend your business: 1) Recommendation frequency across major AI platforms, 2) Sentiment and context of AI-generated recommendations, 3) Verification status and trust signals across platforms, 4) Local authority indicators, and 5) Conversion rates from AI-driven recommendations.",
   },
   {
     question: "Is GEO suitable for small businesses?",
     answer:
-      "Yes! GEO is especially beneficial for small and local businesses that want to compete with larger companies by being discoverable where customers are asking questions—in AI assistants and voice search. It's a cost-effective way to future-proof your online presence.",
+      "Yes! GEO is particularly valuable for small businesses looking to compete with larger companies. By building strong trust signals and authority in your local market or niche, you can become the business that AI assistants confidently recommend—even over larger competitors with bigger marketing budgets.",
   },
   {
     question: "How can Due Season Digital help with GEO?",
     answer:
-      "Due Season Digital specializes in GEO services tailored to your unique business needs. We provide comprehensive audits, conversational content creation, schema optimization, local AI search enhancement, and ongoing performance tracking to ensure your business thrives in the new AI-driven search landscape.",
+      "We specialize in making your business the trusted recommendation across AI platforms. Our comprehensive approach includes AI recommendation audits, trust signal optimization, schema markup implementation, authority building through strategic content and PR, and continuous monitoring of how AI assistants represent your business. We ensure you're not just visible, but actively recommended.",
   },
   {
     question: "How do I get started with GEO?",
     answer:
-      "Start by contacting us for a free consultation or an AI search readiness audit. We'll assess your current online presence and develop a custom GEO strategy designed to boost your visibility in AI-powered search engines and assistants.",
+      "Start with our AI Recommendation Audit to see how AI assistants currently view and recommend your business. We'll analyze your trust signals, authority indicators, and current recommendation frequency to develop a strategic plan for becoming the go-to recommendation in your industry.",
   },
 ];
 
@@ -75,10 +81,10 @@ const GEOFAQ: React.FC = () => {
   return (
     <div className={styles.geofaqPage}>
       <header className={styles.header}>
-        <h1>Generative Engine Optimization (GEO) FAQ</h1>
+        <h1>AI Recommendation Optimization FAQ</h1>
         <p className={styles.subtitle}>
-          Everything you need to know about optimizing for AI-powered search
-          assistants and generative engines.
+          Learn how we help your business become the trusted recommendation
+          across AI assistants like ChatGPT, Gemini, and Bing Chat.
         </p>
       </header>
       <main className={styles.faqList}>
@@ -108,13 +114,16 @@ const GEOFAQ: React.FC = () => {
           </section>
         ))}
         <div className={styles.ctaSection}>
-          <h2>Ready to future-proof your business?</h2>
+          <h2>
+            Ready to become the #1 AI-recommended business in your industry?
+          </h2>
           <p>
-            Schedule a free consultation or request a GEO audit to see how your
-            business can stand out in AI-powered search.
+            Get your free AI Recommendation Audit and discover how we can
+            position your business as the trusted choice that AI assistants
+            actively suggest.
           </p>
           <Link to="/contact" className={styles.ctaButton}>
-            Schedule a Free Consultation
+            Get Your AI Recommendation Audit
           </Link>
         </div>
       </main>
