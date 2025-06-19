@@ -310,13 +310,9 @@ const ServicesPage = () => {
                   </li>
                 ))}
               </ul>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className={styles.ctaButton}
-              >
+              <Link to="/contact" className={styles.ctaButton}>
                 Get Started
-              </motion.button>
+              </Link>
             </motion.div>
           ))}
         </div>
@@ -409,13 +405,9 @@ const ServicesPage = () => {
             Need something unique or have multiple locations? We're happy to
             build a custom solution!
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className={styles.ctaButton}
-          >
+          <Link to="/contact" className={styles.ctaButton}>
             Book a Free Strategy Call
-          </motion.button>
+          </Link>
         </motion.div>
       </div>
     </div>

@@ -501,25 +501,6 @@ const LandingPageAISEO: React.FC = () => (
         </form>
       </div>
     </section>
-
-    <footer className={styles.footer}>
-      <div className={styles.container}>
-        <div className={`${styles.socialLinks} ${styles.fadeIn}`}>
-          <a href="https://www.facebook.com/profile.php?id=61577034625612">
-            <i className="fab fa-facebook"></i>
-          </a>
-          <a href="https://www.instagram.com/dueseason.digital/">
-            <i className="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.linkedin.com/company/due-season-digital/">
-            <i className="fab fa-linkedin"></i>
-          </a>
-        </div>
-        <p className={styles.fadeIn}>
-          &copy; 2024 Due Season Digital. All rights reserved.
-        </p>
-      </div>
-    </footer>
   </>
 );
 

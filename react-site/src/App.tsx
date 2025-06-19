@@ -7,7 +7,11 @@ import ServicesPage from "./pages/ServicesPage";
 import ContactPage from "./pages/ContactPage";
 import DueSeasonIndexTool from "./pages/DueSeasonIndexTool";
 import GEOFAQ from "./pages/GEOFAQ";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+import CookiePolicy from "./pages/CookiePolicy";
 import ScrollToTop from "./components/ScrollToTop";
+import Footer from "./components/Footer";
 import "./variables.css";
 import "./App.css";
 
@@ -28,9 +32,13 @@ function App() {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/index-tool" element={<DueSeasonIndexTool />} />
             <Route path="/geofaq" element={<GEOFAQ />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+            <Route path="/cookie-policy" element={<CookiePolicy />} />
             {/* Add other routes as needed */}
           </Routes>
         </main>
+        <Footer />
       </div>
     </Router>
   );

@@ -42,6 +42,7 @@ const HomePage: React.FC = () => {
       ],
       icon: <FaSeedling className={styles.packageIcon} />,
       cta: "🌱 Plant My Visibility",
+      link: "/contact",
       popular: false,
     },
     {
@@ -148,9 +149,9 @@ const HomePage: React.FC = () => {
             Optimization) is the new way to win visibility in the age of AI.
           </p>
           <div className={styles.heroCta}>
-            <button onClick={scrollToServices} className={styles.primaryButton}>
+            <Link to="/contact" className={styles.primaryButton}>
               🌱 Plant My Visibility
-            </button>
+            </Link>
             <Link to="/services" className={styles.secondaryButton}>
               See All Plans
             </Link>
@@ -272,7 +273,7 @@ const HomePage: React.FC = () => {
                   ))}
                 </ul>
                 <MotionLink
-                  to="/contact"
+                  to={pkg.link}
                   className={styles.ctaButton}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -399,51 +400,6 @@ const HomePage: React.FC = () => {
           </MotionLink>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className={styles.footer}>
-        <div className={styles.container}>
-          <div className={styles.socialLinks}>
-            <motion.a
-              href="https://www.facebook.com/profile.php?id=61577034625612"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ y: -5 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <FaFacebook />
-            </motion.a>
-            <motion.a
-              href="https://www.linkedin.com/company/due-season-digital/"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ y: -5 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <FaLinkedin />
-            </motion.a>
-            <motion.a
-              href="https://instagram.com/dueseasondigital"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ y: -5 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <FaInstagram />
-            </motion.a>
-          </div>
-          <p>
-            © 2025 Due Season Digital. All rights reserved.{" "}
-            <Link
-              to="/geofaq"
-              className={styles.secondaryButton}
-              style={{ marginLeft: "1rem", fontSize: "1rem" }}
-            >
-              GEO FAQ
-            </Link>
-          </p>
-        </div>
-      </footer>
     </div>
   );
 };

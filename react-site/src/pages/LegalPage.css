@@ -1,0 +1,13 @@
+.legalPage {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10rem 1.5rem 4rem 1.5rem;
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+@media (max-width: 600px) {
+  .legalPage {
+    padding: 10rem 0.5rem 3rem 0.5rem;
+  }
+}
