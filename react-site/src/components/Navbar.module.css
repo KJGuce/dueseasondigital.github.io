@@ -1,15 +1,12 @@
 .navbar {
+  background-color: var(--color-background-dark);
+  padding: 1rem 0;
   position: fixed;
-  top: 3.5rem;
+  top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 1rem 0;
-  transition: top 0.3s ease;
+  transition: top 0.3s;
 }
 
 .navbarNoAlert {
@@ -19,95 +16,19 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 800;
-  background: linear-gradient(
-    135deg,
-    var(--color-primary) 0%,
-    var(--color-accent) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--color-text-light);
   text-decoration: none;
-  transition: all 0.3s ease;
-  letter-spacing: -0.5px;
-  position: relative;
-  padding: 0.5rem 0;
-}
-
-.logo::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(
-    135deg,
-    var(--color-primary) 0%,
-    var(--color-accent) 100%
-  );
-  transition: width 0.3s ease;
-}
-
-.logo:hover {
-  transform: translateY(-1px);
-}
-
-.logo:hover::after {
-  width: 100%;
-}
-
-.navLinks {
+  font-size: 1.5rem;
+  font-weight: 600;
   display: flex;
   align-items: center;
-  gap: 2rem;
-}
-
-.navLink {
-  color: var(--color-text-light);
-  font-size: clamp(1rem, 1.2vw, 1.1rem);
-  font-weight: 600;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-.navLink:hover {
-  color: var(--color-text-dark);
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.ctaButton {
-  background: linear-gradient(
-    135deg,
-    var(--color-primary) 0%,
-    var(--color-accent) 100%
-  );
-  color: var(--color-background);
-  padding: 0.75rem 1.5rem;
-  border-radius: 50px;
-  font-weight: 700;
-  font-size: clamp(1rem, 1.2vw, 1.1rem);
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
-  transition: all 0.3s ease;
-}
-
-.ctaButton:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
 }
 
 .menuButton {
@@ -118,6 +39,79 @@
   font-size: 1.5rem;
   cursor: pointer;
   padding: 0.5rem;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navItem {
+  position: relative;
+}
+
+.navLink {
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+  padding: 0.5rem 0;
+}
+
+.navLink:hover {
+  color: var(--color-primary);
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-background-dark);
+  border-radius: 8px;
+  padding: 0.5rem;
+  min-width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+  margin-top: 0.5rem;
+}
+
+.navItem:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdownLink {
+  display: block;
+  color: var(--color-text-light);
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.dropdownLink:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-primary);
+}
+
+.ctaButton {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
@@ -131,8 +125,7 @@
     top: 100%;
     left: 0;
     right: 0;
-    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: var(--color-background-dark);
     padding: 1rem;
     flex-direction: column;
     align-items: stretch;
@@ -143,13 +136,27 @@
     display: flex;
   }
 
-  .navLink {
-    padding: 1rem;
-    text-align: center;
+  .navItem {
+    position: static;
+  }
+
+  .dropdown {
+    position: static;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0.5rem 0 0.5rem 1rem;
+  }
+
+  .dropdownLink {
+    padding: 0.5rem 1rem;
   }
 
   .ctaButton {
-    width: 100%;
+    display: block;
     text-align: center;
     margin-top: 1rem;
   }

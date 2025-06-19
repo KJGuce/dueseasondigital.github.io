@@ -15,10 +15,22 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", href: "/" },
+    {
+      name: "GEO",
+      href: "/generative-engine-optimization",
+      subLinks: [
+        { name: "What is GEO?", href: "/generative-engine-optimization" },
+        { name: "FAQ", href: "/generative-engine-optimization/faq" },
+        {
+          name: "Case Studies",
+          href: "/generative-engine-optimization/case-studies",
+        },
+        { name: "Blog", href: "/generative-engine-optimization/blog" },
+      ],
+    },
     { name: "Services", href: "/services" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
-    { name: "Due Season Index", href: "/index-tool" },
   ];
 
   return (
@@ -58,17 +70,32 @@ const Navbar = () => {
           className={`${styles.navLinks} ${isMenuOpen ? styles.active : ""}`}
         >
           {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              to={link.href}
-              className={styles.navLink}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {link.name}
-            </Link>
+            <div key={link.name} className={styles.navItem}>
+              <Link
+                to={link.href}
+                className={styles.navLink}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.name}
+              </Link>
+              {link.subLinks && (
+                <div className={styles.dropdown}>
+                  {link.subLinks.map((subLink) => (
+                    <Link
+                      key={subLink.name}
+                      to={subLink.href}
+                      className={styles.dropdownLink}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {subLink.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
           <Link to="/contact" className={styles.ctaButton}>
-            Let's Talk
+            Get Your AI Audit
           </Link>
         </div>
       </div>

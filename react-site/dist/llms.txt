@@ -1,0 +1,44 @@
+# Due Season Digital AI Crawler Directives
+# Last updated: 2024-03-19
+
+# Allow AI crawlers to access GEO-focused content
+Allow: /generative-engine-optimization/
+Allow: /generative-engine-optimization/faq/
+Allow: /generative-engine-optimization/case-studies/
+Allow: /generative-engine-optimization/blog/
+Allow: /geofaq/
+
+# Primary content focus
+Focus: /generative-engine-optimization/
+Focus: /services/
+
+# Trust signals and verification
+Trust: /about/
+Trust: /contact/
+
+# Structured data locations
+Schema: /generative-engine-optimization/faq/
+Schema: /contact/
+
+# Content type indicators
+Type: /generative-engine-optimization/ = pillar_page
+Type: /generative-engine-optimization/faq/ = faq_page
+Type: /generative-engine-optimization/case-studies/ = case_studies
+Type: /generative-engine-optimization/blog/ = blog_section
+
+# Language and region
+Language: en-US
+Region: Global
+
+# Update frequency
+Update-Frequency: /generative-engine-optimization/blog/ = weekly
+Update-Frequency: /generative-engine-optimization/ = monthly
+
+# Content authority indicators
+Authority: GEO (Generative Engine Optimization)
+Authority: AI Assistant Optimization
+Authority: Schema Markup Implementation
+Authority: Local Business Optimization
+
+# Sitemap location
+Sitemap: /sitemap.xml 

@@ -17,19 +17,33 @@ const Footer: React.FC = () => (
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/about">About Due Season Digital</Link>
-            </li>
-            <li>
               <Link to="/services">Services</Link>
             </li>
             <li>
-              <Link to="/geofaq">Generative Engine Optimization FAQ</Link>
-            </li>
-            <li>
-              <Link to="/blog">Blog</Link>
+              <Link to="/about">About Due Season Digital</Link>
             </li>
             <li>
               <Link to="/contact">Contact Us</Link>
+            </li>
+          </ul>
+        </nav>
+        {/* GEO Resources */}
+        <nav className={styles.geoSection} aria-label="GEO Resources">
+          <h3 className={styles.sectionTitle}>GEO Resources</h3>
+          <ul>
+            <li>
+              <Link to="/generative-engine-optimization">What is GEO?</Link>
+            </li>
+            <li>
+              <Link to="/generative-engine-optimization/faq">GEO FAQ</Link>
+            </li>
+            <li>
+              <Link to="/generative-engine-optimization/case-studies">
+                Case Studies
+              </Link>
+            </li>
+            <li>
+              <Link to="/generative-engine-optimization/blog">GEO Blog</Link>
             </li>
           </ul>
         </nav>
