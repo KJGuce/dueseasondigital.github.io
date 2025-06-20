@@ -181,7 +181,7 @@ const HomePage: React.FC = () => {
     <>
       <Helmet>
         <title>
-          Due Season Digital — #1 GEO Agency for AI Assistant Search
+          Due Season Digital — Leading GEO Agency for AI Assistant Search
           Optimization
         </title>
         <meta
