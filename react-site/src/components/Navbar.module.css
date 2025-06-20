@@ -139,6 +139,10 @@
     top: 48px;
   }
 
+  .navbar.navbarNoAlert {
+    top: 0;
+  }
+
   .navLinks {
     display: none;
     position: absolute;
