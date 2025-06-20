@@ -305,7 +305,7 @@ const AboutPage: React.FC = () => {
                 <span>Founding client recognition</span>
               </div>
             </div>
-            <Link to="/contact" className={styles.discountCta}>
+            <Link to="/services" className={styles.discountCta}>
               Learn More About Our Packages
             </Link>
           </motion.div>
