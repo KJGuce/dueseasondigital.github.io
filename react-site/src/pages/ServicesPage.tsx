@@ -155,7 +155,7 @@ const ServicesPage = () => {
       clientType: "All packages",
     },
     {
-      name: "🔧 AI SEO Health Check & Technical Fixes",
+      name: "AI SEO Health Check & Technical Fixes",
       price: "325",
       period: "one-time",
       description:
@@ -368,7 +368,14 @@ const ServicesPage = () => {
             build a custom solution!
           </p>
           <Link to="/contact" className={styles.ctaButton}>
-            Book a Free Strategy Call
+            <a
+              href="https://calendly.com/kristenjoy-dueseasondigital/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.ctaButton}
+            >
+              Book a Free Strategy Call
+            </a>
           </Link>
         </motion.div>
       </div>
