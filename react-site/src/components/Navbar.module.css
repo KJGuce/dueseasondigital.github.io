@@ -2,7 +2,7 @@
   background-color: var(--color-background-dark);
   padding: 1rem 0;
   position: fixed;
-  top: 58px;
+  top: 96px !important;
   left: 0;
   right: 0;
   z-index: 1000;
@@ -10,7 +10,7 @@
 }
 
 .navbarNoAlert {
-  top: 0;
+  top: 0 !important;
 }
 
 .container {
