@@ -135,6 +135,10 @@
     display: block;
   }
 
+  .navbar {
+    top: 48px;
+  }
+
   .navLinks {
     display: none;
     position: absolute;
@@ -159,12 +163,13 @@
   .dropdown {
     position: static;
     transform: none;
-    opacity: 1;
-    visibility: visible;
     background: none;
     box-shadow: none;
     padding: 0;
     margin: 0.5rem 0 0.5rem 1rem;
+  }
+  .dropdown[style*="display: none"] {
+    display: none !important;
   }
 
   .dropdownLink {

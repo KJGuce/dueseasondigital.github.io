@@ -9,6 +9,7 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ isBannerVisible }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isGeoDropdownOpen, setIsGeoDropdownOpen] = useState(false);
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -29,6 +30,9 @@ const Navbar: React.FC<NavbarProps> = ({ isBannerVisible }) => {
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
+
+  // Helper to detect mobile
+  const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
 
   return (
     <nav
@@ -56,38 +60,78 @@ const Navbar: React.FC<NavbarProps> = ({ isBannerVisible }) => {
         {/* Mobile menu button */}
         <button
           className={styles.menuButton}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={() => {
+            setIsMenuOpen(!isMenuOpen);
+            setIsGeoDropdownOpen(false);
+          }}
           aria-label="Toggle menu"
         >
           {isMenuOpen ? <FaTimes /> : <FaBars />}
         </button>
 
-        {/* Desktop Navigation */}
+        {/* Desktop & Mobile Navigation */}
         <div
           className={`${styles.navLinks} ${isMenuOpen ? styles.active : ""}`}
         >
           {navLinks.map((link) => (
             <div key={link.name} className={styles.navItem}>
-              <Link
-                to={link.href}
-                className={styles.navLink}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.name}
-              </Link>
-              {link.subLinks && (
-                <div className={styles.dropdown}>
-                  {link.subLinks.map((subLink) => (
-                    <Link
-                      key={subLink.name}
-                      to={subLink.href}
-                      className={styles.dropdownLink}
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {subLink.name}
-                    </Link>
-                  ))}
-                </div>
+              {link.subLinks ? (
+                <>
+                  <button
+                    className={styles.navLink}
+                    type="button"
+                    aria-haspopup="true"
+                    aria-expanded={isGeoDropdownOpen}
+                    onClick={() => {
+                      if (window.innerWidth <= 768) {
+                        setIsGeoDropdownOpen((open) => !open);
+                      }
+                    }}
+                    onMouseEnter={() => {
+                      if (window.innerWidth > 768) setIsGeoDropdownOpen(true);
+                    }}
+                    onMouseLeave={() => {
+                      if (window.innerWidth > 768) setIsGeoDropdownOpen(false);
+                    }}
+                  >
+                    {link.name}
+                  </button>
+                  <div
+                    className={styles.dropdown}
+                    style={{
+                      display:
+                        window.innerWidth > 768
+                          ? isGeoDropdownOpen
+                            ? "block"
+                            : undefined
+                          : isGeoDropdownOpen
+                          ? "block"
+                          : "none",
+                    }}
+                  >
+                    {link.subLinks.map((subLink) => (
+                      <Link
+                        key={subLink.name}
+                        to={subLink.href}
+                        className={styles.dropdownLink}
+                        onClick={() => {
+                          setIsMenuOpen(false);
+                          setIsGeoDropdownOpen(false);
+                        }}
+                      >
+                        {subLink.name}
+                      </Link>
+                    ))}
+                  </div>
+                </>
+              ) : (
+                <Link
+                  to={link.href}
+                  className={styles.navLink}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
               )}
             </div>
           ))}
