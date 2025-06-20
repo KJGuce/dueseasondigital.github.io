@@ -367,16 +367,14 @@ const ServicesPage = () => {
             Need something unique or have multiple locations? We're happy to
             build a custom solution!
           </p>
-          <Link to="/contact" className={styles.ctaButton}>
-            <a
-              href="https://calendly.com/kristenjoy-dueseasondigital/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.ctaButton}
-            >
-              Book a Free Strategy Call
-            </a>
-          </Link>
+          <a
+            href="https://calendly.com/kristenjoy-dueseasondigital/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.ctaButton}
+          >
+            Book a Free Strategy Call
+          </a>
         </motion.div>
       </div>
     </div>
