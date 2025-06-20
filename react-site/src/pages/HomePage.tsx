@@ -23,6 +23,7 @@ import {
 import styles from "./HomePage.module.css";
 import { motion as motionLink } from "framer-motion";
 import PackageCard from "../components/PackageCard";
+import { Helmet } from "react-helmet";
 
 const MotionLink = motionLink(Link);
 
@@ -177,245 +178,258 @@ const HomePage: React.FC = () => {
   };
 
   return (
-    <div className={styles.homePage}>
-      {/* Hero Section */}
-      <section className={styles.hero}>
-        <div className={styles.heroContent}>
-          <h1>
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              Get Actively Recommended by AI Assistants with Generative Engine
-              Optimization (GEO)
-            </motion.span>
-          </h1>
-          <div className={styles.robotIconMobile}>
+    <>
+      <Helmet>
+        <title>
+          Due Season Digital — #1 GEO Agency for AI Assistant Search
+          Optimization
+        </title>
+        <meta
+          name="description"
+          content="Specializing in Generative Engine Optimization (GEO), we help Toronto SMBs get recommended by AI assistants like ChatGPT and Gemini. Grow your AI search visibility today!"
+        />
+      </Helmet>
+      <div className={styles.homePage}>
+        {/* Hero Section */}
+        <section className={styles.hero}>
+          <div className={styles.heroContent}>
+            <h1>
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                Get Actively Recommended by AI Assistants with Generative Engine
+                Optimization (GEO)
+              </motion.span>
+            </h1>
+            <div className={styles.robotIconMobile}>
+              <FaRobot />
+            </div>
+            <p className={styles.heroSubtitle}>
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                We don't just help you rank — we help you get recommended by AI
+                assistants like ChatGPT, Google Gemini, Bing Chat, Perplexity,
+                YouChat, Anthropic Claude, and more. Our GEO strategy ensures
+                your business becomes the trusted source that AI platforms
+                actively suggest to users.
+              </motion.span>
+            </p>
+            <div className={styles.heroCta}>
+              <Link to="/contact" className={styles.primaryButton}>
+                🌱 Plant My Visibility
+              </Link>
+              <Link to="/services" className={styles.secondaryButton}>
+                See All Plans
+              </Link>
+              <Link to="/geofaq" className={styles.secondaryButton}>
+                Learn more about GEO
+              </Link>
+            </div>
+          </div>
+          <div className={styles.scrollCue} onClick={scrollToServices}>
+            <span>Scroll to see plans</span>
+            <FaArrowDown className={styles.scrollCueIcon} />
+          </div>
+          <div className={styles.heroGraphic}></div>
+          <div className={styles.robotIcon}>
             <FaRobot />
           </div>
-          <p className={styles.heroSubtitle}>
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              We don't just help you rank — we help you get recommended by AI
-              assistants like ChatGPT, Google Gemini, Bing Chat, Perplexity,
-              YouChat, Anthropic Claude, and more. Our GEO strategy ensures your
-              business becomes the trusted source that AI platforms actively
-              suggest to users.
-            </motion.span>
-          </p>
-          <div className={styles.heroCta}>
-            <Link to="/contact" className={styles.primaryButton}>
-              🌱 Plant My Visibility
-            </Link>
-            <Link to="/services" className={styles.secondaryButton}>
-              See All Plans
-            </Link>
-            <Link to="/geofaq" className={styles.secondaryButton}>
-              Learn more about GEO
-            </Link>
-          </div>
-        </div>
-        <div className={styles.scrollCue} onClick={scrollToServices}>
-          <span>Scroll to see plans</span>
-          <FaArrowDown className={styles.scrollCueIcon} />
-        </div>
-        <div className={styles.heroGraphic}></div>
-        <div className={styles.robotIcon}>
-          <FaRobot />
-        </div>
-      </section>
+        </section>
 
-      {/* Section Divider */}
-      <div className={styles.sectionDivider}></div>
+        {/* Section Divider */}
+        <div className={styles.sectionDivider}></div>
 
-      {/* Services Section */}
-      <section className={styles.services} id="pricing-plans">
-        <div className={styles.servicesContent}>
-          <div className={styles.contextSection}>
-            <p className={styles.contextText}>
-              🌍 Get actively recommended by ChatGPT, Gemini, Bing Chat, and
-              more — our GEO-driven approach ensures AI assistants recognize and
-              suggest your business to potential customers. Beyond rankings, we
-              focus on becoming the trusted source that AI platforms naturally
-              recommend.
-            </p>
-            <div className={styles.benefitIcons}>
-              <div className={styles.contextBenefitIcon}>
-                <span>🧠</span>
-                <h4>AI-Powered Recommendations</h4>
-                <p>
-                  We optimize your presence so AI assistants don't just find you
-                  — they actively recommend you as a trusted solution to user
-                  queries.
-                </p>
-              </div>
-              <div className={styles.contextBenefitIcon}>
-                <span>📊</span>
-                <h4>Recommendation Tracking</h4>
-                <p>
-                  Our AI-powered reports show how often you're recommended
-                  across platforms, with actionable insights to increase
-                  recommendation frequency.
-                </p>
-              </div>
-              <div className={styles.contextBenefitIcon}>
-                <span>🤝</span>
-                <h4>Strategic AI Partnership</h4>
-                <p>
-                  We help you build authority that AI assistants trust and
-                  recommend, adapting our approach as AI platforms evolve.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className={styles.sectionHeader}>
-            <h2>GEO-Powered Visibility Plans</h2>
-            <p>
-              Choose the perfect plan to boost your AI assistant search ranking
-            </p>
-          </div>
-
-          <motion.div
-            className={styles.founderDiscountBanner}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <div className={styles.discountBadge}>
-              <FaTag className={styles.discountIcon} />
-              <span>Founding Client Special: 25% Off All Packages</span>
-            </div>
-            <p className={styles.discountSubtext}>
-              Be one of our first 10 clients and save 25% on all packages plus
-              add-ons!
-            </p>
-          </motion.div>
-
-          <div className={styles.packagesGrid}>
-            {packages.map((pkg, index) => (
-              <PackageCard pkg={pkg} index={index} key={pkg.name} />
-            ))}
-          </div>
-          <motion.div
-            className={styles.postSectionCTA}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <motion.p>Not sure which plan is right for you?</motion.p>
-            <a
-              href="https://calendly.com/kristenjoy-dueseasondigital/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.secondaryCtaButton}
-            >
-              Book a Call
-            </a>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className={styles.whyUs} id="why-dsd">
-        <div className={styles.whyUsContent}>
-          <div className={styles.sectionHeader}>
-            <h2>GEO-Powered Growth, Human-Centered Support</h2>
-            <p>
-              Why forward-thinking businesses choose Due Season Digital for
-              their GEO and AI assistant search optimization needs.
-            </p>
-          </div>
-          <div className={styles.benefitsGrid}>
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                className={styles.benefitItem}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                {benefit.icon}
-                <div className={styles.benefitContent}>
-                  <h3>{benefit.title}</h3>
-                  <p>{benefit.description}</p>
+        {/* Services Section */}
+        <section className={styles.services} id="pricing-plans">
+          <div className={styles.servicesContent}>
+            <div className={styles.contextSection}>
+              <p className={styles.contextText}>
+                🌍 Get actively recommended by ChatGPT, Gemini, Bing Chat, and
+                more — our GEO-driven approach ensures AI assistants recognize
+                and suggest your business to potential customers. Beyond
+                rankings, we focus on becoming the trusted source that AI
+                platforms naturally recommend.
+              </p>
+              <div className={styles.benefitIcons}>
+                <div className={styles.contextBenefitIcon}>
+                  <span>🧠</span>
+                  <h4>AI-Powered Recommendations</h4>
+                  <p>
+                    We optimize your presence so AI assistants don't just find
+                    you — they actively recommend you as a trusted solution to
+                    user queries.
+                  </p>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-          <div className={styles.whyUsCta}>
-            <p>✨ Ready to work with a partner who actually sees you?</p>
-            <a
-              href="https://calendly.com/kristenjoy-dueseasondigital/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.secondaryCtaButton}
+                <div className={styles.contextBenefitIcon}>
+                  <span>📊</span>
+                  <h4>Recommendation Tracking</h4>
+                  <p>
+                    Our AI-powered reports show how often you're recommended
+                    across platforms, with actionable insights to increase
+                    recommendation frequency.
+                  </p>
+                </div>
+                <div className={styles.contextBenefitIcon}>
+                  <span>🤝</span>
+                  <h4>Strategic AI Partnership</h4>
+                  <p>
+                    We help you build authority that AI assistants trust and
+                    recommend, adapting our approach as AI platforms evolve.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.sectionHeader}>
+              <h2>GEO-Powered Visibility Plans</h2>
+              <p>
+                Choose the perfect plan to boost your AI assistant search
+                ranking
+              </p>
+            </div>
+
+            <motion.div
+              className={styles.founderDiscountBanner}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
             >
-              Book a Call
-            </a>
-          </div>
-        </div>
-      </section>
+              <div className={styles.discountBadge}>
+                <FaTag className={styles.discountIcon} />
+                <span>Founding Client Special: 25% Off All Packages</span>
+              </div>
+              <p className={styles.discountSubtext}>
+                Be one of our first 10 clients and save 25% on all packages plus
+                add-ons!
+              </p>
+            </motion.div>
 
-      {/* Testimonials Section */}
-      <section className={styles.testimonials}>
-        <div className={styles.container}>
-          <div className={styles.sectionHeader}>
-            <h2>Client Success Stories</h2>
-            <p>
-              See what our clients say about our GEO and AI assistant search
-              optimization services
-            </p>
+            <div className={styles.packagesGrid}>
+              {packages.map((pkg, index) => (
+                <PackageCard pkg={pkg} index={index} key={pkg.name} />
+              ))}
+            </div>
+            <motion.div
+              className={styles.postSectionCTA}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <motion.p>Not sure which plan is right for you?</motion.p>
+              <a
+                href="https://calendly.com/kristenjoy-dueseasondigital/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.secondaryCtaButton}
+              >
+                Book a Call
+              </a>
+            </motion.div>
           </div>
-          <motion.div
-            className={styles.comingSoon}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h3>Coming Soon</h3>
-            <p>
-              We're working on gathering our first success stories. Check back
-              soon!
-            </p>
-          </motion.div>
-        </div>
-      </section>
+        </section>
 
-      {/* Big CTA Section */}
-      <section className={styles.bigCta}>
-        <div className={styles.container}>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            Ready to Transform Your GEO?
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            Join the GEO revolution and start ranking higher in AI-powered
-            search today
-          </motion.p>
-          <Link to="/contact" className={styles.primaryButton}>
-            Chat With Us
-          </Link>
-        </div>
-      </section>
-    </div>
+        {/* Why Choose Us Section */}
+        <section className={styles.whyUs} id="why-dsd">
+          <div className={styles.whyUsContent}>
+            <div className={styles.sectionHeader}>
+              <h2>GEO-Powered Growth, Human-Centered Support</h2>
+              <p>
+                Why forward-thinking businesses choose Due Season Digital for
+                their GEO and AI assistant search optimization needs.
+              </p>
+            </div>
+            <div className={styles.benefitsGrid}>
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  className={styles.benefitItem}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  {benefit.icon}
+                  <div className={styles.benefitContent}>
+                    <h3>{benefit.title}</h3>
+                    <p>{benefit.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+            <div className={styles.whyUsCta}>
+              <p>✨ Ready to work with a partner who actually sees you?</p>
+              <a
+                href="https://calendly.com/kristenjoy-dueseasondigital/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.secondaryCtaButton}
+              >
+                Book a Call
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className={styles.testimonials}>
+          <div className={styles.container}>
+            <div className={styles.sectionHeader}>
+              <h2>Client Success Stories</h2>
+              <p>
+                See what our clients say about our GEO and AI assistant search
+                optimization services
+              </p>
+            </div>
+            <motion.div
+              className={styles.comingSoon}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <h3>Coming Soon</h3>
+              <p>
+                We're working on gathering our first success stories. Check back
+                soon!
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Big CTA Section */}
+        <section className={styles.bigCta}>
+          <div className={styles.container}>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              Ready to Transform Your GEO?
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              Join the GEO revolution and start ranking higher in AI-powered
+              search today
+            </motion.p>
+            <Link to="/contact" className={styles.primaryButton}>
+              Chat With Us
+            </Link>
+          </div>
+        </section>
+      </div>
+    </>
   );
 };
 

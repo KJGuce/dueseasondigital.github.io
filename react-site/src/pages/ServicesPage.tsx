@@ -10,6 +10,7 @@ import {
 import styles from "./ServicesPage.module.css";
 import { Link } from "react-router-dom";
 import PackageCard from "../components/PackageCard";
+import { Helmet } from "react-helmet";
 
 const ServicesPage = () => {
   const formatPrice = (price: string) => {
@@ -256,128 +257,139 @@ const ServicesPage = () => {
   ];
 
   return (
-    <div className={styles.servicesPage}>
-      <div className={styles.container}>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className={styles.header}
-        >
-          <h1>Our Services</h1>
-          <p>
-            Choose your path to becoming the trusted recommendation in
-            AI-powered searches
-          </p>
-          <div className={styles.introText}>
-            <p>
-              We don't just help you rank — we help you become the business that
-              AI assistants actively recommend. Through strategic content
-              optimization, schema markup, and verified platform presence, we
-              position your business as the trusted authority that AI platforms
-              naturally suggest to users.
-            </p>
-          </div>
-          <div
-            style={{
-              textAlign: "center",
-              margin: "2rem 0",
-              position: "relative",
-              zIndex: 10,
-            }}
+    <>
+      <Helmet>
+        <title>
+          GEO & AI SEO Services for Local Businesses — Due Season Digital
+        </title>
+        <meta
+          name="description"
+          content="Boost your local AI visibility with our GEO-focused digital marketing services. From AI assistant SEO to reputation management, we help you get found and recommended."
+        />
+      </Helmet>
+      <div className={styles.servicesPage}>
+        <div className={styles.container}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className={styles.header}
           >
-            <Link to="/geofaq" className={styles.ctaButton}>
-              Learn How We Get You Recommended by AI
-            </Link>
-          </div>
-        </motion.div>
+            <h1>Our Services</h1>
+            <p>
+              Choose your path to becoming the trusted recommendation in
+              AI-powered searches
+            </p>
+            <div className={styles.introText}>
+              <p>
+                We don't just help you rank — we help you become the business
+                that AI assistants actively recommend. Through strategic content
+                optimization, schema markup, and verified platform presence, we
+                position your business as the trusted authority that AI
+                platforms naturally suggest to users.
+              </p>
+            </div>
+            <div
+              style={{
+                textAlign: "center",
+                margin: "2rem 0",
+                position: "relative",
+                zIndex: 10,
+              }}
+            >
+              <Link to="/geofaq" className={styles.ctaButton}>
+                Learn How We Get You Recommended by AI
+              </Link>
+            </div>
+          </motion.div>
 
-        <motion.div
-          className={styles.founderDiscountBanner}
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <div className={styles.discountBadge}>
-            <FaTag className={styles.discountIcon} />
-            <span>Founding Client Special: 25% Off All Packages</span>
-          </div>
-          <p className={styles.discountSubtext}>
-            Be one of our first 10 clients and save 25% on all packages plus
-            add-ons!
-          </p>
-        </motion.div>
+          <motion.div
+            className={styles.founderDiscountBanner}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className={styles.discountBadge}>
+              <FaTag className={styles.discountIcon} />
+              <span>Founding Client Special: 25% Off All Packages</span>
+            </div>
+            <p className={styles.discountSubtext}>
+              Be one of our first 10 clients and save 25% on all packages plus
+              add-ons!
+            </p>
+          </motion.div>
 
-        <div className={styles.packages}>
-          {packages.map((pkg, index) => (
-            <PackageCard
-              key={pkg.name}
-              pkg={{ ...pkg, cta: "Get Started", link: "/contact" }}
-              index={index}
-            />
-          ))}
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className={styles.addOns}
-        >
-          <h2>Add-Ons & À La Carte Enhancements</h2>
-          <p className={styles.addOnsSubtitle}>
-            Enhance your visibility with our specialized services
-          </p>
-          <div className={styles.addOnsGrid}>
-            {addOns.map((addOn, index) => (
-              <motion.div
-                key={addOn.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                className={styles.addOn}
-              >
-                <h3>{addOn.name}</h3>
-                <div className={styles.addOnPrice}>
-                  <span className={styles.currency}>$</span>
-                  <span className={styles.amount}>
-                    {formatPrice(addOn.price)}
-                  </span>
-                  {addOn.period !== "one-time" && (
-                    <span className={styles.period}>
-                      {getPeriodDisplay(addOn.period)}
-                    </span>
-                  )}
-                </div>
-                <p className={styles.addOnDescription}>{addOn.description}</p>
-              </motion.div>
+          <div className={styles.packages}>
+            {packages.map((pkg, index) => (
+              <PackageCard
+                key={pkg.name}
+                pkg={{ ...pkg, cta: "Get Started", link: "/contact" }}
+                index={index}
+              />
             ))}
           </div>
-        </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          className={styles.custom}
-        >
-          <h2>Custom & Enterprise</h2>
-          <p>
-            Need something unique or have multiple locations? We're happy to
-            build a custom solution!
-          </p>
-          <a
-            href="https://calendly.com/kristenjoy-dueseasondigital/30min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.ctaButton}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className={styles.addOns}
           >
-            Book a Free Strategy Call
-          </a>
-        </motion.div>
+            <h2>Add-Ons & À La Carte Enhancements</h2>
+            <p className={styles.addOnsSubtitle}>
+              Enhance your visibility with our specialized services
+            </p>
+            <div className={styles.addOnsGrid}>
+              {addOns.map((addOn, index) => (
+                <motion.div
+                  key={addOn.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                  className={styles.addOn}
+                >
+                  <h3>{addOn.name}</h3>
+                  <div className={styles.addOnPrice}>
+                    <span className={styles.currency}>$</span>
+                    <span className={styles.amount}>
+                      {formatPrice(addOn.price)}
+                    </span>
+                    {addOn.period !== "one-time" && (
+                      <span className={styles.period}>
+                        {getPeriodDisplay(addOn.period)}
+                      </span>
+                    )}
+                  </div>
+                  <p className={styles.addOnDescription}>{addOn.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className={styles.custom}
+          >
+            <h2>Custom & Enterprise</h2>
+            <p>
+              Need something unique or have multiple locations? We're happy to
+              build a custom solution!
+            </p>
+            <a
+              href="https://calendly.com/kristenjoy-dueseasondigital/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.ctaButton}
+            >
+              Book a Free Strategy Call
+            </a>
+          </motion.div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
