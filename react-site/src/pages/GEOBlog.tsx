@@ -86,27 +86,6 @@ const GEOBlog: React.FC = () => {
             ))}
           </div>
         </section>
-
-        <section className={styles.subscribe}>
-          <div className={styles.subscribeContent}>
-            <h2>Stay Updated</h2>
-            <p>
-              Subscribe to our newsletter to be notified when we publish new
-              insights about GEO and AI recommendation strategies.
-            </p>
-            <form className={styles.subscribeForm}>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className={styles.emailInput}
-                aria-label="Email address"
-              />
-              <button type="submit" className={styles.subscribeButton}>
-                Subscribe
-              </button>
-            </form>
-          </div>
-        </section>
       </div>
     </div>
   );

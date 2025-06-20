@@ -32,7 +32,7 @@
   );
   position: relative;
   overflow: hidden;
-  padding: clamp(6rem, 12vw, 10rem) 0 4rem;
+  padding: clamp(1.5rem, 3vw, 2.5rem) 0 4rem;
   width: 100%;
   margin-bottom: 2rem;
 }
@@ -246,7 +246,12 @@
   right: clamp(2rem, 5vw, 5rem);
   top: 50%;
   transform: translateY(-50%);
-  z-index: 1;
+  z-index: 1200;
+  display: block;
+}
+
+.robotIconMobile {
+  display: none;
 }
 
 .heroGraphic {
@@ -840,7 +845,7 @@
 
 @media (max-width: 480px) {
   .hero {
-    padding: clamp(4rem, 8vw, 6rem) 0 2rem;
+    padding: clamp(1rem, 2vw, 1.5rem) 0 2rem;
   }
 
   .heroGraphic {
@@ -848,7 +853,17 @@
   }
 
   .robotIcon {
-    display: none;
+    display: none !important;
+  }
+  .robotIconMobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem 0 0.5rem 0;
+    font-size: 5rem;
+    color: var(--color-primary);
+    opacity: 0.85;
+    animation: float 6s ease-in-out infinite;
   }
 
   .hero h1 {

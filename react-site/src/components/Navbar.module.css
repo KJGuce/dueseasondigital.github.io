@@ -1,16 +1,18 @@
 .navbar {
   background-color: var(--color-background-dark);
   padding: 1rem 0;
-  position: fixed;
-  top: 96px !important;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  transition: top 0.3s;
+  position: static;
+  top: auto;
+  z-index: 1201;
+  left: auto;
+  right: auto;
+  transition: none;
+  margin-top: 64px;
 }
 
 .navbarNoAlert {
   top: 0 !important;
+  margin-top: 0;
 }
 
 .container {
@@ -136,11 +138,18 @@
   }
 
   .navbar {
-    top: 48px;
+    position: fixed;
+    top: 88px;
+    left: 0;
+    right: 0;
+    z-index: 1201;
+    transition: top 0.3s;
+    margin-top: 0;
   }
 
   .navbar.navbarNoAlert {
     top: 0;
+    margin-top: 0;
   }
 
   .navLinks {

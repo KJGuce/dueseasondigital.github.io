@@ -191,6 +191,9 @@ const HomePage: React.FC = () => {
               Optimization (GEO)
             </motion.span>
           </h1>
+          <div className={styles.robotIconMobile}>
+            <FaRobot />
+          </div>
           <p className={styles.heroSubtitle}>
             <motion.span
               initial={{ opacity: 0, y: 20 }}

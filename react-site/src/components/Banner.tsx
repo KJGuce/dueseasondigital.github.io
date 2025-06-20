@@ -26,7 +26,10 @@ const Banner: React.FC<BannerProps> = ({ isVisible, onClose }) => {
             🌱 Founding Client Offer: Get 25% off all packages — limited to our
             first 10 clients.
           </p>
-          <Link to="/services" className={styles.ctaButton}>
+          <Link
+            to="/services"
+            className={`${styles.ctaButton} ${styles.hideOnMobile}`}
+          >
             View Packages
           </Link>
           <button

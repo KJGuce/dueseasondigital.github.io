@@ -60,6 +60,10 @@
   opacity: 0.7;
 }
 
+.hideOnMobile {
+  display: inline-block;
+}
+
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -80,5 +84,9 @@
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
+  }
+
+  .hideOnMobile {
+    display: none !important;
   }
 }
