@@ -6,7 +6,6 @@ import {
   FaChartLine,
   FaRobot,
   FaSearch,
-  FaCheck,
   FaArrowRight,
 } from "react-icons/fa";
 import styles from "./GenerativeEngineOptimization.module.css";
@@ -183,9 +182,14 @@ const GenerativeEngineOptimization: React.FC = () => {
             position your business as the trusted choice that AI assistants
             actively suggest.
           </p>
-          <Link to="/contact" className={styles.ctaButton}>
-            Request Your Free Audit
-          </Link>
+          <div className={styles.ctaButtons}>
+            <Link to="/due-season-index" className={styles.secondaryButton}>
+              Request Your Free Audit
+            </Link>
+            <Link to="/services" className={styles.ctaButton}>
+              Shop our Packages
+            </Link>
+          </div>
         </div>
       </section>
     </div>

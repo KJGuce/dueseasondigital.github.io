@@ -62,14 +62,81 @@
 }
 
 .heroSubtitle {
-  font-size: clamp(1.1rem, 1.5vw, 1.3rem);
+  font-size: 1.2rem;
   color: var(--color-text-light);
-  margin-bottom: 2.5rem;
-  max-width: 800px;
-  line-height: 1.6;
-  text-align: center;
+  margin-bottom: 2rem;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.founderDiscountBanner {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 0, 0.1) 0%,
+    rgba(255, 215, 0, 0.05) 100%
+  );
+  border: 2px solid var(--color-primary);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 2rem auto;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  max-width: 800px;
+}
+
+.founderDiscountBanner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 215, 0, 0.1) 50%,
+    transparent 70%
+  );
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.discountBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #ffed4e 100%);
+  color: #1a202c;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.discountIcon {
+  font-size: 1.2rem;
+}
+
+.discountSubtext {
+  color: var(--color-text);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  position: relative;
+  z-index: 2;
 }
 
 /* Form & Info Section */

@@ -9,6 +9,7 @@ import {
   FaChartLine,
   FaCheck,
   FaBrain,
+  FaTag,
 } from "react-icons/fa";
 import styles from "./AboutPage.module.css";
 import founderPhoto from "../assets/KjGuce-BSTN Pic.jpg";
@@ -252,6 +253,61 @@ const AboutPage: React.FC = () => {
                 Schedule a Free Consultation Today
               </Link>
             </motion.div>
+          </motion.div>
+        </div>
+      </motion.section>
+
+      {/* Founder Discount Section */}
+      <motion.section
+        className={styles.founderDiscount}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <div className={styles.container}>
+          <div className={styles.sectionHeader}>
+            <h2>Special Offer for Early Adopters</h2>
+          </div>
+          <motion.div
+            className={styles.discountContent}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className={styles.discountBadge}>
+              <FaTag className={styles.discountIcon} />
+              <span>25% Off All Packages</span>
+            </div>
+            <h3>Founding Client Opportunity</h3>
+            <p>
+              As we launch our GEO services, we're offering a special 25%
+              discount on all packages for our first 10 founding clients. This
+              includes our Seed, Sprout, Grow, and Harvest packages, plus all
+              add-on services.
+            </p>
+            <div className={styles.discountFeatures}>
+              <div className={styles.discountFeature}>
+                <FaCheck className={styles.checkIcon} />
+                <span>25% off all package pricing</span>
+              </div>
+              <div className={styles.discountFeature}>
+                <FaCheck className={styles.checkIcon} />
+                <span>25% off all add-on services</span>
+              </div>
+              <div className={styles.discountFeature}>
+                <FaCheck className={styles.checkIcon} />
+                <span>Priority onboarding and support</span>
+              </div>
+              <div className={styles.discountFeature}>
+                <FaCheck className={styles.checkIcon} />
+                <span>Founding client recognition</span>
+              </div>
+            </div>
+            <Link to="/contact" className={styles.discountCta}>
+              Learn More About Our Packages
+            </Link>
           </motion.div>
         </div>
       </motion.section>

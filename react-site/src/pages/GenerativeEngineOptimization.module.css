@@ -172,22 +172,188 @@
 }
 
 .cta {
-  background: var(--color-background-dark);
-  color: var(--color-text-light);
-  padding: 5rem 2rem;
+  padding: 6rem 0;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-accent)
+  );
+  color: var(--color-background-dark);
   text-align: center;
 }
 
 .cta h2 {
   font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-background-dark);
 }
 
 .cta p {
-  max-width: 600px;
-  margin: 0 auto 2rem;
   font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--color-background-dark);
   opacity: 0.9;
+}
+
+.ctaButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  padding: 1rem 2rem;
+  background: white;
+  color: var(--color-background-dark);
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.ctaButton:hover {
+  background: transparent;
+  border-color: white;
+  color: white;
+}
+
+.secondaryButton {
+  padding: 1rem 2rem;
+  background: transparent;
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+}
+
+.secondaryButton:hover {
+  background: white;
+  color: var(--color-background-dark);
+}
+
+.pricing {
+  padding: 4rem 0;
+  background: var(--color-background);
+}
+
+.pricingSubtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+}
+
+.founderDiscount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 0, 0.1) 0%,
+    rgba(255, 215, 0, 0.05) 100%
+  );
+  border: 1px solid var(--color-primary);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin: 2rem 0;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.founderDiscountBanner {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 0, 0.1) 0%,
+    rgba(255, 215, 0, 0.05) 100%
+  );
+  border: 2px solid var(--color-primary);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 3rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.founderDiscountBanner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 215, 0, 0.1) 50%,
+    transparent 70%
+  );
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.discountBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #ffed4e 100%);
+  color: #1a202c;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.discountIcon {
+  font-size: 1.2rem;
+}
+
+.discountSubtext {
+  color: var(--color-text);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.packagesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+  align-items: stretch;
+}
+
+@media (min-width: 768px) {
+  .packagesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .packagesGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -214,5 +380,11 @@
   .step,
   .resourceCard {
     padding: 1.5rem;
+  }
+
+  .founderDiscount {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
   }
 }

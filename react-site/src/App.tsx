@@ -43,7 +43,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/index-tool" element={<DueSeasonIndexTool />} />
+          <Route path="/due-season-index" element={<DueSeasonIndexTool />} />
           <Route path="/geofaq" element={<GEOFAQ />} />
           <Route
             path="/generative-engine-optimization"

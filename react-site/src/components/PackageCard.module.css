@@ -1,0 +1,238 @@
+.package {
+  background: linear-gradient(135deg, #2d3748, #1a202c);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  position: relative;
+  transition: all 0.3s ease;
+  color: #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.package:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.package.popular {
+  border-color: var(--color-primary);
+}
+
+.package.vip {
+  border-color: var(--color-accent);
+  background: linear-gradient(135deg, #2d3748, #1a202c);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+}
+
+.package.vip:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+}
+
+.popularBadge,
+.vipBadge {
+  position: absolute;
+  top: -12px;
+  right: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #1a202c;
+  z-index: 10;
+}
+
+.popularBadge {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-accent) 100%
+  );
+}
+
+.vipBadge {
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  color: #1a202c;
+  font-weight: 700;
+  box-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.crownIcon {
+  font-size: 1rem;
+  color: #1a202c;
+}
+
+.packageHeader {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.packageIcon {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.packageHeader h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.packageHeader p {
+  color: #a0aec0;
+  font-size: 0.95rem;
+  min-height: 40px;
+}
+
+.price {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.fullPrice {
+  text-decoration: line-through;
+  color: #718096;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.betaPrice {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.setup .fullPrice {
+  font-size: 0.9rem;
+}
+
+.setup .betaPrice {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.currency {
+  font-size: 1.2rem;
+  margin-right: 0.25rem;
+  color: var(--color-primary);
+}
+
+.period {
+  font-size: 1rem;
+  color: #a0aec0;
+  margin-left: 0.25rem;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  flex-grow: 1;
+}
+
+.features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.checkIcon {
+  color: var(--color-accent);
+  margin-top: 4px;
+}
+
+.expandButton {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 0.75rem;
+  width: 100%;
+  margin: 1rem 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  transition: background-color 0.2s ease;
+}
+
+.expandButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.commitment {
+  text-align: center;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #a0aec0;
+}
+
+.annualDiscount {
+  text-align: center;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background: rgba(255, 215, 0, 0.1);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #ffd700;
+  font-weight: 600;
+}
+
+.paymentPlan {
+  text-align: center;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background: rgba(78, 205, 196, 0.1);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #4ecdc4;
+  font-weight: 600;
+}
+
+.ctaWrapper {
+  margin-top: auto;
+}
+
+.ctaButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-accent) 100%
+  );
+  color: #1a202c;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
+  color: #1a202c;
+}

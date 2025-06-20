@@ -6,6 +6,7 @@ import {
   FaFacebookF,
   FaEnvelope,
   FaMapMarkerAlt,
+  FaTag,
 } from "react-icons/fa";
 import styles from "./ContactPage.module.css";
 
@@ -127,6 +128,25 @@ const ContactPage: React.FC = () => {
           </motion.p>
         </div>
       </section>
+
+      <motion.section
+        className={styles.founderDiscountBanner}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <div className={styles.container}>
+          <div className={styles.discountBadge}>
+            <FaTag className={styles.discountIcon} />
+            <span>Founding Client Special: 25% Off All Packages</span>
+          </div>
+          <p className={styles.discountSubtext}>
+            Be one of our first 10 clients and save 25% on all packages plus
+            add-ons!
+          </p>
+        </div>
+      </motion.section>
 
       {/* Contact Form & Info Section */}
       <section className={styles.formInfoSection}>

@@ -3,11 +3,13 @@ import {
   FaCheck,
   FaSeedling,
   FaLeaf,
-  FaChartLine,
+  FaChartArea,
+  FaTrophy,
   FaTag,
 } from "react-icons/fa";
 import styles from "./ServicesPage.module.css";
 import { Link } from "react-router-dom";
+import PackageCard from "../components/PackageCard";
 
 const ServicesPage = () => {
   const formatPrice = (price: string) => {
@@ -42,180 +44,216 @@ const ServicesPage = () => {
   const packages = [
     {
       name: "Seed Package",
-      description: "Start your journey to AI assistant recommendations.",
-      fullPrice: "895",
-      betaPrice: "675",
+      description: "Perfect foundation for AI assistant visibility.",
+      fullPrice: "799",
+      betaPrice: "599",
       period: "one-time",
       features: [
-        "AI Assistant Recommendation Audit",
-        "Google Business Profile Optimization for AI Trust",
+        "Comprehensive AI Recommendation Audit",
+        "Google Business Profile GEO Optimization",
         "Verified Listings Setup (Yelp, Bing, Apple, etc.)",
-        "Basic Schema Markup for AI Understanding",
-        "FAQ + Content Optimization for AI Recommendations",
-        "'Ask the AI' Recommendation Report (PDF)",
+        "Basic Schema Markup Implementation",
+        "FAQ + Content Optimization for AI",
         "AI Recommendation Strategy Guide",
+        "30-Day Support & Optimization",
       ],
       icon: <FaSeedling className={styles.packageIcon} />,
+      cta: "🌱 Start My GEO Journey",
+      link: "/contact",
       popular: false,
     },
     {
       name: "Sprout Package",
-      description: "Grow your AI-powered recommendation presence.",
-      fullPrice: "749",
-      betaPrice: "560",
+      description: "Essential GEO foundation for growing businesses.",
+      fullPrice: "299",
+      betaPrice: "224",
       period: "month",
-      setupFullPrice: "850",
-      setupBetaPrice: "640",
+      setupFee: "997",
+      setupBetaFee: "748",
       features: [
-        "Everything in Seed, plus:",
-        "Monthly AI-Optimized Content Creation",
-        "Review Management for AI Trust",
+        "AI-Optimized Google Business Profile",
         "Verified Directory Management (5/month)",
-        "Monthly AI Recommendation Report",
-        "Email Support",
+        "Monthly AI Recommendation Reports",
         "1 Local Authority Building PR Pitch",
+        "Quarterly Strategy Reviews",
+        "Email Support",
       ],
       icon: <FaLeaf className={styles.packageIcon} />,
+      cta: "🌿 Grow My AI Presence",
+      link: "/contact",
       popular: true,
+      commitment: "3-month minimum",
+      annualDiscount: "10% off annual prepayment",
+    },
+    {
+      name: "Grow Package",
+      description: "Advanced GEO strategy for established businesses.",
+      fullPrice: "499",
+      betaPrice: "374",
+      period: "month",
+      setupFee: "1499",
+      setupBetaFee: "1124",
+      features: [
+        "Everything in Sprout Package",
+        "Full Website AI Content Optimization",
+        "Advanced Schema Markup & AI Understanding",
+        "2x Authority Building PR Pitches",
+        "AI Recommendation Dashboard Access",
+        "Monthly Analytics + AI Summary Reports",
+        "Quarterly AI Strategy Reports",
+        "Priority Support",
+        "Custom AI Training for Your Industry",
+      ],
+      icon: <FaChartArea className={styles.packageIcon} />,
+      cta: "📈 Scale My AI Authority",
+      link: "/contact",
+      popular: false,
+      commitment: "6-month minimum",
+      annualDiscount: "10% off annual prepayment",
+      paymentPlan: "Flexible setup payment options",
     },
     {
       name: "Harvest Package",
-      description: "Maximize AI recommendations and authority.",
-      fullPrice: "1,800",
-      betaPrice: "1,350",
+      description: "Complete GEO domination for industry leaders.",
+      fullPrice: "649",
+      betaPrice: "487",
       period: "month",
-      setupFullPrice: "2,999",
-      setupBetaPrice: "2,250",
+      setupFee: "2799",
+      setupBetaFee: "2099",
       features: [
-        "Everything in Sprout, plus:",
-        "Full Website AI Content Optimization",
+        "Everything in Grow Package",
+        "Comprehensive AI Content Strategy",
         "Advanced Schema + AI Understanding",
-        "2x Authority Building PR Pitches",
-        "AI Recommendation Dashboard",
-        "Quarterly AI Strategy Report",
-        "Priority Support",
+        "3x Authority Building PR Pitches",
+        "Custom AI Recommendation Dashboard",
+        "Weekly AI Visibility Reports",
+        "Monthly Strategy Calls",
+        "Dedicated Account Manager",
+        "Priority Support (24-hour response)",
+        "Industry-Specific AI Training",
+        "Competitive AI Analysis",
       ],
-      icon: <FaChartLine className={styles.packageIcon} />,
+      icon: <FaTrophy className={styles.packageIcon} />,
+      cta: "🏆 Dominate AI Search",
+      link: "/contact",
       popular: false,
+      isVip: true,
+      commitment: "6-12 month minimum",
+      annualDiscount: "10% off annual prepayment",
+      paymentPlan: "Flexible setup payment options",
     },
   ];
 
   const addOns = [
     {
-      name: "Blog/FAQ Post (AI-Optimized)",
-      price: "250",
+      name: "Blog/FAQ Post (AI & GEO-Optimized)",
+      price: "225",
       period: "post",
       description:
         "Strategic content crafted to become the trusted source that AI assistants recommend. Includes schema markup, conversational optimization, and verification of facts that AI platforms prioritize.",
+      hours: "3-4 hours",
+      clientType: "All packages",
     },
     {
-      name: "AI-Enhanced Content",
-      price: "125",
-      period: "post",
-      description:
-        "AI-generated content enhanced with human expertise and structured data. Perfect for building a foundation of trustworthy content that AI assistants can confidently recommend.",
-    },
-    {
-      name: "Authority Building PR Pitch",
-      price: "550",
-      period: "pitch",
-      description:
-        "Strategic outreach to build verifiable authority that AI assistants recognize. Includes placement tracking and schema markup for maximum AI visibility.",
-    },
-    {
-      name: "Trust Signals Management",
-      price: "299",
-      period: "month",
-      description:
-        "Comprehensive review and reputation management to build trust signals that AI assistants value. Includes automated collection, monitoring, and schema-enhanced display.",
-    },
-    {
-      name: "AI Recommendation Audit",
+      name: "🔧 AI SEO Health Check & Technical Fixes",
       price: "325",
       period: "one-time",
       description:
-        "In-depth analysis of how AI assistants currently view and recommend your business. Covers ChatGPT, Gemini, Bing Chat, and Perplexity with actionable optimization steps.",
+        "A deep scan and fix for critical technical SEO issues (crawl errors, schema, page speed) that block AI indexing, with a detailed health report.",
+      hours: "2-3 hours",
+      clientType: "All packages",
     },
     {
-      name: "Verified Profile Enhancement",
-      price: "399",
+      name: "AI Visibility Report Refresh",
+      price: "175",
+      period: "report",
+      description:
+        "Updated analysis of your AI assistant visibility every 3-6 months. Tracks changes across ChatGPT, Gemini, Bing Chat, and Perplexity with actionable insights.",
+      hours: "2-3 hours",
+      clientType: "Seed, Sprout",
+    },
+    {
+      name: "Profile Power-Up (Visual Branding on Listings)",
+      price: "349",
       period: "one-time",
       description:
-        "Comprehensive verification and optimization of your business profiles across platforms that AI assistants trust. Includes schema markup and authority building.",
+        "Enhanced visual branding across all business listings with custom graphics, optimized photos, and branded elements that AI assistants recognize.",
+      hours: "4-5 hours",
+      clientType: "All packages",
     },
     {
-      name: "AI Recommendation Analytics",
-      price: "145",
+      name: "Review Management",
+      price: "279",
       period: "month",
       description:
-        "Track and analyze how often AI assistants recommend your business. Includes custom dashboard and AI-generated strategy insights.",
+        "Comprehensive review collection, monitoring, and response management to build trust signals that AI assistants value and recommend.",
+      hours: "5-6 hours/month",
+      clientType: "Sprout, Grow, Harvest",
     },
     {
-      name: "AI-Optimized Page Content",
+      name: "Google Analytics Setup + AI Visibility Dashboard",
       price: "175",
-      period: "page",
-      description:
-        "Strategic page content designed to become the trusted source for AI recommendations. Includes schema markup and natural language optimization.",
-    },
-    {
-      name: "Conversion Landing Page",
-      price: "475",
-      period: "page",
-      description:
-        "High-converting pages built with both human users and AI assistants in mind. Includes trust-building elements that AI platforms recognize.",
-    },
-    {
-      name: "Multi-Format Content Script",
-      price: "125",
-      period: "script",
-      description:
-        "Repurpose your trusted content into engaging video scripts, maintaining consistency across platforms that AI assistants monitor.",
-    },
-    {
-      name: "AI-Ready Website Foundation",
-      price: "1,950",
       period: "one-time",
       description:
-        "Complete website setup (1–3 pages) built to be easily understood and recommended by AI assistants. Includes schema markup and trust signal integration.",
+        "Complete Google Analytics setup with custom AI visibility tracking dashboard to monitor recommendation frequency across platforms.",
+      hours: "3-4 hours",
+      clientType: "All packages",
     },
     {
-      name: "Local Authority Page",
-      price: "375",
+      name: "Monthly Analytics + AI Summary Report",
+      price: "125",
+      period: "month",
+      description:
+        "Monthly analysis of your AI visibility performance with actionable insights and strategy recommendations for improvement.",
+      hours: "2-3 hours/month",
+      clientType: "Sprout, Grow, Harvest",
+    },
+    {
+      name: "AI/SEO Landing Page",
+      price: "425",
       period: "page",
       description:
-        "Location-specific pages built to dominate local AI recommendations. Includes verified local data, schema markup, and trust signals that AI assistants prioritize.",
+        "High-converting landing pages optimized for both human users and AI assistants. Includes schema markup and trust-building elements.",
+      hours: "6-8 hours",
+      clientType: "Grow, Harvest",
+    },
+    {
+      name: "Monthly Reel/Short Script",
+      price: "95",
+      period: "post",
+      description:
+        "Engaging short-form video scripts optimized for social platforms that AI assistants monitor for trending content and recommendations.",
+      hours: "1-2 hours",
+      clientType: "All packages",
+    },
+    {
+      name: "Social Post Package (3-5 posts)",
+      price: "125",
+      period: "month",
+      description:
+        "Monthly social media content package with 3-5 posts optimized for AI assistant recognition and social proof building.",
+      hours: "3-4 hours/month",
+      clientType: "Sprout, Grow, Harvest",
+    },
+    {
+      name: "Local PR Pitch",
+      price: "450",
+      period: "pitch",
+      description:
+        "Strategic local media outreach to build verifiable authority that AI assistants recognize and trust for recommendations.",
+      hours: "5-6 hours",
+      clientType: "Sprout, Grow, Harvest",
+    },
+    {
+      name: "AI Audit & Report",
+      price: "299",
+      period: "one-time",
+      description:
+        "Comprehensive AI assistant visibility audit covering ChatGPT, Gemini, Bing Chat, and Perplexity with detailed optimization recommendations.",
+      hours: "4-5 hours",
+      clientType: "All packages",
     },
   ];
-
-  const socialBooster = {
-    name: "Social Visibility Booster",
-    description:
-      "Add-on that turns every blog into branded, scroll-stopping social content.",
-    tiers: [
-      {
-        name: "Copy-Only",
-        price: "150",
-        period: "blog",
-        features: ["3–5 captions w/ hashtags", "CTA suggestions"],
-      },
-      {
-        name: "Copy + Canva Graphics",
-        price: "325",
-        period: "blog",
-        features: ["3–5 captions", "3–5 branded visuals", "1 infographic"],
-      },
-      {
-        name: "Full Post Pack",
-        price: "450",
-        period: "blog",
-        features: [
-          "All of the above",
-          "1 short-form script",
-          "Posting schedule PDF",
-        ],
-      },
-    ],
-  };
 
   return (
     <div className={styles.servicesPage}>
@@ -231,13 +269,6 @@ const ServicesPage = () => {
             Choose your path to becoming the trusted recommendation in
             AI-powered searches
           </p>
-          <div className={styles.discountBadge}>
-            <FaTag className={styles.discountIcon} />
-            <span>
-              Founding Client Offer: 25% off all packages for the first 10
-              clients!
-            </span>
-          </div>
           <div className={styles.introText}>
             <p>
               We don't just help you rank — we help you become the business that
@@ -261,71 +292,30 @@ const ServicesPage = () => {
           </div>
         </motion.div>
 
+        <motion.div
+          className={styles.founderDiscountBanner}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <div className={styles.discountBadge}>
+            <FaTag className={styles.discountIcon} />
+            <span>Founding Client Special: 25% Off All Packages</span>
+          </div>
+          <p className={styles.discountSubtext}>
+            Be one of our first 10 clients and save 25% on all packages plus
+            add-ons!
+          </p>
+        </motion.div>
+
         <div className={styles.packages}>
           {packages.map((pkg, index) => (
-            <motion.div
+            <PackageCard
               key={pkg.name}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`${styles.package} ${
-                pkg.popular ? styles.popular : ""
-              }`}
-            >
-              {pkg.popular && (
-                <div className={styles.popularBadge}>Most Popular</div>
-              )}
-              <div className={styles.packageHeader}>
-                {pkg.icon}
-                <h2>{pkg.name}</h2>
-                <p>{pkg.description}</p>
-              </div>
-              <div className={styles.price}>
-                <div className={styles.fullPrice}>
-                  <span className={styles.currency}>$</span>
-                  <span className={styles.amount}>
-                    {formatPrice(pkg.fullPrice)}
-                  </span>
-                  {pkg.period !== "one-time" && (
-                    <span className={styles.period}>
-                      {getPeriodDisplay(pkg.period)}
-                    </span>
-                  )}
-                </div>
-                <div className={styles.betaPrice}>
-                  <span className={styles.currency}>$</span>
-                  <span className={styles.amount}>
-                    {formatPrice(pkg.betaPrice)}
-                  </span>
-                  {pkg.period !== "one-time" && (
-                    <span className={styles.period}>
-                      {getPeriodDisplay(pkg.period)}
-                    </span>
-                  )}
-                </div>
-                {pkg.setupFullPrice && (
-                  <div className={styles.setup}>
-                    <div className={styles.fullPrice}>
-                      + ${formatPrice(pkg.setupFullPrice)} setup
-                    </div>
-                    <div className={styles.betaPrice}>
-                      + ${formatPrice(pkg.setupBetaPrice)} setup
-                    </div>
-                  </div>
-                )}
-              </div>
-              <ul className={styles.features}>
-                {pkg.features.map((feature, i) => (
-                  <li key={i}>
-                    <FaCheck className={styles.checkIcon} />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <Link to="/contact" className={styles.ctaButton}>
-                Get Started
-              </Link>
-            </motion.div>
+              pkg={{ ...pkg, cta: "Get Started", link: "/contact" }}
+              index={index}
+            />
           ))}
         </div>
 
@@ -364,46 +354,6 @@ const ServicesPage = () => {
               </motion.div>
             ))}
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            className={styles.socialBooster}
-          >
-            <h3>{socialBooster.name}</h3>
-            <p>{socialBooster.description}</p>
-            <div className={styles.socialBoosterTiers}>
-              {socialBooster.tiers.map((tier, index) => (
-                <motion.div
-                  key={tier.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
-                  className={styles.socialBoosterTier}
-                >
-                  <h4>{tier.name}</h4>
-                  <div className={styles.tierPrice}>
-                    <span className={styles.currency}>$</span>
-                    <span className={styles.amount}>
-                      {formatPrice(tier.price)}
-                    </span>
-                    <span className={styles.period}>
-                      {getPeriodDisplay(tier.period)}
-                    </span>
-                  </div>
-                  <ul className={styles.tierFeatures}>
-                    {tier.features.map((feature, i) => (
-                      <li key={i}>
-                        <FaCheck className={styles.checkIcon} />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
         </motion.div>
 
         <motion.div

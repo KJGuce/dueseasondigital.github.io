@@ -9,7 +9,8 @@ import {
   FaInstagram,
   FaSeedling,
   FaLeaf,
-  FaChartLine,
+  FaChartArea,
+  FaTrophy,
   FaTag,
   FaBrain,
   FaStar,
@@ -20,71 +21,112 @@ import {
   FaArrowDown,
 } from "react-icons/fa";
 import styles from "./HomePage.module.css";
+import { motion as motionLink } from "framer-motion";
+import PackageCard from "../components/PackageCard";
 
-const MotionLink = motion(Link);
+const MotionLink = motionLink(Link);
 
 const HomePage: React.FC = () => {
   const packages = [
     {
       name: "Seed Package",
-      description: "Start your journey to AI assistant recommendations.",
-      fullPrice: "895",
-      betaPrice: "675",
+      description: "Perfect foundation for AI assistant visibility.",
+      fullPrice: "799",
+      betaPrice: "599",
       period: "one-time",
       features: [
-        "AI Assistant Recommendation Audit",
-        "Google Business Profile Optimization for AI Trust",
+        "Comprehensive AI Recommendation Audit",
+        "Google Business Profile GEO Optimization",
         "Verified Listings Setup (Yelp, Bing, Apple, etc.)",
-        "Basic Schema Markup for AI Understanding",
-        "FAQ + Content Optimization for AI Recommendations",
-        "'Ask the AI' Recommendation Report (PDF)",
+        "Basic Schema Markup Implementation",
+        "FAQ + Content Optimization for AI",
         "AI Recommendation Strategy Guide",
+        "30-Day Support & Optimization",
       ],
       icon: <FaSeedling className={styles.packageIcon} />,
-      cta: "🌱 Plant My Visibility",
+      cta: "🌱 Start My GEO Journey",
       link: "/contact",
       popular: false,
     },
     {
       name: "Sprout Package",
-      description: "Grow your AI-powered recommendation presence.",
-      fullPrice: "749",
-      betaPrice: "560",
+      description: "Essential GEO foundation for growing businesses.",
+      fullPrice: "299",
+      betaPrice: "224",
       period: "month",
-      setupFullPrice: "850",
-      setupBetaPrice: "640",
+      setupFee: "997",
+      setupBetaFee: "748",
       features: [
-        "Everything in Seed",
-        "Monthly AI-Optimized Content Creation",
-        "Review Management for AI Trust",
-        "Verified Directory Management (5/mo)",
-        "Monthly AI Recommendation Report",
+        "AI-Optimized Google Business Profile",
+        "Verified Directory Management (5/month)",
+        "Monthly AI Recommendation Reports",
         "1 Local Authority Building PR Pitch",
+        "Quarterly Strategy Reviews",
+        "Email Support",
       ],
       icon: <FaLeaf className={styles.packageIcon} />,
-      cta: "🌿 Nurture My Growth",
+      cta: "🌿 Grow My AI Presence",
+      link: "/contact",
       popular: true,
+      commitment: "3-month minimum",
+      annualDiscount: "10% off annual prepayment",
+    },
+    {
+      name: "Grow Package",
+      description: "Advanced GEO strategy for established businesses.",
+      fullPrice: "499",
+      betaPrice: "374",
+      period: "month",
+      setupFee: "1499",
+      setupBetaFee: "1124",
+      features: [
+        "Everything in Sprout Package",
+        "Full Website AI Content Optimization",
+        "Advanced Schema Markup & AI Understanding",
+        "2x Authority Building PR Pitches",
+        "AI Recommendation Dashboard Access",
+        "Monthly Analytics + AI Summary Reports",
+        "Quarterly AI Strategy Reports",
+        "Priority Support",
+        "Custom AI Training for Your Industry",
+      ],
+      icon: <FaChartArea className={styles.packageIcon} />,
+      cta: "📈 Scale My AI Authority",
+      link: "/contact",
+      popular: false,
+      commitment: "6-month minimum",
+      annualDiscount: "10% off annual prepayment",
+      paymentPlan: "Flexible setup payment options",
     },
     {
       name: "Harvest Package",
-      description: "Maximize AI recommendations and authority.",
-      fullPrice: "1,800",
-      betaPrice: "1,350",
+      description: "Complete GEO domination for industry leaders.",
+      fullPrice: "649",
+      betaPrice: "487",
       period: "month",
-      setupFullPrice: "2,999",
-      setupBetaPrice: "2,250",
+      setupFee: "2799",
+      setupBetaFee: "2099",
       features: [
-        "Everything in Sprout",
-        "Full Website AI Content Optimization",
+        "Everything in Grow Package",
+        "Comprehensive AI Content Strategy",
         "Advanced Schema + AI Understanding",
-        "2x Authority Building PR Pitches",
-        "AI Recommendation Dashboard",
-        "Quarterly AI Strategy Report",
-        "Priority Support",
+        "3x Authority Building PR Pitches",
+        "Custom AI Recommendation Dashboard",
+        "Weekly AI Visibility Reports",
+        "Monthly Strategy Calls",
+        "Dedicated Account Manager",
+        "Priority Support (24-hour response)",
+        "Industry-Specific AI Training",
+        "Competitive AI Analysis",
       ],
-      icon: <FaChartLine className={styles.packageIcon} />,
-      cta: "🌾 Let's Harvest the Results",
+      icon: <FaTrophy className={styles.packageIcon} />,
+      cta: "🏆 Dominate AI Search",
+      link: "/contact",
       popular: false,
+      isVip: true,
+      commitment: "6-12 month minimum",
+      annualDiscount: "10% off annual prepayment",
+      paymentPlan: "Flexible setup payment options",
     },
   ];
 
@@ -235,69 +277,26 @@ const HomePage: React.FC = () => {
             </p>
           </div>
 
+          <motion.div
+            className={styles.founderDiscountBanner}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className={styles.discountBadge}>
+              <FaTag className={styles.discountIcon} />
+              <span>Founding Client Special: 25% Off All Packages</span>
+            </div>
+            <p className={styles.discountSubtext}>
+              Be one of our first 10 clients and save 25% on all packages plus
+              add-ons!
+            </p>
+          </motion.div>
+
           <div className={styles.packagesGrid}>
             {packages.map((pkg, index) => (
-              <motion.div
-                key={pkg.name}
-                className={`${styles.package} ${
-                  pkg.popular ? styles.popular : ""
-                }`}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-              >
-                {pkg.popular && (
-                  <div className={styles.popularBadge}>Most Popular</div>
-                )}
-                <div className={styles.packageHeader}>
-                  {pkg.icon}
-                  <h3>{pkg.name}</h3>
-                  <p>{pkg.description}</p>
-                </div>
-                <div className={styles.price}>
-                  <div className={styles.fullPrice}>
-                    <span className={styles.currency}>$</span>
-                    <span className={styles.amount}>{pkg.fullPrice}</span>
-                    <span className={styles.period}>/{pkg.period}</span>
-                  </div>
-                  <div className={styles.betaPrice}>
-                    <span className={styles.currency}>$</span>
-                    <span className={styles.amount}>{pkg.betaPrice}</span>
-                    <span className={styles.period}>/{pkg.period}</span>
-                  </div>
-                  {pkg.setupFullPrice && (
-                    <div className={styles.setup}>
-                      <div className={styles.fullPrice}>
-                        + ${pkg.setupFullPrice} setup
-                      </div>
-                      <div className={styles.betaPrice}>
-                        + ${pkg.setupBetaPrice} setup
-                      </div>
-                    </div>
-                  )}
-                </div>
-                <div className={styles.betaBadge}>
-                  <FaTag className={styles.betaIcon} />
-                  <span>Beta Pricing Available</span>
-                </div>
-                <ul className={styles.features}>
-                  {pkg.features.map((feature, i) => (
-                    <li key={i}>
-                      <FaCheck className={styles.checkIcon} />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <MotionLink
-                  to={pkg.link}
-                  className={styles.ctaButton}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  {pkg.cta}
-                </MotionLink>
-              </motion.div>
+              <PackageCard pkg={pkg} index={index} key={pkg.name} />
             ))}
           </div>
           <motion.div
@@ -307,15 +306,15 @@ const HomePage: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
             viewport={{ once: true }}
           >
-            <p>Not sure which plan is right for you?</p>
-            <MotionLink
-              to="/index-tool"
+            <motion.p>Not sure which plan is right for you?</motion.p>
+            <a
+              href="https://calendly.com/kristenjoy-dueseasondigital/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className={styles.secondaryCtaButton}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
             >
-              🧭 Get a Free Visibility Check
-            </MotionLink>
+              Book a Call
+            </a>
           </motion.div>
         </div>
       </section>
@@ -350,9 +349,14 @@ const HomePage: React.FC = () => {
           </div>
           <div className={styles.whyUsCta}>
             <p>✨ Ready to work with a partner who actually sees you?</p>
-            <Link to="/contact" className={styles.secondaryCtaButton}>
-              Book a Free Visibility Check
-            </Link>
+            <a
+              href="https://calendly.com/kristenjoy-dueseasondigital/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.secondaryCtaButton}
+            >
+              Book a Call
+            </a>
           </div>
         </div>
       </section>
@@ -403,18 +407,9 @@ const HomePage: React.FC = () => {
             Join the GEO revolution and start ranking higher in AI-powered
             search today
           </motion.p>
-          <MotionLink
-            to="/index-tool"
-            className={styles.ctaButton}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Get Your Free GEO Audit
-          </MotionLink>
+          <Link to="/contact" className={styles.primaryButton}>
+            Chat With Us
+          </Link>
         </div>
       </section>
     </div>

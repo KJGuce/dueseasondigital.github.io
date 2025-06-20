@@ -69,6 +69,36 @@ const faqs = [
     answer:
       "Start with our AI Recommendation Audit to see how AI assistants currently view and recommend your business. We'll analyze your trust signals, authority indicators, and current recommendation frequency to develop a strategic plan for becoming the go-to recommendation in your industry.",
   },
+  {
+    question: "What packages do you offer for GEO services?",
+    answer:
+      "We offer four comprehensive GEO packages: Seed ($799 one-time) for foundational AI visibility, Sprout ($699 setup + $449/month, 3-month minimum) as our most popular choice for growing businesses, Grow ($1,499 setup + $499/month, 6-month minimum) for advanced GEO strategy, and Harvest ($2,799 setup + $649/month, 6-12 month minimum) for complete GEO domination. All packages include annual prepayment discounts and we offer a 25% founder discount for the first 10 clients.",
+  },
+  {
+    question: "What's included in each GEO package?",
+    answer:
+      "Seed includes AI audit, Google Business Profile optimization, verified listings, and basic schema markup. Sprout adds monthly content creation, review management, and PR pitches. Grow includes full website optimization, advanced schema, dashboard access, and priority support. Harvest provides comprehensive strategy, custom dashboard, weekly reports, dedicated account manager, and industry-specific AI training.",
+  },
+  {
+    question: "Do you offer payment plans or discounts?",
+    answer:
+      "Yes! We offer a 25% founder discount for the first 10 clients on all packages. Grow and Harvest packages include 10% off for annual prepayment. We also offer flexible payment options for setup fees on Grow and Harvest packages. All pricing is transparent with no hidden fees.",
+  },
+  {
+    question: "What are the minimum commitments for each package?",
+    answer:
+      "Seed is a one-time setup with no monthly commitment. Sprout requires a 3-month minimum commitment. Grow requires a 6-month minimum commitment. Harvest requires a 6-12 month minimum commitment depending on your goals and industry complexity.",
+  },
+  {
+    question: "What add-on services do you offer?",
+    answer:
+      "We offer specialized add-ons including AI-optimized blog/FAQ posts ($225), AI visibility report refreshes ($175), profile power-ups ($349), review management ($279/month), Google Analytics setup with AI dashboard ($175), monthly analytics reports ($125/month), AI/SEO landing pages ($425), social content packages ($125/month), and local PR pitches ($450).",
+  },
+  {
+    question: "How do you measure ROI for GEO services?",
+    answer:
+      "We track AI recommendation frequency across platforms, sentiment analysis of AI responses, conversion rates from AI-driven traffic, local authority indicators, and competitive positioning. Our monthly reports show clear metrics on how often AI assistants recommend your business and the quality of those recommendations.",
+  },
 ];
 
 const GEOFAQ: React.FC = () => {
@@ -122,7 +152,7 @@ const GEOFAQ: React.FC = () => {
             position your business as the trusted choice that AI assistants
             actively suggest.
           </p>
-          <Link to="/contact" className={styles.ctaButton}>
+          <Link to="/due-season-index" className={styles.ctaButton}>
             Get Your AI Recommendation Audit
           </Link>
         </div>

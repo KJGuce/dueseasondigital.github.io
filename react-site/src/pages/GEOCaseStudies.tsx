@@ -39,7 +39,7 @@ const GEOCaseStudies: React.FC = () => {
               trusted recommendation across all major AI platforms.
             </p>
             <div className={styles.ctaButtons}>
-              <Link to="/contact" className={styles.primaryButton}>
+              <Link to="/due-season-index" className={styles.primaryButton}>
                 Get Your AI Recommendation Audit
               </Link>
               <Link
