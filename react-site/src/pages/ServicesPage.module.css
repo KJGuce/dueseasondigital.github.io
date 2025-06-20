@@ -67,25 +67,34 @@
 
 .packages {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr;
   gap: 2rem;
+  align-items: stretch;
   margin-bottom: 4rem;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  background: var(--color-background);
+}
+
+@media (min-width: 768px) {
+  .packages {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .packages {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .package {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.05) 0%,
-    rgba(255, 255, 255, 0.02) 100%
-  );
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  background: var(--color-background-light);
   border-radius: 16px;
   padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   position: relative;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--color-border);
 }
 
 .package:hover {
@@ -93,12 +102,18 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.popular {
+.package.popular {
   border: 2px solid var(--color-primary);
   transform: scale(1.05);
 }
 
-.popularBadge {
+.package.vip {
+  border: 2px solid var(--color-accent);
+  transform: scale(1.05);
+}
+
+.popularBadge,
+.vipBadge {
   position: absolute;
   top: -12px;
   right: 2rem;
@@ -107,11 +122,15 @@
     var(--color-primary) 0%,
     var(--color-accent) 100%
   );
-  color: var(--color-background);
+  color: var(--color-background-dark);
   padding: 0.5rem 1rem;
   border-radius: 50px;
   font-size: 0.8rem;
   font-weight: 600;
+}
+
+.vipBadge {
+  background: linear-gradient(135deg, var(--color-accent) 0%, #00c6ff 100%);
 }
 
 .packageHeader {
@@ -184,6 +203,43 @@
   gap: 0.25rem;
   margin-top: 0.5rem;
   font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.commitment {
+  text-align: center;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 215, 0, 0.1);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 8px;
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.annualDiscount {
+  text-align: center;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  background: rgba(78, 205, 196, 0.1);
+  border: 1px solid rgba(78, 205, 196, 0.3);
+  border-radius: 8px;
+  color: var(--color-accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.paymentPlan {
+  text-align: center;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  background: rgba(107, 77, 230, 0.1);
+  border: 1px solid rgba(107, 77, 230, 0.3);
+  border-radius: 8px;
+  color: var(--color-secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .pricingNote {
@@ -196,16 +252,18 @@
 .features {
   list-style: none;
   padding: 0;
-  margin: 2rem 0;
+  margin-bottom: 2rem;
+  flex-grow: 1;
 }
 
 .features li {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  margin-bottom: 1rem;
-  color: var(--color-text-light);
+  margin-bottom: 0.75rem;
   font-size: 0.95rem;
+  color: var(--color-text-primary);
+  text-align: left;
 }
 
 .checkIcon {
@@ -232,6 +290,10 @@
   transition: all 0.3s ease;
   cursor: pointer;
   border: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .ctaButton:hover {
@@ -324,9 +386,32 @@
 }
 
 .addOnDescription {
-  color: var(--color-text-light);
+  color: var(--color-text-secondary);
   font-size: 0.95rem;
   line-height: 1.6;
+  flex-grow: 1;
+}
+
+.addOnDeliverables {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.addOnDeliverables li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.addOnDeliverables li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: bold;
 }
 
 .socialBooster {
@@ -530,7 +615,7 @@
 .discountBadge span {
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: #000 !important;
 }
 
 .discountBadge .discountIcon {
@@ -616,4 +701,80 @@
   .custom {
     padding: 2rem;
   }
+}
+
+.introText {
+  margin: 2rem 0;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.founderDiscountBanner {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 0, 0.1) 0%,
+    rgba(255, 215, 0, 0.05) 100%
+  );
+  border: 2px solid var(--color-primary);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 3rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.founderDiscountBanner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 215, 0, 0.1) 50%,
+    transparent 70%
+  );
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.discountBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #ffed4e 100%);
+  color: #1a202c;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.discountIcon {
+  font-size: 1.2rem;
+}
+
+.discountSubtext {
+  color: var(--color-text);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  position: relative;
+  z-index: 2;
 }
