@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaCheck, FaChevronDown, FaChevronUp, FaCrown } from "react-icons/fa";
+import {
+  FaCheck,
+  FaChevronDown,
+  FaChevronUp,
+  FaCrown,
+  FaShoppingCart,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
 import styles from "./PackageCard.module.css";
 
@@ -23,6 +29,7 @@ interface Package {
   paymentPlan?: string;
   cta: string;
   link: string;
+  purchaseUrl?: string;
 }
 
 interface PackageCardProps {
@@ -88,6 +95,24 @@ const PackageCard: React.FC<PackageCardProps> = ({ pkg, index }) => {
         )}
       </div>
 
+      {pkg.commitment && (
+        <div className={styles.commitment}>
+          <span>{pkg.commitment}</span>
+        </div>
+      )}
+
+      {pkg.annualDiscount && (
+        <div className={styles.annualDiscount}>
+          <span>💎 {pkg.annualDiscount}</span>
+        </div>
+      )}
+
+      {pkg.paymentPlan && (
+        <div className={styles.paymentPlan}>
+          <span>💳 {pkg.paymentPlan}</span>
+        </div>
+      )}
+
       <motion.ul
         className={styles.features}
         variants={featureListVariants}
@@ -121,25 +146,18 @@ const PackageCard: React.FC<PackageCardProps> = ({ pkg, index }) => {
         </button>
       )}
 
-      {pkg.commitment && (
-        <div className={styles.commitment}>
-          <span>{pkg.commitment}</span>
-        </div>
-      )}
-
-      {pkg.annualDiscount && (
-        <div className={styles.annualDiscount}>
-          <span>💎 {pkg.annualDiscount}</span>
-        </div>
-      )}
-
-      {pkg.paymentPlan && (
-        <div className={styles.paymentPlan}>
-          <span>💳 {pkg.paymentPlan}</span>
-        </div>
-      )}
-
       <div className={styles.ctaWrapper}>
+        {pkg.purchaseUrl && (
+          <a
+            href={pkg.purchaseUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.purchaseButton}
+          >
+            <FaShoppingCart className={styles.cartIcon} />
+            Purchase Now
+          </a>
+        )}
         <Link to={pkg.link} className={styles.ctaButton}>
           {pkg.cta}
         </Link>
