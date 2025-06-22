@@ -160,7 +160,10 @@ const DueSeasonIndexTool = () => {
 
   const handleBookCall = () => {
     // Replace with your actual calendar link
-    window.open("https://calendly.com/dueseasondigital/30min", "_blank");
+    window.open(
+      "https://calendly.com/kristenjoy-dueseasondigital/30min",
+      "_blank"
+    );
   };
 
   return (
@@ -170,6 +173,19 @@ const DueSeasonIndexTool = () => {
           <h1>Due Season Index Tool</h1>
           <p className={styles.subtitle}>
             Discover your website's SEO potential and get actionable insights
+          </p>
+        </div>
+
+        <div className={styles.betaAlert}>
+          <div className={styles.betaBadge}>
+            <span className={styles.betaIcon}>🚧</span>
+            <span className={styles.betaText}>Beta Version</span>
+          </div>
+          <p className={styles.betaMessage}>
+            This AI audit tool is currently being built and enhanced. The
+            current version provides a foundation - we're working on adding more
+            advanced AI analysis features, real-time data integration, and
+            comprehensive reporting capabilities.
           </p>
         </div>
 
@@ -184,6 +200,13 @@ const DueSeasonIndexTool = () => {
                 className={styles.step}
               >
                 <h2>Step 1: Enter Your Website</h2>
+                <div className={styles.betaWarning}>
+                  <p>
+                    ⚠️ <strong>Beta Notice:</strong> This tool is currently in
+                    development. The analysis shown will be a demonstration with
+                    sample data.
+                  </p>
+                </div>
                 <form onSubmit={handleWebsiteSubmit} className={styles.form}>
                   <div className={styles.inputGroup}>
                     <FaGlobe className={styles.inputIcon} />
@@ -204,7 +227,7 @@ const DueSeasonIndexTool = () => {
                     className={styles.submitButton}
                     disabled={loading}
                   >
-                    {loading ? "Analyzing..." : "Analyze My Site"}
+                    {loading ? "Analyzing..." : "Try Demo Analysis"}
                   </motion.button>
                 </form>
               </motion.div>
@@ -301,10 +324,16 @@ const DueSeasonIndexTool = () => {
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      placeholder="Your Email"
-                      required
-                      className={styles.input}
+                      placeholder="Email collection disabled during beta"
+                      disabled
+                      className={`${styles.input} ${styles.disabledInput}`}
                     />
+                  </div>
+                  <div className={styles.betaNote}>
+                    <p>
+                      📧 Email collection is temporarily disabled during beta.
+                      Contact us directly to get your detailed report.
+                    </p>
                   </div>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
@@ -313,7 +342,9 @@ const DueSeasonIndexTool = () => {
                     className={styles.submitButton}
                     disabled={loading}
                   >
-                    {loading ? "Generating Report..." : "Get My Report"}
+                    {loading
+                      ? "Generating Report..."
+                      : "Get My Analysis (Beta)"}
                   </motion.button>
                 </form>
               </motion.div>
